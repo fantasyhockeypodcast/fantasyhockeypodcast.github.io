@@ -1,0 +1,361 @@
+html, body {
+  font-family: 'product-sans';
+  margin: 0;
+  padding: 0;
+}
+.mdl .mdl-layout__header-row {
+  padding-left: 70px;
+}
+
+.mdl-layout .mdl-layout__header,
+.mdl-layout .mdl-layout__drawer-button {
+    color:black;
+    background: white;
+    
+}
+
+.mdl .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
+  font-size: inherit;
+}
+
+
+.mdl main > .mdl-layout__tab-panel {
+  padding: 8px;
+  padding-top: 30px;
+  
+}
+.mdl .mdl-card {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.mdl .mdl-card > * {
+  height: auto;
+    font-family: 'Product-Sans'
+}
+.mdl .mdl-card .mdl-card__supporting-text {
+  margin: 40px;
+  flex-grow: 1;
+  padding: 0;
+  color: inherit;
+  width: calc(100% - 80px);
+    font-family: 'Product-sans';
+}
+.mdl.mdl .mdl-card__supporting-text h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: 'product-sans'
+}
+
+.mdl-card__actions {
+  margin: 0;
+  padding: 4px 40px;
+  color: inherit;
+}
+.mdl .mdl-card__actions a {
+  color: #00BCD4;
+  margin: 0;
+}
+.mdl .mdl-card__actions a:hover,
+.mdl .mdl-card__actions a:active {
+  color: inherit;
+  background-color: transparent;
+}
+.mdl .mdl-card__supporting-text + .mdl-card__actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+    
+}
+.mdl #add {
+  position: absolute;
+  right: 40px;
+  top: 36px;
+  z-index: 999;
+}
+
+.mdl .mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 48px;
+}
+.mdl section.section--center {
+  max-width: 860px;
+}
+.mdl #features section.section--center {
+  max-width: 620px;
+}
+.mdl section > header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdl section > .section__play-btn.sticker {
+  min-height: 200px;
+    background-color: black;
+    opacity: .8;
+    background: url('/images/Artboard%206.png') center/cover;
+}
+
+.mdl section > .section__play-btn.ep8 {
+  min-height: 200px;
+background: url('http://media.video-cdn.espn.com/motion/2017/0201/dm_170201_NHL_DUCKS_SILFVERBERG_2_GOALS/dm_170201_NHL_DUCKS_SILFVERBERG_2_GOALS.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep8:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+
+.mdl section > .section__play-btn.ep7 {
+  min-height: 200px;
+background: url('http://a.espncdn.com/combiner/i?img=%2Fphoto%2F2016%2F0627%2Fr96624_1296x729_16-9.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep7:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep6 {
+  min-height: 200px;
+background: url('https://cdn2.vox-cdn.com/uploads/chorus_image/image/52978749/633037050.0.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep6:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+
+.mdl section > .section__play-btn.ep5 {
+  min-height: 200px;
+background: url('https://www.staplescenter.com/assets/img/NHL-AllStar-2017-960x390-webhero-be352240a8.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep5:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep4 {
+  min-height: 200px;
+  opacity:.3;
+background: url('https://nhl.bamcontent.com/images/photos/285522850/1024x576/cut.jpg') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.ep4:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep3 {
+  min-height: 200px;
+  opacity:.3;
+background: url('http://2.cdn.nhle.com/bluejackets/images/upload/gallery/2016/01/503207314_slide.jpg') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.ep3:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep2 {
+  min-height: 200px;
+  opacity:.3;
+background: url('http://krisletang.org/wp-content/uploads/2015/01/01132015-3.jpg') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.ep2:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep1 {
+  min-height: 200px;
+  opacity:.3;
+background: url('/images/Artboard%206.png') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.ep1:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.jagr {
+  min-height: 200px;
+background: url('../images/jagr.png') center/cover;
+    
+    
+}
+
+.mdl section > .section__play-btn.detroitp {
+  min-height: 200px;
+background: url('../images/detroit/header_index.png') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.elo {
+  min-height: 200px;
+background: url('../images/elo-header.png') center/cover;
+    
+}
+
+.mdl section > .section__play-btn.beginner {
+  min-height: 200px;
+background: url('../images/1.jpg') center/cover;
+    
+}
+
+.mdl section > header > .material-icons {
+  font-size: 3rem;
+}
+.mdl section > button {
+  position: absolute;
+  z-index: 99;
+  top: 8px;
+  right: 8px;
+}
+.mdl section .section__circle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+.mdl section .section__text 
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+.mdl section .section__text h5 {
+  font-size: inherit;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.mdl section .section__text a {
+  text-decoration: none;
+}
+.mdl section .section__circle-container > .section__circle-container__circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  margin: 8px 0;
+}
+.mdl section.section--footer .section__circle--big {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 8px 32px;
+}
+.mdl .is-small-screen section.section--footer .section__circle--big {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 8px 16px;
+}
+.mdl section.section--footer {
+  padding: 64px 0;
+  margin: 0 -8px -8px -8px;
+}
+.mdl section.section--center .section__text:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,.13);
+}
+.mdl .mdl-card .mdl-card__supporting-text > h3:first-child {
+  margin-bottom: 24px;
+    font-family: 'Product-Sans';
+}
+.mdl .mdl-layout__tab-panel:not(#overview) {
+  background-color: white;
+}
+.mdl #features section {
+  margin-bottom: 72px;
+}
+.mdl #features h4, #features h5 {
+  margin-bottom: 16px;
+}
+.mdl .toc {
+  border-left: 4px solid #C1EEF4;
+  margin: 24px;
+  padding: 0;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.mdl .toc h4 {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+.mdl .toc a {
+  color: #4DD0E1;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 28px;
+  display: block;
+}
+.mdl .mdl-menu__container {
+  /* z-index: 99; */
+}
+
+/* ARTICLE */
+
+.mdl .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+
+.images {
+    position:relative;
+    display: inline;
+    max-width: 840px;
+    margin: auto;
+}
+.imageSelector {
+    text-align: center;
+    margin: auto;
+}
+
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+ 
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+}
+
+
+
