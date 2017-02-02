@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'product-sans';
+  font-family: 'product sans';
   margin: 0;
   padding: 0;
 }
@@ -31,7 +31,7 @@ html, body {
 }
 .mdl .mdl-card > * {
   height: auto;
-    font-family: 'Product-Sans'
+    font-family: 'Product Sans'
 }
 .mdl .mdl-card .mdl-card__supporting-text {
   margin: 40px;
@@ -39,12 +39,12 @@ html, body {
   padding: 0;
   color: inherit;
   width: calc(100% - 80px);
-    font-family: 'Product-sans';
+    font-family: 'Product sans';
 }
 .mdl.mdl .mdl-card__supporting-text h4 {
   margin-top: 0;
   margin-bottom: 20px;
-  font-family: 'product-sans'
+  font-family: 'product sans'
 }
 
 .mdl-card__actions {
@@ -93,6 +93,19 @@ html, body {
     background-color: black;
     opacity: .8;
     background: url('/images/Artboard%206.png') center/cover;
+}
+
+.mdl section > .section__play-btn.ep9 {
+  min-height: 200px;
+background: url('https://cdn0.vox-cdn.com/thumbor/aeIFX-1y3BapXCGYirvrv-DuBlo=/0x0:960x540/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/51051339/brad_marchand_ogcDlru.0.0.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep9:hover {
+  min-height: 200px;
+    opacity: .9;
+    
 }
 
 .mdl section > .section__play-btn.ep8 {
@@ -282,7 +295,7 @@ background: url('../images/1.jpg') center/cover;
 }
 .mdl .mdl-card .mdl-card__supporting-text > h3:first-child {
   margin-bottom: 24px;
-    font-family: 'Product-Sans';
+    font-family: 'Product Sans';
 }
 .mdl .mdl-layout__tab-panel:not(#overview) {
   background-color: white;
