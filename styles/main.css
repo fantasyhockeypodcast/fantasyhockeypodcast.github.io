@@ -96,6 +96,19 @@ html, body {
 }
 
 
+.mdl section > .section__play-btn.ep11 {
+  min-height: 200px;
+background: url('https://nhl.bamcontent.com/images/photos/286480214/1024x576/cut.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep10:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep10 {
   min-height: 200px;
 background: url('http://static.gofansgo.com/media/post_images/JamieBenn787832434.jpg') center/cover;
