@@ -33,3 +33,4 @@ for title in titles:
     html += "</div>\n\n"
     print "Completed section " + title + "\n"
 print html
+raw_input()
