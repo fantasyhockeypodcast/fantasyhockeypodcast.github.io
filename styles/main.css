@@ -95,6 +95,18 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep12 {
+  min-height: 200px;
+background: url('http://cdn.fansided.com/wp-content/uploads/usat-images/2016/04/9851398-nhl-washington-capitals-at-new-york-islanders.jpeg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep12:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
 
 .mdl section > .section__play-btn.ep11 {
   min-height: 200px;
@@ -103,7 +115,7 @@ background: url('https://nhl.bamcontent.com/images/photos/286480214/1024x576/cut
     
 }
 
-.mdl section > .section__play-btn.ep10:hover {
+.mdl section > .section__play-btn.ep11:hover {
   min-height: 200px;
     opacity: .9;
     
