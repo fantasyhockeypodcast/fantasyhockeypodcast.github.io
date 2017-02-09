@@ -136,7 +136,8 @@ imagedict = {
         "Jacob Markstrom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5452.png&w=350&h=254",
         "Cam Ward": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1671.png&w=350&h=254",
         "Frederik Andersen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2517899.png&w=350&h=254",
-        "Cory Schneider": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3750.png&w=350&h=254"
+        "Cory Schneider": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3750.png&w=350&h=254",
+        "Kris Letang": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3539.png&w=350&h=254"
         }
 
 daydict = {
