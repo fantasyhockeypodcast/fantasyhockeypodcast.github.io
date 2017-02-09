@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep14 {
+  min-height: 200px;
+background: url('http://cdn.fansided.com/wp-content/uploads/usat-images/2016/04/9792286-nhl-centennial-classic-detroit-red-wings-at-toronto-maple-leafs.jpeg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep14:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep13 {
   min-height: 200px;
 background: url('http://images.performgroup.com/di/library/sporting_news/ee/54/getty_1oeaga32ll6y81sgtucj89wya9.jpg?t=172001386') center/cover;
