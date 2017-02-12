@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep15 {
+  min-height: 200px;
+background: url('http://assets1.sportsnet.ca/wp-content/uploads/2017/02/tarasenko-1.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep15:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep14 {
   min-height: 200px;
 background: url('http://cdn.fansided.com/wp-content/uploads/usat-images/2016/04/9792286-nhl-centennial-classic-detroit-red-wings-at-toronto-maple-leafs.jpeg') center/cover;
