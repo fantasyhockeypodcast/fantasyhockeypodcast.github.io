@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep16 {
+  min-height: 200px;
+background: url('https://d13csqd2kn0ewr.cloudfront.net/uploads/image/file/229006/cropped_2017-02-13T020727Z_1212864411_NOCID_RTRMADP_3_NHL-MONTREAL-CANADIENS-AT-BOSTON-BRUINS.jpg?ts=1486952161') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep16:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep15 {
   min-height: 200px;
 background: url('http://assets1.sportsnet.ca/wp-content/uploads/2017/02/tarasenko-1.jpg') center/cover;
