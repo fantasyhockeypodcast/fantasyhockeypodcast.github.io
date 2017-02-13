@@ -18,15 +18,15 @@ html = """<!doctype html>
     <meta name=\"Fantasy Hockey Podcast\" content=\"\">
     <meta name=\"keywords\" content=\"Hockey, Fantasy, Podast, David Gamboa, NHL, Stanley Cup Playoffs, Playoffs, advice, help, drop, trade, add, waiver wire, Fantasy Hockey Pod, daily, season long, espn, yahoo, sell high, buy low, candidates, best\">
     <meta name=\"author\" content=\"Fantasy Hockey Podcast\">
-    <meta name=\"description\" content=\" """ + page_description + """"\">
+    <meta name=\"description\" content=""" + "\"" + page_description + """\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <meta name=\"title\" content=\"Fantasy Hockey Podcast | Episode """ + episode_number + """ - """ + page_title + """\">
-    <meta name=\"image\" content=\" """ + page_image + """\">
+    <meta name=\"image\" content=""" + "\"" + page_image + """\">
     <title> Fantasy Hockey Podcast | Episode """ + episode_number + """ - """ + page_title + """</title>
     <!---- FB OPEN GRAPH ---->
     <meta property=\"og:type\"               content=\"article\" />
-    <meta property=\"og:description\"        content=\" """ + page_description + """\">
-    <meta property=\"og:image\"              content=\" """ + page_image + """\"/>
+    <meta property=\"og:description\"        content=""" + "\"" + page_description + """\">
+    <meta property=\"og:image\"              content=""" + "\"" + page_image + """\"/>
     <!-- Disable tap highlight on IE -->
     <meta name=\"msapplication-tap-highlight\" content=\"no\">
 
@@ -120,7 +120,7 @@ html = """<!doctype html>
       
       
     <div class=\"page-content\">
-        <img style=\"width:100%; opacity:.8;\" src=\" """ + page_image + """\">
+        <img style=\"width:100%; opacity:.8;\" src=""" + "\"" + page_image + """\">
         <div class=\"container mdl-grid\">
         <div class=\"mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone\"></div>
         <div  class=\"content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col\">
@@ -130,7 +130,7 @@ html = """<!doctype html>
 
         <p> 
             <audio controls style=\"width:70%;opacity:1;\">
-            <source src=\" """ + pod_url + """\"  type=\"audio/mpeg\">
+            <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
             </audio> 
         </p>
@@ -432,7 +432,7 @@ html_file = open("../ep-"+episode_number+".html", "w")
 html_file.write(html)
 html_file.close()
 
-if new_player_images.values().count > 0:
+if len(new_player_images) > 0:
     print "\n\nAdd the following players and images to the database:\n\n" 
     for player, image in new_player_images.iteritems():
         print "\"" + player + "\": \"" + image + "\","
