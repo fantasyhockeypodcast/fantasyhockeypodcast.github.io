@@ -1,4 +1,249 @@
-html = ""
+episode_number = raw_input("Enter episode number: ")
+page_title = raw_input("Enter a title for the page: ")
+page_description = raw_input("Enter a description for the page: ")
+page_image = raw_input("Enter an image for the page: ")
+pod_url = raw_input("Add a url for the cast: ")
+show_notes = ""
+while True:
+    note = raw_input("Enter a show note (ie: Grammar School - 1:00) or leave empty to complete show notes: ")
+    if not note:
+        break
+    show_notes += "\n<br>" + note
+
+html = """<!doctype html>
+<html>
+<head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
+    <meta name=\"keywords\" content=\"Hockey, Fantasy, Podast, David Gamboa, NHL, Stanley Cup Playoffs, Playoffs, advice, help, drop, trade, add, waiver wire, Fantasy Hockey Pod, daily, season long, espn, yahoo, sell high, buy low, candidates, best\">
+    <meta name=\"author\" content=\"Fantasy Hockey Podcast\">
+    <meta name=\"description\" content=\" """ + page_description + """"\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta name=\"title\" content=\"Fantasy Hockey Podcast | Episode """ + episode_number + """ - """ + page_title + """\">
+    <meta name=\"image\" content=\" """ + page_image + """\">
+    <title> Fantasy Hockey Podcast | Episode """ + episode_number + """ - """ + page_title + """</title>
+    <!---- FB OPEN GRAPH ---->
+    <meta property=\"og:type\"               content=\"article\" />
+    <meta property=\"og:description\"        content=\" """ + page_description + """\">
+    <meta property=\"og:image\"              content=\" """ + page_image + """\"/>
+    <!-- Disable tap highlight on IE -->
+    <meta name=\"msapplication-tap-highlight\" content=\"no\">
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name=\"mobile-web-app-capable\" content=\"yes\">
+    <meta name=\"Hockey On Stats\" content=\"\">
+    <link rel=\"icon\" sizes=\"192x192\" href=\"images/Artboard%206.png\">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
+    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
+    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
+    <link rel=\"apple-touch-icon\" href=\"images/Artboard%206.png\">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name=\"msapplication-TileImage\" content=\"images/artboard%206\">
+    <meta name=\"msapplication-TileColor\" content=\"#444443\">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name=\"theme-color\" content=\"#444443\">
+
+    <link rel=\"stylesheet\" href=\"https://code.getmdl.io/1.3.0/material.indigo-pink.min.css\">
+    <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+    <!-- Material Design icons -->
+    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">
+
+    <!-- Your styles -->
+    <link rel=\"stylesheet\" href=\"styles/main.css\">
+    <link rel=\"stylesheet\" href=\"styles/styles.css\">
+    <script defer src=\"https://code.getmdl.io/1.3.0/material.min.js\"></script>
+
+</head>
+<body class=\"mdl mdl-color--grey-100 mdl-color-text--grey-700 mdl-base\">
+      
+    <!---TOP HEADER-->
+   <!-- Always shows a header, even in smaller screens. -->
+    <div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">
+        <header class=\"mdl-layout__header mdl-layout__header--transparent \">
+            <div  class=\"mdl-layout__header-row mdl-shadow--4dp\">
+                <!-- Title -->
+                <span class=\"mdl-layout-title\">""" + page_title + """</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class=\"mdl-layout-spacer\"></div>
+      <!-- Navigation. We hide it in small screens. -->
+    </div>
+  </header>
+    
+    
+<!-- DRAWER -->    
+    
+    
+  <div class=\"mdl-layout__drawer\">
+    <span class=\"mdl-layout-title\">FHP</span>
+    <nav class=\"mdl-navigation\">
+        <!--
+      <a class=\"mdl-navigation__link\" href=\"\">Interactives</a>
+      <a class=\"mdl-navigation__link\" href=\"\">Long Reads</a>
+      <a class=\"mdl-navigation__link\" href=\"\">Short Reads</a>
+      <a class=\"mdl-navigation__link\" href=\"\">About</a>
+
+-->
+    <a class=\"mdl-navigation__link\" href=\"/index.html\">Home</a>
+      <a class=\"mdl-navigation__link\" href=\"https://twitter.com/fntasyhockeypod\">Twitter</a>
+        <!--
+      <a class=\"mdl-navigation__link\" href=\"https://www.facebook.com/hockeyonstats/\">Facebook</a>-->
+    <a class=\"mdl-navigation__link\" href=\"about.html\">About</a>
+        <a class=\"mdl-navigation__link\" href=\"mailto:fantasyhockeypodcast@gmail.com?Subject=Inquiry\">Contact</a>
+        
+        <br>
+        <!-----BADGES--->
+        
+         <!----itunes---->
+         <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
+                <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='70%' style=\"padding-left:10%\"> </a> 
+        
+        <!-----GPLAY---->
+            <a href=\"https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igp5eo4jiymytfxf3uyffggtbyq?t%3DFantasy_Hockey_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16\">
+                      <img src=\"https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png\" width='70%' style=\"padding-left:10%\"></a>
+                  <br>
+         <!--- STITCHER---->
+             <a href=\"http://www.stitcher.com/podcast/fantasy-hockey-podcast\">
+                      <img src=\"https://wordpress.todaytix.com/wp-content/uploads/2016/10/stitcher-badge.jpg\" width='70%' style=\"padding-left:10%\"> </a>
+    </nav>
+  </div>
+
+      
+    
+  <main  style=\"background:white;\" class=\"mdl-layout__content\">
+      
+      
+      
+    <div class=\"page-content\">
+        <img style=\"width:100%; opacity:.8;\" src=\" """ + page_image + """\">
+        <div class=\"container mdl-grid\">
+        <div class=\"mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone\"></div>
+        <div  class=\"content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col\">
+        <div class=\"opener\">
+        
+        <p style=\"font-style:italic;opacity:.5;\">Episode """ + episode_number + """ - """ + page_title + """</p>
+
+        <p> 
+            <audio controls style=\"width:70%;opacity:1;\">
+            <source src=\" """ + pod_url + """\"  type=\"audio/mpeg\">
+                Your browser does not support the audio element.
+            </audio> 
+        </p>
+        
+        <!----ITUNES--->
+        <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
+        <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='20%'></a> 
+                  
+        <!-----GOOGLE PLAY---->
+        <a href=\"https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igp5eo4jiymytfxf3uyffggtbyq?t%3DFantasy_Hockey_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16\">
+        <img src=\"https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png\" width='20%'></a>
+             
+        </div>    
+        <div class=\"ellipses\"><iron-icon  icon=\"filter-list\" stylue></iron-icon></div>
+        
+        <div class=\"interlude fb\">
+            <div style=\"padding-bottom:px;\" class=\"fb-like\" data-href=\"http://fantasyhockeypodcast.com\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-share=\"false\"></div>
+        <div class=\"article-content\">
+        
+        <!------ ARTICLE BEGINS -----> 
+        
+        <p class=\"interlude\">
+            Summary
+        </p>
+
+        <p class=\"main-paragraphs\"><text class=\"first-letter\">""" + page_title[0] + """</text>""" + page_title[1:] + """</p>
+        <p class=\"interlude\">
+            Show Notes
+        </p>
+
+        <p class=\"main-paragraphs notes\">
+        """ + show_notes + """
+        </p>
+        <br>
+        <br>
+
+        <p class=\"interlude\">
+            Players Talked About
+        </p>
+"""
+
+html_close = """
+</div>
+</div>
+</div>
+</main>
+<div style=\"position:relative;\">
+    <div id=\"view-source\">
+    <button id=\"menu-top-right\" class=\"mdl-button mdl-js-button mdl-button--fab mdl-color--grey-300\">
+    <i id=\"fab\" class=\"material-icons share\">share</i>
+    </button>
+    <ul class=\"mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect\" for=\"menu-top-right\">
+        <li class=\"mdl-menu__item\"><div style=\"left:50px;\" class=\"fb-share-button\" data-href=\"http://fantasyhockeypodcast.com\" data-layout=\"button\"></div></li>
+        <li class=\"mdl-menu__item\"><div style=\"margin-left:53%;margin-top:10%;\"><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"fntasyhockeypod\" data-related=\"Daveedgamboa\">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div></li>
+    </ul>
+    </div>
+</div>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script src=\"scripts/main.js\"></script>
+    <!-- endbuild -->
+      
+    <script>
+
+        (function(document){
+              var div = document.getElementById('menu-top-right');
+              var icon = document.getElementById('fab');
+              var open = false;
+
+              div.addEventListener('click', function(){
+                if(open){
+                  icon.className = 'material-icons share';  
+                } else{
+                  icon.className = 'material-icons share open';
+                }
+
+                open = !open;
+              });
+            })(document);
+    </script>
+      
+    <div id=\"fb-root\"></div>
+      <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=129264100505161\";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+      
+      
+      
+    
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script src=\"scripts/main.js\"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61894957-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!-- Built with love using Web Starter Kit -->
+      </div></main></div>
+  </body>
+</html>
+"""
 
 imagedict = {
         "Alex Ovechkin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3101.png&w=350&h=254",
@@ -137,11 +382,14 @@ imagedict = {
         "Cam Ward": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1671.png&w=350&h=254",
         "Frederik Andersen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2517899.png&w=350&h=254",
         "Cory Schneider": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3750.png&w=350&h=254",
-        "Kris Letang": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3539.png&w=350&h=254"
+        "Kris Letang": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3539.png&w=350&h=254",
+        "Nikita Zaitsev": "http://www.hockeydb.com/ihdb/photos/nikita-zaitsev-2017-38.jpg",
+        "Calle Jarnkrok": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2555316.png&w=350&h=254",
+        "Kenny Agostino": "https://nhl.bamcontent.com/images/headshots/current/168x168/8475844.jpg",
         }
 
 daydict = {
-        "monday":["Grammar School", "Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players to Consider This Week", "Players Who Will Regress", "Our Top Picks of the Night", "Our Value Picks of the Night"], 
+        "monday":["Grammar School", "Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"], 
         "tuesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"],
         "wednesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Unsustainably High Picks", "Unsustainably Low Picks", "Our Top Picks of the Night", "Our Value Picks of the Night"],
         "thursday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"],
@@ -149,6 +397,7 @@ daydict = {
         }
 
 podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
+new_player_images = {}
 titles = []
 if podcast_type:
     titles = daydict[podcast_type]
@@ -171,8 +420,20 @@ for title in titles:
         image = ""
         if player in imagedict:
             image = imagedict[player]
+        else:
+            image = raw_input("Add image for " + player + ": ")
+            new_player_images[player] = image
         html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" style=\"height:5em;\" src=\"" + image + "\">\n        <br>\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
     html += "</div>\n\n"
     print "Completed section " + title + "\n"
-print html
+
+html += html_close
+html_file = open("../ep-"+episode_number+".html", "w")
+html_file.write(html)
+html_file.close()
+
+if new_player_images.values().count > 0:
+    print "\n\nAdd the following players and images to the database:\n\n" 
+    for player, image in new_player_images.iteritems():
+        print "\"" + player + "\": \"" + image + "\","
 raw_input()
