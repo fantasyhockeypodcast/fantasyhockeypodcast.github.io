@@ -95,6 +95,20 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep17 {
+  min-height: 200px;
+background: url('https://cdn0.vox-cdn.com/thumbor/YgcgS-vX6fHbW_NKAtxeoXJXKDA=/0x31:4145x2363/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/49063243/usa-today-9180380.0.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep17:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+
 .mdl section > .section__play-btn.ep16 {
   min-height: 200px;
 background: url('https://d13csqd2kn0ewr.cloudfront.net/uploads/image/file/229006/cropped_2017-02-13T020727Z_1212864411_NOCID_RTRMADP_3_NHL-MONTREAL-CANADIENS-AT-BOSTON-BRUINS.jpg?ts=1486952161') center/cover;
