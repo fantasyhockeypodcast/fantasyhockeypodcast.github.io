@@ -156,7 +156,7 @@ html = """<!doctype html>
             Summary
         </p>
 
-        <p class=\"main-paragraphs\"><text class=\"first-letter\">""" + page_title[0] + """</text>""" + page_title[1:] + """</p>
+        <p class=\"main-paragraphs\"><text class=\"first-letter\">""" + page_description[0] + """</text>""" + page_description[1:] + """</p>
         <p class=\"interlude\">
             Show Notes
         </p>
