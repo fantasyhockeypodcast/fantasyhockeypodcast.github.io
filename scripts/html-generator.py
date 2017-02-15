@@ -415,6 +415,16 @@ imagedict = {
         "Ondrej Pavelec": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3502.png&w=350&h=254",
         "Johnny Gaudreau": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563039.png&w=350&h=254",
         "Cody Eakin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5237.png&w=350&h=254",
+        "Brian Elliott": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2865.png&w=350&h=254",
+        "Martin Hanzal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3537.png&w=350&h=254",
+        "Jake Muzzin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4906.png&w=350&h=254",
+        "Jason Chimera": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1067.png&w=350&h=254",
+        "Jonathan Huberdeau": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562606.png&w=350&h=254",
+        "Michal Neuvirth": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3705.png&w=350&h=254",
+        "David Perron": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3792.png&w=350&h=254",
+        "Tomas Hertl": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976844.png&w=350&h=254",
+        "Patrik Berglund": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3693.png&w=350&h=254",
+        "Patrick Sharp": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2002.png",
         }
 
 daydict = {
