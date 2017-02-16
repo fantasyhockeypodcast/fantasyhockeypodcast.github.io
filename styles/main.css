@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep19 {
+  min-height: 200px;
+background: url('https://nhl.bamcontent.com/images/photos/284143054/1284x722/cut.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep18:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep18 {
   min-height: 200px;
 background: url('http://pbs.twimg.com/media/C4rcPlMXUAA5zdx.jpg:medium') center/cover;
