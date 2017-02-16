@@ -425,6 +425,13 @@ imagedict = {
         "Tomas Hertl": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976844.png&w=350&h=254",
         "Patrik Berglund": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3693.png&w=350&h=254",
         "Patrick Sharp": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2002.png",
+        "Gustav Nyquist": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5823.png&w=350&h=254",
+        "Alex Chiasson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590705.png&w=350&h=254",
+        "Nick Leddy": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5447.png&w=350&h=254",
+        "Oliver Ekman-Larsson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5488.png&w=350&h=254",
+        "Nick Cousins": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563027.png&w=350&h=254",
+        "Mikko Rantanen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899938.png&w=350&h=254",
+        "Antoine Vermette": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1939.png&w=350&h=254",
         }
 
 daydict = {
