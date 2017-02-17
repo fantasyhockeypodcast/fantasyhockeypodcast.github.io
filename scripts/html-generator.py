@@ -432,6 +432,20 @@ imagedict = {
         "Nick Cousins": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563027.png&w=350&h=254",
         "Mikko Rantanen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899938.png&w=350&h=254",
         "Antoine Vermette": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1939.png&w=350&h=254",
+        "Nick Bjugstad": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5828.png&w=350&h=254",
+        "Sebastian Aho": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904173.png&w=350&h=254",
+        "Dylan Larkin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114755.png&w=350&h=254",
+        "Nathan MacKinnon": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041969.png&w=350&h=254",
+        "Josh Leivo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590559.png&w=350&h=254",
+        "Brock Nelson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5798.png&w=350&h=254",
+        "Cam Fowler": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5495.png&w=350&h=254",
+        "Josh Bailey": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5056.png&w=350&h=254",
+        "Aleksander Barkov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041970.png&w=350&h=254",
+        "Jonathan Marchessault": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2967072.png&w=350&h=254",
+        "Matt Duchene": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5161.png&w=350&h=254",
+        "Oliver Bjorkstrand": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477416.jpg",
+        "Justin Faulk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5746.png&w=350&h=254",
+        "Ryan Strome": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562636.png&w=350&h=254",
         }
 
 daydict = {
