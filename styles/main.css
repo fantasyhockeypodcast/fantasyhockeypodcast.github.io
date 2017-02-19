@@ -516,5 +516,56 @@ background: url('../images/1.jpg') center/cover;
   height: 500px;
 }
 
+.pagination {
+    font-size: 2em;
+    padding-top: .6em;
+    padding-bottom: .6em;
+    text-align: center;
+    align-content: center;
+}
+
+.pagination-weeks{
+    font-size: 2em;
+    padding-top: 1em;
+    opacity: .6;
+    text-align: center;
+    align-content: center;
+    text-decoration: underline;
+}
+
+.pagination-index button{
+    font-size: 1em;
+    text-align: center;
+    font-family: 'product sans';
+    opacity: .8;
+}
+
+.pagination-index{
+    font-size: 1.3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    align-content: center;
+}
+
+.pagination .active {
+     opacity: 1;
+    padding: 8px 16px;
+}
+
+.pagination a {
+    color: dimgray;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    opacity: .5;
+    
+}
+.pagination a:hover {
+    background-color: white;
+    opacity: 1;
+    transition: .2s;
+    
+}
 
 

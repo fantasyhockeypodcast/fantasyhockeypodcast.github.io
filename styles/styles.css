@@ -181,6 +181,14 @@ a {
     
 }
 
+.main-paragraphs.table{
+    font-family: 'product sans';
+    text-align: center;
+    align-content: center;
+    padding-bottom: 2em;
+    
+}
+
 .interlude {
     font-family: 'product sans';
     font-size: 1.5em;
