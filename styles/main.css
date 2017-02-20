@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep21 {
+  min-height: 200px;
+background: url('http://cdn.saleminteractivemedia.com/associated-press/data/photos/2017/50/59f9226f-1d79-47b8-bfeb-c88e2d360d2a.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep21:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 
 .mdl section > .section__play-btn.ep20 {
   min-height: 200px;
