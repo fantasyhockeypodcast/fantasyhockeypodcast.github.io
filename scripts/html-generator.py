@@ -446,6 +446,17 @@ imagedict = {
         "Oliver Bjorkstrand": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477416.jpg",
         "Justin Faulk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5746.png&w=350&h=254",
         "Ryan Strome": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562636.png&w=350&h=254",
+        "Connor Hellebuyck": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3020225.png&w=350&h=254",
+        "Louis Domingue": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2560083.png&w=350&h=254",
+        "Ondrej Kase": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478131.jpg",
+        "Jaromir Jagr": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/405.png&w=350&h=254",
+        "Stefan Noesen": "https://nhl.bamcontent.com/images/headshots/current/168x168/8476474.jpg",
+        "Aaron Ekblad": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114717.png&w=350&h=254",
+        "Damon Severson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3068087.png&w=350&h=254",
+        "Oscar Klefbom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562608.png&w=350&h=254",
+        "Mika Zibanejad": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562637.png&w=350&h=254",
+        "Anthony Mantha": "http://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=anthony-mantha&width=620&height=620",
+        "Radim Vrbata": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1323.png&w=350&h=254",
         }
 
 daydict = {
