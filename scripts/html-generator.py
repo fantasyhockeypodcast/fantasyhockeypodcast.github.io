@@ -457,6 +457,17 @@ imagedict = {
         "Mika Zibanejad": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562637.png&w=350&h=254",
         "Anthony Mantha": "http://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=anthony-mantha&width=620&height=620",
         "Radim Vrbata": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1323.png&w=350&h=254",
+        "Derick Brassard": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3506.png&w=350&h=254",
+        "Jake Gardiner": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5830.png&w=350&h=254",
+        "Josh Morrissey": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042016.png&w=350&h=254",
+        "Sami Vatanen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590835.png&w=350&h=254",
+        "Connor Brown": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067951.png&w=350&h=254",
+        "Erik Johnson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3649.png&w=350&h=254",
+        "Zack Smith": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5025.png&w=350&h=254",
+        "Sam Reinhart": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114722.png&w=350&h=254",
+        "Bobby Ryan": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3264.png&w=350&h=254",
+        "Jacob Trouba": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976839.png&w=350&h=254",
+        "Ryan Dzingel": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3070196.png&w=350&h=254",
         }
 
 daydict = {
