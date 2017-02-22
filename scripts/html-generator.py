@@ -468,6 +468,14 @@ imagedict = {
         "Bobby Ryan": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3264.png&w=350&h=254",
         "Jacob Trouba": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976839.png&w=350&h=254",
         "Ryan Dzingel": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3070196.png&w=350&h=254",
+        "Alex Galchenyuk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2966502.png&w=350&h=254",
+        "David Krejci": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3343.png&w=350&h=254",
+        "Shayne Gostisbehere": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025662.png&w=350&h=254",
+        "Mathieu Perreault": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3886.png&w=350&h=254",
+        "Carter Hutton": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5420.png&w=350&h=254",
+        "Richard Panik": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5332.png&w=350&h=254",
+        "Reilly Smith": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2500990.png&w=350&h=254",
+        "Henrik Zetterberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1964.png&w=350&h=254",
         }
 
 daydict = {
