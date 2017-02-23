@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep23 {
+  min-height: 200px;
+background: url('http://pbs.twimg.com/media/C5PtiCMUcAAgW7X.jpg:large') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep22:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep22 {
   min-height: 200px;
 background: url('http://s3.amazonaws.com/si-fl-wp/wp-content/uploads/20170219133331/MikeSmith.jpg') center/cover;
