@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep25 {
+  min-height: 200px;
+background: url('https://pbs.twimg.com/media/C5Z1s7nWQAA8bDa.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep25:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep24 {
   min-height: 200px;
 background: url('http://assets1.sportsnet.ca/wp-content/uploads/2017/02/alex-ovechkin-nicklas-backstrom-michal-neuvirth.jpg') center/cover;
