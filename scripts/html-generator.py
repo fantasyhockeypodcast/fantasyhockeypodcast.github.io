@@ -483,6 +483,11 @@ imagedict = {
         "Gabriel Landeskog": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562609.png&w=350&h=254",
         "Ben Bishop": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3866.png&w=350&h=254",
         "Michael Stone": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5148.png&w=350&h=254",
+        "Jason Spezza": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1183.png&w=350&h=254",
+        "Anze Kopitar": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3183.png&w=350&h=254",
+        "Alex Petrovic": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5620.png&w=350&h=254",
+        "Jonathan Toews": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3669.png&w=350&h=254",
+        "Nicholas Baptiste": "http://cdn1-www.hockeysfuture.com/assets/uploads/2013/05/nick_baptiste.jpg",
         }
 
 daydict = {
