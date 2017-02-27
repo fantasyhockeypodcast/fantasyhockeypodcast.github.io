@@ -488,10 +488,16 @@ imagedict = {
         "Alex Petrovic": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5620.png&w=350&h=254",
         "Jonathan Toews": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3669.png&w=350&h=254",
         "Nicholas Baptiste": "http://cdn1-www.hockeysfuture.com/assets/uploads/2013/05/nick_baptiste.jpg",
+        "Laurent Brossoit": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3026526.png&w=350&h=254",
+        "Travis Zajac": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3321.png&w=350&h=254",
+        "Jakob Chychrun": "http://cdn2-www.hockeysfuture.com/assets/uploads/2015/11/jakob_chychrun_sarnia_sting.jpg",
+        "Tobias Rieder": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2564163.png&w=350&h=254",
+        "Tanner Pearson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976860.png&w=350&h=254",
+        "Tyler Toffoli": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5550.png&w=350&h=254",
         }
 
 daydict = {
-        "monday":["Grammar School", "Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"], 
+        "monday":["Grammar School", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"], 
         "tuesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"],
         "wednesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Unsustainably High Picks", "Unsustainably Low Picks", "Our Top Picks of the Night", "Our Value Picks of the Night"],
         "thursday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"],
