@@ -95,6 +95,20 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+
+.mdl section > .section__play-btn.ep26 {
+  min-height: 200px;
+background: url('http://www.post-gazette.com/image/2017/02/26/ca0,7,2600,1740/20170225mfpenssports05.JPG') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep26:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep25 {
   min-height: 200px;
 background: url('https://pbs.twimg.com/media/C5Z1s7nWQAA8bDa.jpg') center/cover;
