@@ -494,6 +494,20 @@ imagedict = {
         "Tobias Rieder": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2564163.png&w=350&h=254",
         "Tanner Pearson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976860.png&w=350&h=254",
         "Tyler Toffoli": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5550.png&w=350&h=254",
+        "Jason Pominville": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1531.png&w=350&h=254",
+        "Ian Cole": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4991.png&w=350&h=254",
+        "Andrew Ladd": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3191.png&w=350&h=254",
+        "Andrei Markov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/574.png&w=350&h=254",
+        "Mathew Dumba": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2970689.png&w=350&h=254",
+        "Roman Josi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5436.png&w=350&h=254",
+        "Zach Parise": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2975.png&w=350&h=254",
+        "Dan Girardi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3423.png&w=350&h=254",
+        "Calvin Pickard": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5524.png&w=350&h=254",
+        "Nick Schmaltz": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114770.png&w=350&h=254",
+        "Sam Bennett": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114732.png&w=350&h=254",
+        "Andrei Vasilevskiy": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976847.png&w=350&h=254",
+        "Colton Parayko": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069341.png&w=350&h=254",
+        "Marian Gaborik": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/290.png&w=350&h=254",
         }
 
 daydict = {
