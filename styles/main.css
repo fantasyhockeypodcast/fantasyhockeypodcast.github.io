@@ -95,6 +95,44 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep30 {
+  min-height: 200px;
+background: url('https://i.cbc.ca/1.4007827.1488503200!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/subban-pk.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep30:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep28 {
+  min-height: 200px;
+background: url('http://s3.amazonaws.com/si-fl-wp/wp-content/uploads/20170224112554/toews-900-x-3501.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep28:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep27 {
+  min-height: 200px;
+background: url('http://cdn-s3.si.com/styles/marquee_large_2x/s3/images/jon-quick-kings-nhl-1300.jpg?itok=B2QN3Otd') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep27:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
 
 .mdl section > .section__play-btn.ep26 {
   min-height: 200px;
