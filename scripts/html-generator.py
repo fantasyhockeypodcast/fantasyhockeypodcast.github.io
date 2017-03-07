@@ -540,6 +540,19 @@ imagedict = {
         "Valtteri Filppula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3144.png&w=350&h=254",
         "P.A. Parenteau": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2101.png&w=350&h=254",
         "Jarome Iginla": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/401.png&w=350&h=254",
+        "Viktor Stalberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5355.png&w=350&h=254",
+        "Xavier Ouellet": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563079.png&w=350&h=254",
+        "Andreas Athanasiou": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3068035.png&w=350&h=254",
+        "Mark Borowiecki": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2555470.png&w=350&h=254",
+        "Jaccob Slavin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069836.png&w=350&h=254",
+        "Johnny Boychuk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2072.png&w=350&h=254",
+        "Radek Faksa": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976842.png&w=350&h=254",
+        "P.K. Subban": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4044.png&w=350&h=254",
+        "Jack Eichel": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3648002.png&w=350&h=254",
+        "Conor Sheary": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3149827.png&w=350&h=254",
+        "Mike Cammalleri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1517.png&w=350&h=254",
+        "James Reimer": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3870.png",
+        "Michael Grabner": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3558.png&w=350&h=254",
         }
 
 new_player_images = {}
