@@ -3,12 +3,31 @@ page_title = raw_input("Enter a title for the page: ")
 page_description = raw_input("Enter a description for the page: ")
 page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
+daydict = {
+        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"]}, 
+        "tuesday":{"show_notes":["Game Review", "Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "wednesday":{"show_notes":["Game Review", "Unsustainable Segment", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Unsustainably High Picks", "Unsustainably Low Picks", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "thursday":{"show_notes":["Game Review", "NHL News", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "friday":{"show_notes":["Game Review", "Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
+        }
+
+podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
+show_notes_list = []
+if podcast_type:
+    show_notes_list = daydict[podcast_type]["show_notes"]
+
+if not show_notes_list:
+    show_notes_list = []
+    while True:
+        note = raw_input("Enter a show note (ie: Grammar School) or leave empty to complete show notes: ")
+        if not note:
+            break
+        show_notes_list.append(note)
+
 show_notes = ""
-while True:
-    note = raw_input("Enter a show note (ie: Grammar School - 1:00) or leave empty to complete show notes: ")
-    if not note:
-        break
-    show_notes += "\n<br>" + note
+for note in show_notes_list:
+    time = raw_input("Enter a time for note " + note + ": ")
+    show_notes += "\n<br>" + note + " - " + time
 
 html = """<!doctype html>
 <html>
@@ -508,21 +527,25 @@ imagedict = {
         "Andrei Vasilevskiy": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976847.png&w=350&h=254",
         "Colton Parayko": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069341.png&w=350&h=254",
         "Marian Gaborik": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/290.png&w=350&h=254",
+        "Alex Burrows": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3259.png&w=350&h=254",
+        "Mark Streit": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3256.png&w=350&h=254",
+        "Jiri Hudler": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2120.png&w=350&h=254",
+        "Ryan White": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3813.png&w=350&h=254",
+        "Jyrki Jokipakka": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5813.png&w=350&h=254",
+        "Brian Boyle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3648.png&w=350&h=254",
+        "Tomas Jurco": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563055.png&w=350&h=254",
+        "Zach Sanford": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042061.png&w=350&h=254",
+        "Curtis Lazar": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042023.png&w=350&h=254",
+        "Josh Ho-Sang": "http://cdn1-www.hockeysfuture.com/assets/uploads/2013/12/josh_ho_sang_windsor.jpg",
+        "Valtteri Filppula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3144.png&w=350&h=254",
+        "P.A. Parenteau": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2101.png&w=350&h=254",
+        "Jarome Iginla": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/401.png&w=350&h=254",
         }
 
-daydict = {
-        "monday":["Grammar School", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"], 
-        "tuesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"],
-        "wednesday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Unsustainably High Picks", "Unsustainably Low Picks", "Our Top Picks of the Night", "Our Value Picks of the Night"],
-        "thursday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"],
-        "friday":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]
-        }
-
-podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
 new_player_images = {}
 titles = []
 if podcast_type:
-    titles = daydict[podcast_type]
+    titles = daydict[podcast_type]["titles"]
 
 if not titles:
     titles = []
