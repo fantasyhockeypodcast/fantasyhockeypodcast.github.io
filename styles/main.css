@@ -95,6 +95,32 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep32 {
+  min-height: 200px;
+background: url('http://www.mcclatchy-wires.com/incoming/1o7gto/picture136853333/ALTERNATES/FREE_1140/Rangers_Lightning_Hockey_58626.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep32:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep31 {
+  min-height: 200px;
+background: url('https://nhl.bamcontent.com/images/photos/279434650/1284x722/cut.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep31:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep30 {
   min-height: 200px;
 background: url('https://i.cbc.ca/1.4007827.1488503200!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/subban-pk.jpg') center/cover;
@@ -103,6 +129,19 @@ background: url('https://i.cbc.ca/1.4007827.1488503200!/fileImage/httpImage/imag
 }
 
 .mdl section > .section__play-btn.ep30:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep29 {
+  min-height: 200px;
+background: url('http://media.cmgdigital.com/shared/img/photos/2017/03/02/a2/74/e7818e8a465840fd98fa6c57a2a58151-7014f64464234c39a880102f71ac6cca-2.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep29:hover {
   min-height: 200px;
     opacity: .9;
     
