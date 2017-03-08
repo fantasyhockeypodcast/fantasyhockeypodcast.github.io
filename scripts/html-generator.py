@@ -553,6 +553,9 @@ imagedict = {
         "Mike Cammalleri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1517.png&w=350&h=254",
         "James Reimer": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3870.png",
         "Michael Grabner": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3558.png&w=350&h=254",
+        "Morgan Rielly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976833.png&w=350&h=254",
+        "Esa Lindell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069352.png&w=350&h=254",
+        "Micheal Ferland": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5579.png&w=350&h=254",
         }
 
 new_player_images = {}
