@@ -556,6 +556,7 @@ imagedict = {
         "Morgan Rielly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976833.png&w=350&h=254",
         "Esa Lindell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069352.png&w=350&h=254",
         "Micheal Ferland": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5579.png&w=350&h=254",
+        "Joe Thornton": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/939.png&w=350&h=254",
         }
 
 new_player_images = {}
