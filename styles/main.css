@@ -95,9 +95,35 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep34 {
+  min-height: 200px;
+background: url('http://images2.9c9media.com/image_asset/2017_3_8_477e6230-f80c-4510-ae4f-c82801f7220d_jpg_1920x1080.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep34:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+.mdl section > .section__play-btn.ep33 {
+  min-height: 200px;
+background: url('https://cdn0.vox-cdn.com/thumbor/M9a1TUl4OFhBRvxF2TKMOpP1Gs8=/0x194:1942x1286/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/53590087/usa_today_9925238.0.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep33:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep32 {
   min-height: 200px;
-background: url('http://www.sportjust.com/wp-content/uploads/2017/03/07rangers-superJumbo.jpg') center/cover;
+background: url('http://www.mcclatchy-wires.com/incoming/1o7gto/picture136853333/ALTERNATES/FREE_1140/Rangers_Lightning_Hockey_58626.jpg') center/cover;
     opacity: .3;
     
 }
