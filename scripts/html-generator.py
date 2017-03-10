@@ -557,6 +557,10 @@ imagedict = {
         "Esa Lindell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069352.png&w=350&h=254",
         "Micheal Ferland": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5579.png&w=350&h=254",
         "Joe Thornton": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/939.png&w=350&h=254",
+        "John Carlson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5118.png&w=350&h=254",
+        "Petr Mrazek": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5619.png&w=350&h=254",
+        "T.J. Brodie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5162.png&w=350&h=254",
+        "Jake Allen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5111.png&w=350&h=254",
         }
 
 new_player_images = {}
