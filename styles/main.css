@@ -95,6 +95,19 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep36 {
+  min-height: 200px;
+background: url('https://cdn1.vox-cdn.com/uploads/chorus_image/image/53574455/648895554.0.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep36:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep35 {
   min-height: 200px;
 background: url('https://thenypost.files.wordpress.com/2017/03/rangers-hurricanes.jpg?quality=90&strip=all&strip=all') center/cover;
