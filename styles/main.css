@@ -95,6 +95,33 @@ html, body {
     background: url('/images/Artboard%206.png') center/cover;
 }
 
+.mdl section > .section__play-btn.ep38 {
+  min-height: 200px;
+background: url('http://stmedia.stimg.co/08-1002570333+08WILD010117.jpg?fit=crop&crop=faces') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep38:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
+
+.mdl section > .section__play-btn.ep37 {
+  min-height: 200px;
+background: url('http://68.media.tumblr.com/492c491f8e85c4decdee116e715d2d84/tumblr_omkz0nz74o1w6e99ro1_1280.jpg') center/cover;
+    opacity: .3;
+    
+}
+
+.mdl section > .section__play-btn.ep37:hover {
+  min-height: 200px;
+    opacity: .9;
+    
+}
+
 .mdl section > .section__play-btn.ep36 {
   min-height: 200px;
 background: url('https://cdn1.vox-cdn.com/uploads/chorus_image/image/53574455/648895554.0.jpg') center/cover;
