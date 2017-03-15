@@ -561,6 +561,9 @@ imagedict = {
         "Petr Mrazek": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5619.png&w=350&h=254",
         "T.J. Brodie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5162.png&w=350&h=254",
         "Jake Allen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5111.png&w=350&h=254",
+        "Carl Hagelin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2300267.png&w=350&h=254",
+        "Kyle Turris": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3892.png&w=350&h=254",
+        "Ryan Ellis": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5169.png&w=350&h=254",
         }
 
 new_player_images = {}
