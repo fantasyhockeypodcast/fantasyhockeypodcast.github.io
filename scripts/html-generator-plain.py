@@ -7,11 +7,11 @@ page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Players to Consider This Week", "Potentially Returning From Injury", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
+        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"]},
+        "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"]},
+        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"]},
+        "thursday":{"show_notes":["NHL News", "Picks of the Night"]},
+        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"]}
         }
 
 podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
@@ -30,11 +30,7 @@ if not show_notes_list:
 show_notes = ""
 for note in show_notes_list:
     time = raw_input("Enter a time for note " + note + ": ")
-    if show_notes == "":
-        show_notes = "\n    "
-    else:
-        show_notes += "\n    <br>"
-    show_notes += note + " - " + time
+    show_notes += "\n<br>" + note + " - " + time
 
 html = """<!doctype html>
 <html>
@@ -190,6 +186,8 @@ html = """<!doctype html>
         <p class=\"main-paragraphs notes\">
         """ + show_notes + """
         </p>
+        <br>
+        <br>
 
         <p class=\"interlude\">
             Players Talked About
@@ -620,14 +618,10 @@ imagedict = {
         "Jonathan Drouin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041971.png&w=350&h=254",
         "Alex Tuch": "http://www.hockeydb.com/ihdb/photos/alex-tuch-2017-2331.jpg",
         "Sven Andrighetto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042092.png&w=350&h=254",
-        "Alec Martinez": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3927.png&w=350&h=254",
-        "Chris Stewart": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3526.png&w=350&h=254",
         }
 
 new_player_images = {}
 titles = ["Players Discussed"]
-if podcast_type:
-    titles = daydict[podcast_type]["titles"]
 
 for title in titles:
     print "Starting section " + title
@@ -642,7 +636,7 @@ for title in titles:
         else:
             image = raw_input("Add image for " + player + ": ")
             new_player_images[player] = image
-        html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
+        html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" style=\"height:5em;\" src=\"" + image + "\">\n        <br>\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
     html += "</div>\n\n"
     print "Completed section " + title + "\n"
 

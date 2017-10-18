@@ -1,17 +1,14 @@
-import fileinput
-
 episode_number = raw_input("Enter episode number: ")
 page_title = raw_input("Enter a title for the page: ")
 page_description = raw_input("Enter a description for the page: ")
 page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
-pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Players to Consider This Week", "Potentially Returning From Injury", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
+        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Players to Consider This Week", "Potentially Returning From Injury", "Our Top Picks of the Night", "Our Value Picks of the Night"]}, 
+        "tuesday":{"show_notes":["Game Review", "Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "wednesday":{"show_notes":["Game Review", "Unsustainable Segment", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Unsustainably High Picks", "Unsustainably Low Picks", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "thursday":{"show_notes":["Game Review", "NHL News", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "friday":{"show_notes":["Game Review", "Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Our Top Picks of Last Podcast", "Our Value Picks of Last Podcast", "Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
         }
 
 podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
@@ -30,11 +27,7 @@ if not show_notes_list:
 show_notes = ""
 for note in show_notes_list:
     time = raw_input("Enter a time for note " + note + ": ")
-    if show_notes == "":
-        show_notes = "\n    "
-    else:
-        show_notes += "\n    <br>"
-    show_notes += note + " - " + time
+    show_notes += "\n<br>" + note + " - " + time
 
 html = """<!doctype html>
 <html>
@@ -190,6 +183,8 @@ html = """<!doctype html>
         <p class=\"main-paragraphs notes\">
         """ + show_notes + """
         </p>
+        <br>
+        <br>
 
         <p class=\"interlude\">
             Players Talked About
@@ -522,6 +517,7 @@ imagedict = {
         "Ian Cole": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4991.png&w=350&h=254",
         "Andrew Ladd": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3191.png&w=350&h=254",
         "Andrei Markov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/574.png&w=350&h=254",
+        "Mathew Dumba": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2970689.png&w=350&h=254",
         "Roman Josi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5436.png&w=350&h=254",
         "Zach Parise": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2975.png&w=350&h=254",
         "Dan Girardi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3423.png&w=350&h=254",
@@ -573,61 +569,20 @@ imagedict = {
         "Jordan Staal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3541.png&w=350&h=254",
         "Fredrik Claesson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2564148.png&w=350&h=254",
         "Daniel Sedin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/836.png&w=350&h=254",
-        "Semyon Varlamov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3759.png&w=350&h=254",
-        "Ryan Pulock": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042019.png&w=350&h=254",
-        "Steve Mason": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3657.png&w=350&h=254",
-        "Alex DeBrincat": "https://cdn.vox-cdn.com/thumbor/FSE2O2oAqwYMSSwItV3zC9Rgars=/0x0:3516x5298/1200x800/filters:focal(1062x988:1624x1550)/cdn.vox-cdn.com/uploads/chorus_image/image/56445543/543014906.0.jpg",
-        "Mathew Barzal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899946.png&w=350&h=254",
-        "Brayden Point": "https://b.fssta.com/uploads/application/nhl/players/831385.vresize.350.425.medium.35.png",
-        "Nico Hischier": "http://www.swisshabs.ch/uploads/articles/covers/%20Nico%20Hischier_4.jpg",
-        "Nolan Patrick": "http://973espn.com/files/2017/06/NPatrick.jpg?w=980&q=75",
-        "Kailer Yamamoto": "http://whl.uploads.s3.amazonaws.com/app/uploads/spokane_chiefs/2017/06/19222357/YamamotoNHLDraftPreview-1024x576.jpg",
-        "Jakub Vrana": "https://b.fssta.com/uploads/application/nhl/players/831078.vresize.350.425.medium.61.png",
-        "Anders Bjork": "http://cdn3-www.hockeysfuture.com/assets/uploads/2014/03/anders_bjork_ntdp.jpg",
-        "Zdeno Chara": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/145.png&w=350&h=254",
-        "Julius Honka": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114754.png&w=350&h=254",
-        "James Neal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3227.png&w=350&h=254",
-        "Brock Boeser": "http://images.dailyhive.com/20170627155115/brock-boeser.jpg",
-        "Vadim Shipachyov": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Vadim_Shipachev_May_4%2C_2014.jpg/230px-Vadim_Shipachev_May_4%2C_2014.jpg",
-        "Evgeny Dadonov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4969.png&w=350&h=254",
-        "Clayton Keller": "http://cdn3.sportngin.com/attachments/roster_player_info/6303/7766/USA_KELLER_CLAYTON_medium.jpg",
-        "Steven Stamkos": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5037.png&w=350&h=254",
-        "Shea Theodore": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477447.jpg",
-        "Alex Pietrangelo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4013.png&w=350&h=254",
-        "Ryan Hartman": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042063.png&w=350&h=254",
-        "John Klingberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590751.png&w=350&h=254",
-        "Brandon Saad": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563065.png&w=350&h=254",
-        "Mike Green": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3172.png&w=350&h=254",
-        "Jake DeBrusk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900240.png&w=350&h=254",
-        "Dustin Brown": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2288.png&w=350&h=254",
-        "Ryan Spooner": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5544.png&w=350&h=254",
-        "Charlie McAvoy": "https://nesncom.files.wordpress.com/2017/03/charlie-mcavoy.jpg",
-        "Leo Komarov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590558.png&w=350&h=254",
-        "Kari Lehtonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2106.png&w=350&h=254",
-        "Thomas Chabot": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900219.png&w=350&h=254",
-        "Olli Maatta": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976850.png&w=350&h=254",
-        "Will Butcher": "http://cdn1-www.hockeysfuture.com/assets/uploads/2013/06/will_butcher.jpg",
-        "Kevin Labanc": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151792.png&w=350&h=254",
-        "Vladimir Sobotka": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3714.png&w=350&h=254",
-        "Sean Couturier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562601.png&w=350&h=254",
-        "Jesper Bratt": "http://media.gettyimages.com/photos/jesper-bratt-poses-for-a-portrait-after-being-selected-162nd-overall-picture-id583631420?s=612x612",
-        "Sonny Milano": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477947.jpg",
-        "Martin Frk": "http://www.hockeydb.com/ihdb/photos/martin-frk-2016-34.jpg",
-        "Jan Rutta": "http://www.ehshockey.com/upload/images/clients/rutta.jpg",
-        "Jaroslav Halak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3116.png&w=350&h=254",
-        "Nail Yakupov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2966500.png&w=350&h=254",
-        "Nate Schmidt": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3024798.png&w=350&h=254",
-        "Jonathan Drouin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041971.png&w=350&h=254",
-        "Alex Tuch": "http://www.hockeydb.com/ihdb/photos/alex-tuch-2017-2331.jpg",
-        "Sven Andrighetto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042092.png&w=350&h=254",
-        "Alec Martinez": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3927.png&w=350&h=254",
-        "Chris Stewart": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3526.png&w=350&h=254",
         }
 
 new_player_images = {}
-titles = ["Players Discussed"]
+titles = []
 if podcast_type:
     titles = daydict[podcast_type]["titles"]
+
+if not titles:
+    titles = []
+    while True:
+        title = raw_input("Enter a title for a section, or leave empty to move on to adding players to your sections: ")
+        if not title:
+            break
+        titles.append(title)
 
 for title in titles:
     print "Starting section " + title
@@ -642,15 +597,12 @@ for title in titles:
         else:
             image = raw_input("Add image for " + player + ": ")
             new_player_images[player] = image
-        html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
+        html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <br>\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
     html += "</div>\n\n"
     print "Completed section " + title + "\n"
 
 html += html_close
-
-episode_filename = "ep-"+episode_number+".html"
-
-html_file = open("../"+episode_filename, "w")
+html_file = open("../ep-"+episode_number+".html", "w")
 html_file.write(html)
 html_file.close()
 
@@ -658,45 +610,4 @@ if len(new_player_images) > 0:
     print "\n\nAdd the following players and images to the database:\n\n" 
     for player, image in new_player_images.iteritems():
         print "\"" + player + "\": \"" + image + "\","
-
-episode = """
-          <!------ EPISODE """ + episode_number + """----->
-          <div class=\"mdl-layout__tab-panel is-active\" id=\"overview\">
-          <section class=\"section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp\">
-            <header class=\"section__play-btn episode mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white\" style=\"background: url(""" + page_image + """ ) center/cover;\">
-            
-            </header>
-              
-            <div class=\"mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone\">
-              <div class=\"mdl-card__supporting-text\">
-                <h4 style=\"font-family:product sans;\">""" + page_title + """</h4>
-                """ + page_description + """
-                <br>
-                  
-                  <br>
-                  <div style=\"opacity:.9;\">
-                   <audio controls style=\"width:100%;\">
-                      <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
-                            Your browser does not support the audio element.
-                      </audio>
-                  </div>
-              </div>
-              <div class=\"mdl-card__actions\">
-                <a href=""" + "\"" + episode_filename + """\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\">Read more</a>
-                 <i style=\"vertical-align:middle;opacity:.7;\" class=\"material-icons\">schedule</i>
-                  <text style=\"font-size:.8em;opacity:.6\"> """ + pod_length + """ min.</text>
-                
-              </div>
-            </div>
-          </section>
-          </div>
-"""
-
-fi = fileinput.input("../index.html",inplace=True)
-for line in fi:
-    if "<!----- EPISODES START ----->" in line:
-        line=line.replace(line,line+episode)
-    print line,
-fi.close()
-
 raw_input()

@@ -195,8 +195,8 @@ a {
     text-align: center;
     font-weight: 800;
     opacity: .6;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
     
 }
 
@@ -398,6 +398,8 @@ a .twitter-share-button{
     border-radius: 50%;
     display: grid;
     opacity:.6;
+    height: 5em;
+    margin: auto;
 }
 
 .img-circle:hover {
@@ -428,7 +430,8 @@ a .twitter-share-button{
     position: inherit;
     text-align: center;
     display:inline-block;
-   
+    padding-bottom: 1em;  
+    width: 7em;
 }
 
 /* Tooltip text */
