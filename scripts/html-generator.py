@@ -7,9 +7,9 @@ page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Players to Consider This Week", "Potentially Returning From Injury", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Long Term Pickup Suggestions", "Potentially Returning From Injury", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low Picks (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
         }
@@ -622,6 +622,39 @@ imagedict = {
         "Sven Andrighetto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042092.png&w=350&h=254",
         "Alec Martinez": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3927.png&w=350&h=254",
         "Chris Stewart": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3526.png&w=350&h=254",
+        "Michael Del Zotto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5062.png&w=350&h=254",
+        "Mikhail Sergachev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024868.png&w=350&h=254",
+        "Andrew Cogliano": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3655.png&w=350&h=254",
+        "Brandon Montour": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3115032.png&w=350&h=254",
+        "Hampus Lindholm": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2968818.png&w=350&h=254",
+        "Alex Iafallo": "http://umdbulldogs.com/images/2016/9/13/Iafallo_Alex.JPG?width=300",
+        "Josh Manson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590829.png&w=350&h=254",
+        "Christian Djoos": "http://www.hockeydb.com/ihdb/photos/christian-djoos-2017-49.jpg",
+        "Rick Nash": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1569.png&w=350&h=254",
+        "Boone Jenner": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563054.png&w=350&h=254",
+        "Marcus Johansson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5714.png&w=350&h=254",
+        "Marc-Edouard Vlasic": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3371.png&w=350&h=254",
+        "Jaden Schwartz": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5835.png&w=350&h=254",
+        "Jake Virtanen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114734.png&w=350&h=254",
+        "Adrian Kempe": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114802.png&w=350&h=254",
+        "Oscar Dansk": "https://b.fssta.com/uploads/application/nhl/players/660780.vresize.350.425.medium.37.png",
+        "Derek Dorsett": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3641.png&w=350&h=254",
+        "William Karlsson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563057.png&w=350&h=254",
+        "Elias Lindholm": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041994.png&w=350&h=254",
+        "Kyle Connor": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899952.png&w=350&h=254",
+        "Chris DiDomenico": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4917.png&w=350&h=254",
+        "Keith Yandle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3330.png&w=350&h=254",
+        "Pavel Buchnevich": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042081.png&w=350&h=254",
+        "Teuvo Teravainen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2592095.png&w=350&h=254",
+        "Phillip Danault": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562602.png&w=350&h=254",
+        "Ivan Provorov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899939.png&w=350&h=254",
+        "Kyle Palmieri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5517.png&w=350&h=254",
+        "Colin Miller": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590796.png&w=350&h=254",
+        "Adam Larsson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562610.png&w=350&h=254",
+        "Joel Edmundson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563034.png&w=350&h=254",
+        "Josh Anderson": "http://www.sportsnet.ca/wp-content/uploads/players/nhl/j/josh-anderson.png",
+        "Lee Stempniak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3083.png&w=350&h=254",
+        "Tom Wilson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2970615.png&w=350&h=254",
         }
 
 new_player_images = {}
