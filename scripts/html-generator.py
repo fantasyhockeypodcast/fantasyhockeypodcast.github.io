@@ -655,6 +655,8 @@ imagedict = {
         "Josh Anderson": "http://www.sportsnet.ca/wp-content/uploads/players/nhl/j/josh-anderson.png",
         "Lee Stempniak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3083.png&w=350&h=254",
         "Tom Wilson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2970615.png&w=350&h=254",
+        "Lars Eller": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3946.png&w=350&h=254",
+        "Alex Goligoski": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3757.png&w=350&h=254",
         }
 
 new_player_images = {}
