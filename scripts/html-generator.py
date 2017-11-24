@@ -657,6 +657,11 @@ imagedict = {
         "Tom Wilson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2970615.png&w=350&h=254",
         "Lars Eller": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3946.png&w=350&h=254",
         "Alex Goligoski": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3757.png&w=350&h=254",
+        "Artem Anisimov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3756.png&w=350&h=254",
+        "Sean Monahan": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041996.png&w=350&h=254",
+        "Anton Khudobin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3760.png&w=350&h=254",
+        "Tyler Myers": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5052.png&w=350&h=254",
+        "Darnell Nurse": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041997.png&w=350&h=254",
         }
 
 new_player_images = {}
