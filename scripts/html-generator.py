@@ -11,7 +11,8 @@ daydict = {
         "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low Picks (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]}
+        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
 
 podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
@@ -662,6 +663,9 @@ imagedict = {
         "Anton Khudobin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3760.png&w=350&h=254",
         "Tyler Myers": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5052.png&w=350&h=254",
         "Darnell Nurse": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041997.png&w=350&h=254",
+        "Brent Seabrook": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2389.png&w=350&h=254",
+        "David Rittich": "http://www.sportsnet.ca/wp-content/uploads/players/nhl/d/david-rittich.png",
+        "Malcolm Subban": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976852.png&w=350&h=254",
         }
 
 new_player_images = {}
