@@ -664,7 +664,7 @@ imagedict = {
         "Tyler Myers": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5052.png&w=350&h=254",
         "Darnell Nurse": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041997.png&w=350&h=254",
         "Brent Seabrook": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2389.png&w=350&h=254",
-        "David Rittich": "http://www.sportsnet.ca/wp-content/uploads/players/nhl/d/david-rittich.png",
+        "David Rittich": "https://b.fssta.com/uploads/application/nhl/players/918210.vresize.350.425.medium.46.png",
         "Malcolm Subban": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976852.png&w=350&h=254",
         }
 
