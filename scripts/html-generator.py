@@ -666,6 +666,10 @@ imagedict = {
         "Brent Seabrook": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2389.png&w=350&h=254",
         "David Rittich": "https://b.fssta.com/uploads/application/nhl/players/918210.vresize.350.425.medium.46.png",
         "Malcolm Subban": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976852.png&w=350&h=254",
+        "Bryan Little": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3508.png&w=350&h=254",
+        "Cody Franson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3422.png&w=350&h=254",
+        "Mattias Ekholm": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2558631.png&w=350&h=254",
+        "Alexander Edler": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3464.png&w=350&h=254",
         }
 
 new_player_images = {}
