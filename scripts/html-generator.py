@@ -670,7 +670,13 @@ imagedict = {
         "Cody Franson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3422.png&w=350&h=254",
         "Mattias Ekholm": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2558631.png&w=350&h=254",
         "Alexander Edler": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3464.png&w=350&h=254",
-        }
+        "Justin Williams": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1023.png&w=350&h=254",
+        "Jeff Petry": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5407.png&w=350&h=254",
+        "Alexander Kerfoot": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069394.png&w=350&h=254",
+        "Darcy Kuemper": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2610321.png&w=350&h=254",
+        "Tristan Jarry": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042020.png&w=350&h=254",
+        "Seth Jones": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041992.png&w=350&h=254",
+}
 
 new_player_images = {}
 titles = ["Players Discussed"]
