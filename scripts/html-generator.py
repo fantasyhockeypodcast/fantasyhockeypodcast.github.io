@@ -682,6 +682,9 @@ imagedict = {
     "Anton Forsberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3036851.png&w=350&h=254",
     "Rickard Rakell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562629.png&w=350&h=254",
     "Adam Henrique": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5074.png&w=350&h=254",
+    "Scott Wedgewood": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5622.png&w=350&h=254",
+    "Jesse Puljujarvi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024839.png&w=350&h=254",
+    "Craig Smith": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2570752.png&w=350&h=254",
 }
 
 new_player_images = {}
