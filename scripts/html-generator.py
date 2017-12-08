@@ -685,6 +685,10 @@ imagedict = {
     "Scott Wedgewood": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5622.png&w=350&h=254",
     "Jesse Puljujarvi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024839.png&w=350&h=254",
     "Craig Smith": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2570752.png&w=350&h=254",
+    "Daniel Carr": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025657.png&w=350&h=254",
+    "Pierre Luc-Dubois": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024833.png&w=350&h=254",
+    "Michael Raffl": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3037290.png&w=350&h=254",
+    "Joonas Korpisalo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069266.png&w=350&h=254",
 }
 
 new_player_images = {}
