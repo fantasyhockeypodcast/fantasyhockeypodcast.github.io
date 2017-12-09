@@ -689,6 +689,7 @@ imagedict = {
     "Pierre Luc-Dubois": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024833.png&w=350&h=254",
     "Michael Raffl": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3037290.png&w=350&h=254",
     "Joonas Korpisalo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069266.png&w=350&h=254",
+    "Alexander Steen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3113.png&w=350&h=254",
 }
 
 new_player_images = {}
