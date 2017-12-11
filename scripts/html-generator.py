@@ -8,7 +8,7 @@ page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Long Term Pickup Suggestions", "Potentially Returning From Injury", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Weekend's Best Players", "Weekend's Worst Players", "Long Term Pickup Suggestions", "Potentially Returning From Injury", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably Low Picks (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
         "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
@@ -686,10 +686,15 @@ imagedict = {
     "Jesse Puljujarvi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024839.png&w=350&h=254",
     "Craig Smith": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2570752.png&w=350&h=254",
     "Daniel Carr": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025657.png&w=350&h=254",
-    "Pierre Luc-Dubois": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024833.png&w=350&h=254",
+    "Pierre-Luc Dubois": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024833.png&w=350&h=254",
     "Michael Raffl": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3037290.png&w=350&h=254",
     "Joonas Korpisalo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069266.png&w=350&h=254",
     "Alexander Steen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3113.png&w=350&h=254",
+    "Pierre-Luc Dubois": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024833.png&w=350&h=254",
+    "Erik Haula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2593311.png&w=350&h=254",
+    "Kevin Fiala": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114743.png&w=350&h=254",
+    "Dmitrij Jaskin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563053.png&w=350&h=254",
+    "Justin Abdelkader": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3898.png&w=350&h=254",
 }
 
 new_player_images = {}
