@@ -696,6 +696,7 @@ imagedict = {
     "Dmitrij Jaskin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563053.png&w=350&h=254",
     "Justin Abdelkader": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3898.png&w=350&h=254",
     "Trevor van Riemsdyk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025524.png&w=350&h=254",
+    "Radko Gudas": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5502.png&w=350&h=254",
 }
 
 new_player_images = {}
