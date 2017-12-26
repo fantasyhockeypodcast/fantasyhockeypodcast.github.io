@@ -698,6 +698,7 @@ imagedict = {
     "Trevor van Riemsdyk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025524.png&w=350&h=254",
     "Radko Gudas": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5502.png&w=350&h=254",
     "Henrik Sedin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/837.png&w=350&h=254",
+    "Ryan O'Reilly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5208.png&w=350&h=254",
 }
 
 new_player_images = {}
