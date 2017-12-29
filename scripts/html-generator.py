@@ -699,6 +699,10 @@ imagedict = {
     "Radko Gudas": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5502.png&w=350&h=254",
     "Henrik Sedin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/837.png&w=350&h=254",
     "Ryan O'Reilly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5208.png&w=350&h=254",
+    "Danton Heinen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151741.png&w=350&h=254",
+    "Gustav Forsling": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151784.png&w=350&h=254",
+    "Calvin DeHaan": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5266.png&w=350&h=254",
+    "Ryan Nugent-Hopkins": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562624.png&w=350&h=254",
 }
 
 new_player_images = {}
