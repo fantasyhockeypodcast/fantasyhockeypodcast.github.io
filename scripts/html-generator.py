@@ -703,6 +703,8 @@ imagedict = {
     "Gustav Forsling": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151784.png&w=350&h=254",
     "Calvin DeHaan": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5266.png&w=350&h=254",
     "Ryan Nugent-Hopkins": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562624.png&w=350&h=254",
+    "Jordan Oesterle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3097115.png&w=350&h=254",
+    "Tyler Bertuzzi": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477479.jpg",
 }
 
 new_player_images = {}
