@@ -705,6 +705,8 @@ imagedict = {
     "Ryan Nugent-Hopkins": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562624.png&w=350&h=254",
     "Jordan Oesterle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3097115.png&w=350&h=254",
     "Tyler Bertuzzi": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477479.jpg",
+    "Jared Spurgeon": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5079.png&w=350&h=254",
+    "Vincent Hinostroza": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069613.png&w=350&h=254",
 }
 
 new_player_images = {}
