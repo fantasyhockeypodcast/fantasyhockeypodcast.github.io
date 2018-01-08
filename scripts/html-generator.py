@@ -757,8 +757,7 @@ if len(new_player_images) > 0:
 
 if len(unique_players) > 0:
     print "\n\nAdd the following players to keywords:\n\n"
-    for player in unique_players:
-        print player
+    print ", ".join(unique_players)
 
 episode = """
           <!------ EPISODE """ + episode_number + """----->
