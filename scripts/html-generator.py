@@ -717,21 +717,29 @@ titles = ["Players Discussed"]
 if podcast_type:
     titles = daydict[podcast_type]["titles"]
 
+unique_players = []
 for title in titles:
     print "Starting section " + title
-    html += "<p class=\"players-interlude\">\n    " + title + "\n</p>\n\n<div class=\"players\">\n"
+    players = []
     while True:
         player = raw_input("Enter a player name, or leave empty to complete the section: ")
         if not player:
             break
-        image = ""
-        if player in imagedict:
-            image = imagedict[player]
-        else:
-            image = raw_input("Add image for " + player + ": ")
-            new_player_images[player] = image
+        players.append(player)
+
+    if len(players) > 0:
+        html += "<p class=\"players-interlude\">\n    " + title + "\n</p>\n\n<div class=\"players\">\n"
+        for player in players:
+            if player not in unique_players:
+                unique_players.append(player)
+            image = ""
+            if player in imagedict:
+                image = imagedict[player]
+            else:
+                image = raw_input("Add image for " + player + ": ")
+                new_player_images[player] = image
         html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
-    html += "</div>\n\n"
+        html += "</div>\n\n"
     print "Completed section " + title + "\n"
 
 html += html_close
@@ -746,6 +754,11 @@ if len(new_player_images) > 0:
     print "\n\nAdd the following players and images to the database:\n\n" 
     for player, image in new_player_images.iteritems():
         print "\"" + player + "\": \"" + image + "\","
+
+if len(unique_players) > 0:
+    print "\n\nAdd the following players to keywords:\n\n"
+    for player in unique_players:
+        print player
 
 episode = """
           <!------ EPISODE """ + episode_number + """----->
