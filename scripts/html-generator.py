@@ -739,7 +739,7 @@ for title in titles:
             else:
                 image = raw_input("Add image for " + player + ": ")
                 new_player_images[player] = image
-        html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
+            html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
         html += "</div>\n\n"
     print "Completed section " + title + "\n"
 
