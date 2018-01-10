@@ -710,6 +710,7 @@ imagedict = {
     "Jeff Glass": "https://nhl.bamcontent.com/images/headshots/current/168x168/8471301.jpg",
     "Alex Stalock": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5223.png&w=350&h=254",
     "Daniel Sprong": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904181.png&w=350&h=254",
+    "Yanni Gourde": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3094261.png&w=350&h=254",
 }
 
 new_player_images = {}
