@@ -712,6 +712,7 @@ imagedict = {
     "Daniel Sprong": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904181.png&w=350&h=254",
     "Yanni Gourde": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3094261.png&w=350&h=254",
     "Jonathan Bernier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3533.png&w=350&h=254",
+    "Trevor Lewis": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3454.png&w=350&h=254",
 }
 
 new_player_images = {}
