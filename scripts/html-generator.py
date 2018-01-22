@@ -713,6 +713,8 @@ imagedict = {
     "Yanni Gourde": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3094261.png&w=350&h=254",
     "Jonathan Bernier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3533.png&w=350&h=254",
     "Trevor Lewis": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3454.png&w=350&h=254",
+    "Timo Meier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899978.png&w=350&h=254",
+    "Samuel Girard": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4063401.png&w=350&h=254",
 }
 
 new_player_images = {}
