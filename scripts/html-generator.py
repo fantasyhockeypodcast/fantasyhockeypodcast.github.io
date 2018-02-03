@@ -716,6 +716,8 @@ imagedict = {
     "Timo Meier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899978.png&w=350&h=254",
     "Samuel Girard": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4063401.png&w=350&h=254",
     "Anthony Beauvillier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904107.png&w=350&h=254",
+    "Casey DeSmith": "http://www.hockeydb.com/ihdb/photos/casey-desmith-2018-50.jpg",
+    "Harri Sateri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5536.png&w=350&h=254",
 }
 
 new_player_images = {}
