@@ -720,6 +720,7 @@ imagedict = {
     "Harri Sateri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5536.png&w=350&h=254",
     "Zach Hyman": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5509.png&w=350&h=254",
     "Greg Pateryn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4924.png&w=350&h=254",
+    "Riley Nash": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5005.png&w=350&h=254",
 }
 
 new_player_images = {}
