@@ -721,6 +721,8 @@ imagedict = {
     "Zach Hyman": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5509.png&w=350&h=254",
     "Greg Pateryn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4924.png&w=350&h=254",
     "Riley Nash": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5005.png&w=350&h=254",
+    "Mike Amadio": "http://www.hockeydb.com/ihdb/photos/mike-amadio-2016-40.jpg",
+    "Mikkel Boedker": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3976.png&w=350&h=254",
 }
 
 new_player_images = {}
