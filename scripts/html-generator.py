@@ -150,7 +150,7 @@ html = """<!doctype html>
       
       
     <div class=\"page-content\">
-        <img style=\"width:100%; opacity:.8;\" src=""" + "\"" + page_image + """\">
+        <img style=\"max-width:1000px; opacity:.8; margin:auto; display:block\" src=""" + "\"" + page_image + """\">
         <div class=\"container mdl-grid\">
         <div class=\"mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone\"></div>
         <div  class=\"content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col\">
@@ -723,6 +723,7 @@ imagedict = {
     "Riley Nash": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5005.png&w=350&h=254",
     "Mike Amadio": "http://www.hockeydb.com/ihdb/photos/mike-amadio-2016-40.jpg",
     "Mikkel Boedker": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3976.png&w=350&h=254",
+    "Nikolay Goldobin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114786.png&w=350&h=254",
 }
 
 new_player_images = {}
