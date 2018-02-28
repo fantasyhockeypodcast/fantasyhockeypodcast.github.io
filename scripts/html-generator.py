@@ -743,6 +743,10 @@ imagedict = {
     "Matt Beleskey": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3929.png&w=350&h=254",
     "Tommy Wingels": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4928.png&w=350&h=254",
     "Jussi Jokinen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3164.png&w=350&h=254",
+    "Ryan Carpenter": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096605.png&w=350&h=254",
+    "Brian Dumoulin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5738.png&w=350&h=254",
+    "Ivan Barbashev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114985.png&w=350&h=254",
+    "Zach Aston-Reese": "http://sportdesigns.com/images/headshots/noem/astonreese_zach.jpg",
 }
 
 new_player_images = {}
