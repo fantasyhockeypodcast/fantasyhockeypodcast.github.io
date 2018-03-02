@@ -747,6 +747,8 @@ imagedict = {
     "Brian Dumoulin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5738.png&w=350&h=254",
     "Ivan Barbashev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114985.png&w=350&h=254",
     "Zach Aston-Reese": "http://sportdesigns.com/images/headshots/noem/astonreese_zach.jpg",
+    "Jack Roslovic": "http://www.hockeydb.com/ihdb/photos/jack-roslovic-2017-6378.jpg",
+    "John Gilmour": "http://www.hockeydb.com/ihdb/photos/john-gilmour-2017-48.jpg",
 }
 
 new_player_images = {}
