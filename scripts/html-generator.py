@@ -749,6 +749,7 @@ imagedict = {
     "Zach Aston-Reese": "http://sportdesigns.com/images/headshots/noem/astonreese_zach.jpg",
     "Jack Roslovic": "http://www.hockeydb.com/ihdb/photos/jack-roslovic-2017-6378.jpg",
     "John Gilmour": "http://www.hockeydb.com/ihdb/photos/john-gilmour-2017-48.jpg",
+    "Brendan Leipsic": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067485.png&w=350&h=254",
 }
 
 new_player_images = {}
