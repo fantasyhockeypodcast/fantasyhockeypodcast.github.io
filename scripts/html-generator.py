@@ -751,6 +751,8 @@ imagedict = {
     "John Gilmour": "http://www.hockeydb.com/ihdb/photos/john-gilmour-2017-48.jpg",
     "Brendan Leipsic": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067485.png&w=350&h=254",
     "Erik Gustafsson": "https://vignette.wikia.nocookie.net/chicagoblackhawks/images/2/2b/Gustafsson.png/revision/latest?cb=20160710153213",
+    "Neal Pionk": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480145.jpg",
+    "Artturi Lehtonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
 }
 
 new_player_images = {}
