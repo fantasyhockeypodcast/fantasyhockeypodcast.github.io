@@ -588,7 +588,7 @@ imagedict = {
     "Kailer Yamamoto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233648.png&w=350&h=254",
     "Jakub Vrana": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114747.png&w=350&h=254",
     "Anders Bjork": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151742.png&w=350&h=254",
-    "Zdeno Chara": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/145./png&w=350&h=254",
+    "Zdeno Chara": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/145.png&w=350&h=254",
     "Julius Honka": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114754.png&w=350&h=254",
     "James Neal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3227.png&w=350&h=254",
     "Brock Boeser": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899979.png&w=350&h=254",
