@@ -753,6 +753,8 @@ imagedict = {
     "Erik Gustafsson": "https://vignette.wikia.nocookie.net/chicagoblackhawks/images/2/2b/Gustafsson.png/revision/latest?cb=20160710153213",
     "Neal Pionk": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480145.jpg",
     "Artturi Lehtonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
+    "Victor Rask": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563085.png&w=350&h=254",
+    "Carter Hart": "https://nhl.bamcontent.com/images/headshots/current/168x168/8479394.jpg"
 }
 
 new_player_images = {}
