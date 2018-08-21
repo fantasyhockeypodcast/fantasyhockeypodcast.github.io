@@ -755,6 +755,13 @@ imagedict = {
     "Artturi Lehtonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
     "Victor Rask": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563085.png&w=350&h=254",
     "Carter Hart": "https://nhl.bamcontent.com/images/headshots/current/168x168/8479394.jpg"
+    "Kristian Vesalainen": "https://files.eliteprospects.com/layout/players/kristian_vesalainen_hpk-1.jpg",
+    "Eeli Tolvanen": "https://files.eliteprospects.com/layout/players/ep_15_tolvanen,_eeli.jpg",
+    "Stephen Johns": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5759.png&w=350&h=254",
+    "Austin Watson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5556.png&w=350&h=254",
+    "J.T. Compher": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041995.png&w=350&h=254",
+    "Robby Fabbri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114774.png&w=350&h=254",
+    "Vince Dunn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904189.png&w=350&h=254",
 }
 
 new_player_images = {}
