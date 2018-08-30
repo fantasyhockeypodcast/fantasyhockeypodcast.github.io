@@ -754,7 +754,7 @@ imagedict = {
     "Neal Pionk": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480145.jpg",
     "Artturi Lehtonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
     "Victor Rask": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563085.png&w=350&h=254",
-    "Carter Hart": "https://nhl.bamcontent.com/images/headshots/current/168x168/8479394.jpg"
+    "Carter Hart": "https://nhl.bamcontent.com/images/headshots/current/168x168/8479394.jpg",
     "Kristian Vesalainen": "https://files.eliteprospects.com/layout/players/kristian_vesalainen_hpk-1.jpg",
     "Eeli Tolvanen": "https://files.eliteprospects.com/layout/players/ep_15_tolvanen,_eeli.jpg",
     "Stephen Johns": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5759.png&w=350&h=254",
@@ -762,6 +762,14 @@ imagedict = {
     "J.T. Compher": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3041995.png&w=350&h=254",
     "Robby Fabbri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114774.png&w=350&h=254",
     "Vince Dunn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904189.png&w=350&h=254",
+    "Kris Russell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3425.png&w=350&h=254",
+    "Gabriel Vilardi": "http://sports.windsorsquare.ca/wp-content/uploads/Gabriel-Vilardi-Spitfires-2.jpg",
+    "Spencer Foo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4196967.png&w=350&h=254",
+    "Ilya Kovalchuk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1175.png&w=350&h=254",
+    "Ty Rattie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563082.png&w=350&h=254",
+    "Dylan Strome": "http://www.hockeydb.com/ihdb/photos/dylan-strome-2018-7166.jpg",
+    "Elias Pettersson": "https://files.eliteprospects.com/layout/players/elias_pettersson_vaxjo.jpg",
+    "Adam Gaudette": "https://pbs.twimg.com/profile_images/884828588922609664/5POnCNmi_400x400.jpg",
 }
 
 new_player_images = {}
