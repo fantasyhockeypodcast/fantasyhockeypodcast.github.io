@@ -593,7 +593,7 @@ imagedict = {
     "James Neal": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3227.png&w=350&h=254",
     "Brock Boeser": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899979.png&w=350&h=254",
     "Vadim Shipachyov": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Vadim_Shipachev_May_4%2C_2014.jpg/230px-Vadim_Shipachev_May_4%2C_2014.jpg",
-    "Evgeny Dadonov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4969.png&w=350&h=254",
+    "Evgenii Dadonov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4969.png&w=350&h=254",
     "Clayton Keller": "http://cdn3.sportngin.com/attachments/roster_player_info/6303/7766/USA_KELLER_CLAYTON_medium.jpg",
     "Steven Stamkos": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5037.png&w=350&h=254",
     "Shea Theodore": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477447.jpg",
@@ -770,6 +770,14 @@ imagedict = {
     "Dylan Strome": "http://www.hockeydb.com/ihdb/photos/dylan-strome-2018-7166.jpg",
     "Elias Pettersson": "https://files.eliteprospects.com/layout/players/elias_pettersson_vaxjo.jpg",
     "Adam Gaudette": "https://pbs.twimg.com/profile_images/884828588922609664/5POnCNmi_400x400.jpg",
+    "Niklas Kronwall": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2127.png&w=350&h=254",
+    "Filip Zadina": "http://www.hockeydb.com/ihdb/photos/filip-zadina-2017-2083.jpg",
+    "Michael Matheson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976851.png&w=350&h=254",
+    "Kasperi Kapanen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114775.png&w=350&h=254",
+    "Casey Mittelstadt": "https://gogts.net/wp-content/uploads/2017/04/Casey-Mittelstadt-Green-Bay-Gamblers-USHL.jpg",
+    "Andreas Johnsson": "http://www.hockeydb.com/ihdb/photos/andreas-johnsson-2018-38.jpg",
+    "Rasmus Dahlin": "http://www.hockeydb.com/ihdb/photos/rasmus-dahlin-2018-7049.jpg",
+    "Michael Rasmussen": "http://www3.pictures.zimbio.com/gi/Michael+Rasmussen+2017+NHL+Draft+Round+One+F1RIN29YMPBl.jpg",
 }
 
 new_player_images = {}
