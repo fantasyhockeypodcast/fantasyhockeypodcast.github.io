@@ -107,43 +107,42 @@ html = """<!doctype html>
     
     
 <!-- DRAWER -->    
-    
-    
-  <div class=\"mdl-layout__drawer\">
-    <span class=\"mdl-layout-title\">FHP</span>
-    <nav class=\"mdl-navigation\">
+        
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">FHP</span>
+    <nav class="mdl-navigation">
         <!--
-      <a class=\"mdl-navigation__link\" href=\"\">Interactives</a>
-      <a class=\"mdl-navigation__link\" href=\"\">Long Reads</a>
-      <a class=\"mdl-navigation__link\" href=\"\">Short Reads</a>
-      <a class=\"mdl-navigation__link\" href=\"\">About</a>
+      <a class="mdl-navigation__link" href="">Interactives</a>
+      <a class="mdl-navigation__link" href="">Long Reads</a>
+      <a class="mdl-navigation__link" href="">Short Reads</a>
+      <a class="mdl-navigation__link" href="">About</a>
 
 -->
-    <a class=\"mdl-navigation__link\" href=\"/index.html\">Home</a>
-      <a class=\"mdl-navigation__link\" href=\"https://twitter.com/fntasyhockeypod\">Twitter</a>
+     
+        <a class="mdl-navigation__link" href="episodes-1.html">2016-2017 Episodes</a>
+        <a class="mdl-navigation__link" href="episodes-s2.html">2017-2018 Episodes</a>
+      <a class="mdl-navigation__link" href="https://twitter.com/fntasyhockeypod">Twitter</a>
         <!--
-      <a class=\"mdl-navigation__link\" href=\"https://www.facebook.com/hockeyonstats/\">Facebook</a>-->
-    <a class=\"mdl-navigation__link\" href=\"about.html\">About</a>
-        <a class=\"mdl-navigation__link\" href=\"mailto:fantasyhockeypodcast@gmail.com?Subject=Inquiry\">Contact</a>
+      <a class="mdl-navigation__link" href="https://www.facebook.com/hockeyonstats/">Facebook</a>-->
+    <a class="mdl-navigation__link" href="about.html">About</a>
+        <a class="mdl-navigation__link" href="mailto:fantasyhockeypodcast@gmail.com?Subject=Inquiry">Contact</a>
         
         <br>
         <!-----BADGES--->
         
          <!----itunes---->
-         <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
-                <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='70%' style=\"padding-left:10%\"> </a> 
+         <a href="https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323">
+                <img src="http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png" width='70%' style="padding-left:10%; padding-bottom:10%;"> </a> 
         
         <!-----GPLAY---->
-            <a href=\"https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igp5eo4jiymytfxf3uyffggtbyq?t%3DFantasy_Hockey_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16\">
-                      <img src=\"https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png\" width='70%' style=\"padding-left:10%\"></a>
+            <a href="https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igp5eo4jiymytfxf3uyffggtbyq?t%3DFantasy_Hockey_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16">
+                      <img src="https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png" width='70%' style="padding-left:10%"></a>
                   <br>
          <!--- STITCHER---->
-             <a href=\"http://www.stitcher.com/podcast/fantasy-hockey-podcast\">
-                      <img src=\"https://wordpress.todaytix.com/wp-content/uploads/2016/10/stitcher-badge.jpg\" width='70%' style=\"padding-left:10%\"> </a>
+             <a href="http://www.stitcher.com/podcast/fantasy-hockey-podcast">
+                      <img src="https://static1.squarespace.com/static/5a1b2134017db260be209302/t/5a84d5860852295967cebdab/1519418104951/Stitcher-logo-1024x537.png" width='70%' style="padding-left:10%"> </a>
     </nav>
   </div>
-
-      
     
   <main  style=\"background:white;\" class=\"mdl-layout__content\">
       
