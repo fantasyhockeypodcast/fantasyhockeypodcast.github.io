@@ -121,9 +121,8 @@ html = """<!doctype html>
      
         <a class="mdl-navigation__link" href="episodes-1.html">2016-2017 Episodes</a>
         <a class="mdl-navigation__link" href="episodes-s2.html">2017-2018 Episodes</a>
-      <a class="mdl-navigation__link" href="https://twitter.com/fntasyhockeypod">Twitter</a>
-        <!--
-      <a class="mdl-navigation__link" href="https://www.facebook.com/hockeyonstats/">Facebook</a>-->
+      <a class="mdl-navigation__link" href="https://twitter.com/fantasyhockeyPD">Twitter</a>
+      <a class="mdl-navigation__link" href="https://www.facebook.com/FantasyHockeyPodcast/">Facebook</a>
     <a class="mdl-navigation__link" href="about.html">About</a>
         <a class="mdl-navigation__link" href="mailto:fantasyhockeypodcast@gmail.com?Subject=Inquiry">Contact</a>
         
@@ -175,8 +174,6 @@ html = """<!doctype html>
         </div>    
         <div class=\"ellipses\"><iron-icon  icon=\"filter-list\" stylue></iron-icon></div>
         
-        <div class=\"interlude fb\">
-            <div style=\"padding-bottom:px;\" class=\"fb-like\" data-href=\"http://fantasyhockeypodcast.com\" data-layout=\"button_count\" data-action=\"like\" data-show-faces=\"true\" data-share=\"false\"></div>
         <div class=\"article-content\">
         
         <!------ ARTICLE BEGINS -----> 
