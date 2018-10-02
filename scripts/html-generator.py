@@ -774,6 +774,21 @@ imagedict = {
     "Andreas Johnsson": "http://www.hockeydb.com/ihdb/photos/andreas-johnsson-2018-38.jpg",
     "Rasmus Dahlin": "http://www.hockeydb.com/ihdb/photos/rasmus-dahlin-2018-7049.jpg",
     "Michael Rasmussen": "http://www3.pictures.zimbio.com/gi/Michael+Rasmussen+2017+NHL+Draft+Round+One+F1RIN29YMPBl.jpg",
+    "Juuso Riikola": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480945.jpg",
+    "Martin Necas": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233586.png&w=350&h=254",
+    "Joe Hicketts": "http://www.hockeydb.com/ihdb/photos/joe-hicketts-2017-34.jpg",
+    "Brady Tkachuk": "http://www.hockeydb.com/ihdb/photos/brady-tkachuk-2018-449.jpg",
+    "Troy Terry": "https://assets.ngin.com/attachments/profiles/6818/5254/Terry.jpg",
+    "Antti Suomela": "http://www.sportti.com/kuvapankki2014/antti_suomela_jyp.jpg",
+    "Austin Wagner": "http://www.hockeydb.com/ihdb/photos/austin-wagner-2017-40.jpg",
+    "Trevor Daley": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1978.png&w=350&h=254",
+    "Urho Vaakanainen": "https://pbs.twimg.com/profile_images/775368335286497280/www0_27H_400x400.jpg",
+    "Valentin Zykov": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477458.jpg",
+    "Christian Fischer": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478432.jpg",
+    "Filip Hronek": "http://www.hockeydb.com/ihdb/photos/filip-hronek-2018-34.jpg",
+    "Dennis Cholowski": "http://www.hockeydb.com/ihdb/photos/dennis-cholowski-2018-34.jpg",
+    "Jamie Oleksiak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562625.png&w=350&h=254",
+    "Devante Smith-Pelly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5542.png&w=350&h=254",
 }
 
 new_player_images = {}
