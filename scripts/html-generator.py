@@ -8,11 +8,9 @@ page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Weekend Review", "Week Preview and Pickup Suggestions", "Picks of the Night"], "titles":["Grammar School", "Weekend's Best Players", "Weekend's Worst Players", "Long Term Pickup Suggestions", "Potentially Returning From Injury", "Players to Consider This Week", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "tuesday":{"show_notes":["Injury News", "Injury Replacements/Buy Low Candidates", "Picks of the Night"], "titles":["New Injuries", "Returning From Injury", "Injury Replacements", "Buy Low Injury Related Players", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "thursday":{"show_notes":["NHL News", "Picks of the Night"], "titles":["Players in the News", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
-        "friday":{"show_notes":["Week in Review", "Weekend Pickup Suggestions", "Picks of the Night"], "titles":["Best Players of the Week", "Worst Players of the Week", "Weekend Pickup Suggestions", "Our Top Picks of the Night", "Our Value Picks of the Night"]},
+        "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Long Term Pickup Suggestions", "Week Preview and Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
+        "wednesday":{"show_notes":["Unsustainable Segment", "Picks of the Night"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
+        "friday":{"show_notes":["NHL News", "Weekend Pickup Suggestions"], "titles":["Players in the News", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
 draft_ad = ""
@@ -789,6 +787,11 @@ imagedict = {
     "Dennis Cholowski": "http://www.hockeydb.com/ihdb/photos/dennis-cholowski-2018-34.jpg",
     "Jamie Oleksiak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562625.png&w=350&h=254",
     "Devante Smith-Pelly": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5542.png&w=350&h=254",
+    "Andrej Sekera": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3452.png&w=350&h=254",
+    "Joel Armia": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562596.png&w=350&h=254",
+    "Jesperi Kotkaniemi": "http://www.hockeydb.com/ihdb/photos/jesperi-kotkaniemi-2019-45.jpg",
+    "Artturi Lehkonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
+    "Tyler Ennis": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5069.png&w=350&h=254",
 }
 
 new_player_images = {}
