@@ -38,6 +38,9 @@ for note in show_notes_list:
         show_notes += "\n    <br>"
     show_notes += note + " - " + time
 
+gambi_script = raw_input("Enter Gambi's script link: ")
+brandon_script = raw_input("Enter Brandon's script link: ")
+
 html = """<!doctype html>
 <html>
 <head>
@@ -187,6 +190,16 @@ html = """<!doctype html>
 
         <p class=\"main-paragraphs notes\">
         """ + show_notes + """
+        </p>
+        
+        <p class=\"interlude\">
+            Scripts
+        </p>
+
+        <p class=\"main-paragraphs notes\">"""
+html += "<a href=\"" + gambi_script + "\" target=\"_blank\">Gambi's script</a><br>"
+html += "<a href=\"" + brandon_script + "\" target=\"_blank\">Brandon's script</a><br>"
+html += """
         </p>
 
         <p class=\"interlude\">
@@ -792,7 +805,12 @@ imagedict = {
     "Jesperi Kotkaniemi": "http://www.hockeydb.com/ihdb/photos/jesperi-kotkaniemi-2019-45.jpg",
     "Artturi Lehkonen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042050.png&w=350&h=254",
     "Tyler Ennis": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5069.png&w=350&h=254",
-}
+    "Colton Sissons": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2993474.png&w=350&h=254",
+    "Mike Matheson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976851.png&w=350&h=254",
+    "Henri Jokiharju": "http://www.hockeydb.com/ihdb/photos/henri-jokiharju-2018-35.jpg",
+    "Jack Johnson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3583.png&w=350&h=254",
+    "Max Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg",
+    }
 
 new_player_images = {}
 titles = ["Players Discussed"]
