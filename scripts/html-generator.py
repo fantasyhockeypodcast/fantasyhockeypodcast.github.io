@@ -810,7 +810,9 @@ imagedict = {
     "Henri Jokiharju": "http://www.hockeydb.com/ihdb/photos/henri-jokiharju-2018-35.jpg",
     "Jack Johnson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3583.png&w=350&h=254",
     "Max Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg",
-    }
+    "Maxime Lajoie": "http://www.hockeydb.com/ihdb/photos/max-lajoie-2018-54.jpg",
+    "Chris Tierney": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067870.png&w=350&h=254",
+}
 
 new_player_images = {}
 titles = ["Players Discussed"]
