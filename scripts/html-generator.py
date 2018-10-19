@@ -812,6 +812,8 @@ imagedict = {
     "Max Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg",
     "Maxime Lajoie": "http://www.hockeydb.com/ihdb/photos/max-lajoie-2018-54.jpg",
     "Chris Tierney": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067870.png&w=350&h=254",
+    "Linus Ullmark": "http://www.hockeydb.com/ihdb/photos/linus-ullmark-2018-33.jpg",
+    "Maxime Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg"
 }
 
 new_player_images = {}
