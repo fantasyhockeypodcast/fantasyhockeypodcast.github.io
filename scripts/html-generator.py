@@ -149,7 +149,7 @@ html = """<!doctype html>
       
       
     <div class=\"page-content\">
-        <img style=\"max-width:1000px; opacity:.8; margin:auto; display:block\" src=""" + "\"" + page_image + """\">
+        <img style=\"max-width:100%; opacity:.8; margin:auto; display:block\" src=""" + "\"" + page_image + """\">
         <div class=\"container mdl-grid\">
         <div class=\"mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone\"></div>
         <div  class=\"content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col\">
