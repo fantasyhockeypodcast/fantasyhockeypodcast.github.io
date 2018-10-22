@@ -814,6 +814,8 @@ imagedict = {
     "Chris Tierney": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067870.png&w=350&h=254",
     "Linus Ullmark": "http://www.hockeydb.com/ihdb/photos/linus-ullmark-2018-33.jpg",
     "Maxime Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg"
+    "Matt Grzelcyk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069448.png&w=350&h=254",
+    "Warren Foegele": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477998.jpg",    
 }
 
 new_player_images = {}
