@@ -9,7 +9,7 @@ pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
         "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Long Term Pickup Suggestions", "Week Preview and Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
-        "wednesday":{"show_notes":["Unsustainable Segment"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
+        "wednesday":{"show_notes":["Unsustainable Recap", "Unsustainable Segment"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
         "friday":{"show_notes":["NHL News", "Weekend Pickup Suggestions"], "titles":["Players in the News", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
@@ -813,9 +813,10 @@ imagedict = {
     "Maxime Lajoie": "http://www.hockeydb.com/ihdb/photos/max-lajoie-2018-54.jpg",
     "Chris Tierney": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067870.png&w=350&h=254",
     "Linus Ullmark": "http://www.hockeydb.com/ihdb/photos/linus-ullmark-2018-33.jpg",
-    "Maxime Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg"
+    "Maxime Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg",
     "Matt Grzelcyk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069448.png&w=350&h=254",
     "Warren Foegele": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477998.jpg",    
+    "Adam Lowry": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563066.png&w=350&h=254",
 }
 
 new_player_images = {}
