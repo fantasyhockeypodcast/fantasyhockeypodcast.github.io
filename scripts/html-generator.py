@@ -818,6 +818,8 @@ imagedict = {
     "Warren Foegele": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477998.jpg",    
     "Adam Lowry": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563066.png&w=350&h=254",
     "Joonas Donskoi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590379.png&w=350&h=254",
+    "Zachary Sanford": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042061.png&w=350&h=254",
+    "Derrick Pouliot": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976834.png&w=350&h=254",
 }
 
 new_player_images = {}
