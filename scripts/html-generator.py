@@ -820,6 +820,8 @@ imagedict = {
     "Joonas Donskoi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590379.png&w=350&h=254",
     "Zachary Sanford": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042061.png&w=350&h=254",
     "Derrick Pouliot": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976834.png&w=350&h=254",
+    "Jake McCabe": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3020803.png&w=350&h=254",
+    "Andrei Svechnikov": "http://www.hockeydb.com/ihdb/photos/andrei-svechnikov-2019-979.jpg",
 }
 
 new_player_images = {}
