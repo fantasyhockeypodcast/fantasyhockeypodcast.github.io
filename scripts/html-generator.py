@@ -822,6 +822,10 @@ imagedict = {
     "Derrick Pouliot": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976834.png&w=350&h=254",
     "Jake McCabe": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3020803.png&w=350&h=254",
     "Andrei Svechnikov": "http://www.hockeydb.com/ihdb/photos/andrei-svechnikov-2019-979.jpg",
+    "Dominik Simon": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3913226.png&w=350&h=254",
+    "Slava Voynov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5028.png&w=350&h=254",
+    "Pontus Aberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069396.png&w=350&h=254",
+    "Jack Campbell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5473.png&w=350&h=254",
 }
 
 new_player_images = {}
