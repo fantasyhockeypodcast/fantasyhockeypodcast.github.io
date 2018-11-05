@@ -826,6 +826,8 @@ imagedict = {
     "Slava Voynov": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5028.png&w=350&h=254",
     "Pontus Aberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069396.png&w=350&h=254",
     "Jack Campbell": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5473.png&w=350&h=254",
+    "Miro Heiskanen": "http://www.hockeydb.com/ihdb/photos/miro-heiskanen-2018-233.jpg",
+    "Drake Caggiula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025590.png&w=350&h=254",
 }
 
 new_player_images = {}
