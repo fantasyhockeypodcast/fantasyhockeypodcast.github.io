@@ -829,6 +829,7 @@ imagedict = {
     "Miro Heiskanen": "http://www.hockeydb.com/ihdb/photos/miro-heiskanen-2018-233.jpg",
     "Drake Caggiula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025590.png&w=350&h=254",
     "Oskar Lindblom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151326.png&w=350&h=254",
+    "Mathieu Joseph": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478472.jpg",
 }
 
 new_player_images = {}
