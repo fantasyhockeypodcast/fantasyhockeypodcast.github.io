@@ -830,6 +830,9 @@ imagedict = {
     "Drake Caggiula": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3025590.png&w=350&h=254",
     "Oskar Lindblom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151326.png&w=350&h=254",
     "Mathieu Joseph": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478472.jpg",
+    "Cedric Paquette": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067906.png&w=350&h=254",
+    "Cal Petersen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042182.png&w=350&h=254",
+    "Drake Batherson": "http://www.hockeydb.com/ihdb/photos/drake-batherson-2018-54.jpg",
 }
 
 new_player_images = {}
