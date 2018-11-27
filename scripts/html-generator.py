@@ -833,6 +833,11 @@ imagedict = {
     "Cedric Paquette": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067906.png&w=350&h=254",
     "Cal Petersen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042182.png&w=350&h=254",
     "Drake Batherson": "http://www.hockeydb.com/ihdb/photos/drake-batherson-2018-54.jpg",
+    "Jordan Martinook": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2989376.png&w=350&h=254",
+    "Gavin Bayreuther": "http://www.hockeydb.com/ihdb/photos/gavin-bayreuther-2018-233.jpg",
+    "Mikko Koskinen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5268.png",
+    "Jakob Forsbacka Karlsson": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478417.jpg",
+    "Noah Hanifin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3652964.png&w=350&h=254",
 }
 
 new_player_images = {}
