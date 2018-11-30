@@ -838,6 +838,9 @@ imagedict = {
     "Mikko Koskinen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5268.png",
     "Jakob Forsbacka Karlsson": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478417.jpg",
     "Noah Hanifin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3652964.png&w=350&h=254",
+    "Anthony Stolarz": "http://www.hockeydb.com/ihdb/photos/anthony-stolarz-2015-53.jpg",
+    "Michal Kempny": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4046946.png&w=350&h=254",
+    "Brendan Perlini": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114744.png&w=350&h=254",
 }
 
 new_player_images = {}
