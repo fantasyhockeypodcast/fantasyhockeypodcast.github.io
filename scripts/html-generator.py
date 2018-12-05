@@ -841,6 +841,7 @@ imagedict = {
     "Anthony Stolarz": "http://www.hockeydb.com/ihdb/photos/anthony-stolarz-2015-53.jpg",
     "Michal Kempny": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4046946.png&w=350&h=254",
     "Brendan Perlini": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114744.png&w=350&h=254",
+    "Adin Hill": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478499.jpg",
 }
 
 new_player_images = {}
