@@ -775,7 +775,7 @@ imagedict = {
     "Ilya Kovalchuk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/1175.png&w=350&h=254",
     "Ty Rattie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563082.png&w=350&h=254",
     "Dylan Strome": "http://www.hockeydb.com/ihdb/photos/dylan-strome-2018-7166.jpg",
-    "Elias Pettersson": "https://files.eliteprospects.com/layout/players/elias_pettersson_vaxjo.jpg",
+    "Elias Pettersson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233566.png&w=350&h=254",
     "Adam Gaudette": "https://pbs.twimg.com/profile_images/884828588922609664/5POnCNmi_400x400.jpg",
     "Niklas Kronwall": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2127.png&w=350&h=254",
     "Filip Zadina": "http://www.hockeydb.com/ihdb/photos/filip-zadina-2017-2083.jpg",
