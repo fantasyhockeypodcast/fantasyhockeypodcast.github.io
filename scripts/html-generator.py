@@ -46,7 +46,6 @@ html = """<!doctype html>
 <head>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
     <meta name=\"keywords\" content=\"Hockey, Fantasy, Podast, David Gamboa, NHL, Stanley Cup Playoffs, Playoffs, advice, help, drop, trade, add, waiver wire, Fantasy Hockey Pod, daily, season long, espn, yahoo, sell high, buy low, candidates, best\">
     <meta name=\"author\" content=\"Fantasy Hockey Podcast\">
     <meta name=\"description\" content=""" + "\"" + page_description + """\">
@@ -68,8 +67,6 @@ html = """<!doctype html>
     <link rel=\"icon\" sizes=\"192x192\" href=\"images/Artboard%206.png\">
 
     <!-- Add to homescreen for Safari on iOS -->
-    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
-    <meta name=\"Fantasy Hockey Podcast\" content=\"\">
     <meta name=\"Fantasy Hockey Podcast\" content=\"\">
     <link rel=\"apple-touch-icon\" href=\"images/Artboard%206.png\">
 
@@ -843,6 +840,7 @@ imagedict = {
     "Brendan Perlini": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114744.png&w=350&h=254",
     "Adin Hill": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478499.jpg",
     "Colin White": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900259.png&w=350&h=254",
+    "William Carrier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042054.png",
 }
 
 new_player_images = {}
