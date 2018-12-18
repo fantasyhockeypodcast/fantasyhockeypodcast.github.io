@@ -841,6 +841,8 @@ imagedict = {
     "Adin Hill": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478499.jpg",
     "Colin White": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900259.png&w=350&h=254",
     "William Carrier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042054.png",
+    "Oscar Lindberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590850.png&w=350&h=254",
+    "Carl Soderberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3387.png",
 }
 
 new_player_images = {}
