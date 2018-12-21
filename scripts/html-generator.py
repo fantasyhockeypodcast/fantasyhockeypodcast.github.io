@@ -843,6 +843,8 @@ imagedict = {
     "William Carrier": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042054.png",
     "Oscar Lindberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590850.png&w=350&h=254",
     "Carl Soderberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3387.png",
+    "Henrik Borgstrom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024977.png&w=350&h=254",
+    "Jori Lehtera": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2502890.png&w=350&h=254",
 }
 
 new_player_images = {}
