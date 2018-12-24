@@ -845,6 +845,8 @@ imagedict = {
     "Carl Soderberg": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3387.png",
     "Henrik Borgstrom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024977.png&w=350&h=254",
     "Jori Lehtera": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2502890.png&w=350&h=254",
+    "Paul Byron": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4568.png&w=350&h=254",
+    "Adam McQuaid": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3205.png&w=350&h=254",
 }
 
 new_player_images = {}
