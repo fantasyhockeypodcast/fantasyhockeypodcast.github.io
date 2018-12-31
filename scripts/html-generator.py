@@ -847,6 +847,10 @@ imagedict = {
     "Jori Lehtera": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2502890.png&w=350&h=254",
     "Paul Byron": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4568.png&w=350&h=254",
     "Adam McQuaid": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3205.png&w=350&h=254",
+    "Pheonix Copley": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3095330.png&w=350&h=254",
+    "MacKenzie Blackwood": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904177.png&w=350&h=254",
+    "Matt Nieto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563076.png&w=350&h=254",
+    "Brandon Pirri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5525.png&w=350&h=254",
 }
 
 new_player_images = {}
