@@ -851,6 +851,7 @@ imagedict = {
     "MacKenzie Blackwood": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3904177.png&w=350&h=254",
     "Matt Nieto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563076.png&w=350&h=254",
     "Brandon Pirri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5525.png&w=350&h=254",
+    "Thatcher Demko": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392546.png&w=350&h=254",
 }
 
 new_player_images = {}
