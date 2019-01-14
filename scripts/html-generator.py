@@ -852,6 +852,10 @@ imagedict = {
     "Matt Nieto": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563076.png&w=350&h=254",
     "Brandon Pirri": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5525.png&w=350&h=254",
     "Thatcher Demko": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392546.png&w=350&h=254",
+    "Jordan Binnington": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590874.png&w=350&h=254",
+    "Tage Thompson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024988.png&w=350&h=254",
+    "Conor Garland": "http://www.hockeydb.com/ihdb/photos/conor-garland-2018-7166.jpg",
+    "Jordan Greenway": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900260.png&w=350&h=254",
 }
 
 new_player_images = {}
