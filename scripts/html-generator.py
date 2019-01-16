@@ -856,6 +856,8 @@ imagedict = {
     "Tage Thompson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024988.png&w=350&h=254",
     "Conor Garland": "http://www.hockeydb.com/ihdb/photos/conor-garland-2018-7166.jpg",
     "Jordan Greenway": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900260.png&w=350&h=254",
+    "Blake Coleman": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563026.png&w=350&h=254",
+    "Oskar Sundqvist": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069277.png&w=350&h=254",
 }
 
 new_player_images = {}
