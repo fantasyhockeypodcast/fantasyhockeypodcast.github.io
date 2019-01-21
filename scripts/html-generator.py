@@ -864,6 +864,7 @@ imagedict = {
     "Ben Hutton": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3571762.png&w=350&h=254",
     "Luke Schenn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5092.png&w=350&h=254",
     "Joe Blandisi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392639.png&w=350&h=254",
+    "Pat Maroon": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3853.png&w=350&h=254",
 }
 
 new_player_images = {}
