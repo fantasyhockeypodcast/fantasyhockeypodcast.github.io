@@ -867,6 +867,8 @@ imagedict = {
     "Pat Maroon": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3853.png&w=350&h=254",
     "Lawson Crouse": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3899951.png&w=350&h=254",
     "Quinn Hughes": "https://mgoblue.com/images/2017/9/26/20170925_IHM_Hughes.jpg?width=300",
+    "Erik Cernak": "http://www.hockeydb.com/ihdb/photos/erik-cernak-2018-55.jpg",
+    "Filip Chytil": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233643.png&w=350&h=254",
 }
 
 new_player_images = {}
