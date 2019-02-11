@@ -870,6 +870,7 @@ imagedict = {
     "Erik Cernak": "http://www.hockeydb.com/ihdb/photos/erik-cernak-2018-55.jpg",
     "Filip Chytil": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233643.png&w=350&h=254",
     "Garret Sparks": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590569.png&w=350&h=254",
+    "Brandon Tanev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096236.png&w=350&h=254",
 }
 
 new_player_images = {}
