@@ -871,6 +871,9 @@ imagedict = {
     "Filip Chytil": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233643.png&w=350&h=254",
     "Garret Sparks": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590569.png&w=350&h=254",
     "Brandon Tanev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096236.png&w=350&h=254",
+    "Brock McGinn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067868.png&w=350&h=254",
+    "Luke Kunin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4271610.png&w=350&h=254",
+    "Kevin Boyle": "http://www.hockeydb.com/ihdb/photos/kevin-boyle-2018-4312.jpg",
 }
 
 new_player_images = {}
