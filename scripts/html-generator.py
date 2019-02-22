@@ -874,6 +874,9 @@ imagedict = {
     "Brock McGinn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067868.png&w=350&h=254",
     "Luke Kunin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4271610.png&w=350&h=254",
     "Kevin Boyle": "http://www.hockeydb.com/ihdb/photos/kevin-boyle-2018-4312.jpg",
+    "Ryan Donato": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3115033.png&w=350&h=254",
+    "Ben Lovejoy": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3993.png",
+    "Devon Toews": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096249.png&w=350&h=254",
 }
 
 new_player_images = {}
