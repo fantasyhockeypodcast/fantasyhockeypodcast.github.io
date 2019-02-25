@@ -877,6 +877,8 @@ imagedict = {
     "Ryan Donato": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3115033.png&w=350&h=254",
     "Ben Lovejoy": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3993.png",
     "Devon Toews": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096249.png&w=350&h=254",
+    "Alexandar Georgiev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4239677.png&w=350&h=254",
+    "Nick Ritchie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114742.png&w=350&h=254",
 }
 
 new_player_images = {}
