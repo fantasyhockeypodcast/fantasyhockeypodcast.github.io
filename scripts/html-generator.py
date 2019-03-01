@@ -880,6 +880,10 @@ imagedict = {
     "Alexandar Georgiev": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4239677.png&w=350&h=254",
     "Nick Ritchie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114742.png&w=350&h=254",
     "Tyler Jost": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024879.png&w=350&h=254",
+    "Anthony Duclair": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042086.png&w=350&h=254",
+"Samuel Montembeault": "http://www.hockeydb.com/ihdb/photos/samuel-montembeault-2019-7600.jpg",
+    "Tony DeAngelo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114769.png&w=350&h=254",
+    "Travis Sanheim": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114757.png&w=350&h=254",
 }
 
 new_player_images = {}
