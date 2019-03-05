@@ -884,6 +884,9 @@ imagedict = {
 "Samuel Montembeault": "http://www.hockeydb.com/ihdb/photos/samuel-montembeault-2019-7600.jpg",
     "Tony DeAngelo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114769.png&w=350&h=254",
     "Travis Sanheim": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114757.png&w=350&h=254",
+    "Jared McCann": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114777.png&w=350&h=254",
+    "Jamie McGinn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3652.png&w=350&h=254",
+    "Brendan Guhle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392199.png&w=350&h=254",
 }
 
 new_player_images = {}
