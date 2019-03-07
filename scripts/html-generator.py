@@ -887,6 +887,11 @@ imagedict = {
     "Jared McCann": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114777.png&w=350&h=254",
     "Jamie McGinn": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3652.png&w=350&h=254",
     "Brendan Guhle": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392199.png&w=350&h=254",
+    "Vinnie Hinostroza": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069613.png&w=350&h=254",
+    "Zack Kassian": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5194.png&w=350&h=254",
+    "Brad Richardson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3154.png&w=350&h=254",
+    "Tyson Jost": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024879.png&w=350&h=254",
+    "Troy Brouwer": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3394.png",
 }
 
 new_player_images = {}
