@@ -892,6 +892,8 @@ imagedict = {
     "Brad Richardson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3154.png&w=350&h=254",
     "Tyson Jost": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024879.png&w=350&h=254",
     "Troy Brouwer": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3394.png",
+    "Sam Montembeault": "http://www.hockeydb.com/ihdb/photos/samuel-montembeault-2018-234.jpg",
+    "Roope Hintz": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478449.jpg",
 }
 
 new_player_images = {}
