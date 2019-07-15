@@ -94,7 +94,7 @@ html = """<!doctype html>
    <!-- Always shows a header, even in smaller screens. -->
     <div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">
         <header class=\"mdl-layout__header mdl-layout__header--transparent \">
-            <div  class=\"mdl-layout__header-row mdl-shadow--4dp\">
+            <div  class=\"mdl-layout__header-row mdl-shadow--4dp\" style=\"padding-left:10px\">
                 <!-- Title -->
                 <a href=\"http://www.fantasyhockeypodcast.com\"><img src=\"/images/fhp.png\" width=\"40px\" style=\"padding-left:5px\"></a><span class=\"mdl-layout-title\" style=\"padding-left:10px\"> """ + page_title + """</span>
       <!-- Add spacer, to align navigation to the right -->
@@ -859,6 +859,7 @@ imagedict = {
     "Roope Hintz": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478449.jpg",
     "Kurtis Gabriel": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042087.png&w=350&h=254",
     "Andrew Mangiapane": "http://www.hockeydb.com/ihdb/photos/andrew-mangiapane-2019-43.jpg",
+    "Igor Shestyorkin": "http://www.hockeysfuture.com/assets/uploads/2014/03/igor_shestyorkin_spartak.jpg",
 }
 
 new_player_images = {}
