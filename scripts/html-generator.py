@@ -899,6 +899,14 @@ imagedict = {
     "Dillon Dube": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4063268.png&w=350&h=254",
     "Jack Hughes": "https://nhl.bamcontent.com/images/headshots/current/168x168/8481559.jpg",
     "Owen Tippett": "http://www.hockeydb.com/ihdb/photos/owen-tippett-2018-234.jpg",
+    "Ivan Chekhovich": "https://files.eliteprospects.com/layout/players/bc_13_chekovich,_ivan.jpg",
+    "Garret Sparks": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590569.png&w=350&h=254",
+    "Melker Karlsson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3109556.png&w=350&h=254",
+    "Joel Persson": "https://files.eliteprospects.com/layout/players/bb_joelpersson_2018-10-22.jpeg",
+    "Sasha Chmelevski": "http://www.hockeydb.com/ihdb/photos/sasha-chmelevski-2018-44.jpg",
+    "Nikolai Prokhorkin": "http://www.khl.ru/images/teamplayers/10133/16478.jpg",
+    "Carl Grundstrom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392584.png&w=350&h=254",
+    "Christian Dvorak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3115035.png&w=350&h=254",
 }
 
 new_player_images = {}
