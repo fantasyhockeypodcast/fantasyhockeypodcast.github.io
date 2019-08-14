@@ -50,9 +50,9 @@ html = """<!doctype html>
     <meta name=\"author\" content=\"Fantasy Hockey Podcast\">
     <meta name=\"description\" content=""" + "\"" + page_description + """\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <meta name=\"title\" content=\"Episode """ + episode_number + """ - """ + page_title + """\">
+    <meta name=\"title\" content=\" """ + page_title + """\">
     <meta name=\"image\" content=""" + "\"" + page_image + """\">
-    <title>Episode """ + episode_number + """ - """ + page_title + """</title>
+    <title>""" + page_title + """</title>
     <!---- FB OPEN GRAPH ---->
     <meta property=\"og:type\"               content=\"article\" />
     <meta property=\"og:description\"        content=""" + "\"" + page_description + """\">
