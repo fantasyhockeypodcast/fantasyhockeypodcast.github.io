@@ -1,7 +1,7 @@
 import fileinput
 
 episode_number = raw_input("Enter episode number: ")
-page_title = raw_input("Enter a title for the page: ")
+page_title = raw_input("Enter a title for the page: ") + " | Fantasy Hockey Podcast"
 page_description = raw_input("Enter a description for the page: ")
 show_draft_ad = raw_input("Show DRAFT promo code ad? (Y/N): ")
 page_image = raw_input("Enter an image for the page: ")
@@ -50,9 +50,9 @@ html = """<!doctype html>
     <meta name=\"author\" content=\"Fantasy Hockey Podcast\">
     <meta name=\"description\" content=""" + "\"" + page_description + """\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <meta name=\"title\" content=\"Episode """ + episode_number + """ - """ + page_title + """\">
+    <meta name=\"title\" content=\" """ + page_title + """\">
     <meta name=\"image\" content=""" + "\"" + page_image + """\">
-    <title>Episode """ + episode_number + """ - """ + page_title + """</title>
+    <title>""" + page_title + """</title>
     <!---- FB OPEN GRAPH ---->
     <meta property=\"og:type\"               content=\"article\" />
     <meta property=\"og:description\"        content=""" + "\"" + page_description + """\">
@@ -907,6 +907,12 @@ imagedict = {
     "Nikolai Prokhorkin": "http://www.khl.ru/images/teamplayers/10133/16478.jpg",
     "Carl Grundstrom": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392584.png&w=350&h=254",
     "Christian Dvorak": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3115035.png&w=350&h=254",
+    "Alexander Nylander": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4392182.png&w=350&h=254",
+    "Sami Niku": "http://www.hockeydb.com/ihdb/photos/sami-niku-2019-6378.jpg",
+    "Dominik Kubalik": "http://www.hockeysfuture.com/assets/uploads/2013/06/dominik_kubalik.jpg",
+    "Adam Boqvist": "http://www.hockeydb.com/ihdb/photos/adam-boqvist-2019-35.jpg",
+    "Dylan Sikura": "http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d9kjk42l7bfqz.cloudfront.net/req/201905221/images/headshots/sikurdy01-2018.jpg",
+    "John Quenneville": "http://www.hockeydb.com/ihdb/photos/john-quenneville-2017-51.jpg",
 }
 
 new_player_images = {}
