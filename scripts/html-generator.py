@@ -924,6 +924,18 @@ imagedict = {
     "Evgeny Svechnikov": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478431.jpg",
     "Jayce Hawryluk": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477963.jpg",
     "Aleksi Heponiemi": "http://www.hockeydb.com/ihdb/photos/aleksi-heponiemi-2018-234.jpg",
+    "Libor Hajek": "http://www.hockeydb.com/ihdb/photos/libor-hajek-2019-48.jpg",
+    "Alexandre Texier": "http://www2.pictures.zimbio.com/gi/Alexandre+Texier+Ml5osNRMWoYm.jpg",
+    "Jake Bean": "http://www.hockeydb.com/ihdb/photos/jake-bean-2018-979.jpg",
+    "Brendan Lemieux": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477962.jpg",
+    "Michael Dal Colle": "https://assets.leaguestat.com/ahl/240x240/6355.jpg",
+    "Dominik Kahun": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4294651.png&w=350&h=254",
+    "Brett Howden": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024989.png&w=350&h=254",
+    "Alex Nedeljkovic": "http://www.hockeydb.com/ihdb/photos/alex-nedeljkovic-2019-979.jpg",
+    "Haydn Fleury": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114735.png&w=350&h=254",
+    "Nikita Gusev": "http://www.hockeydb.com/ihdb/photos/nikita-gusev-2019-5033.jpg",
+    "Lias Andersson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4232875.png&w=350&h=254",
+    "Emil Bemstrom": "hhttps://cdn1.shl.se/sports/player/portrait/200/qRm-7DyFIL7kE-1535029348.jpg",
 }
 
 new_player_images = {}
