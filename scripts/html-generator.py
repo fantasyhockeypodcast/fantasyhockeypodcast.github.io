@@ -935,7 +935,7 @@ imagedict = {
     "Haydn Fleury": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114735.png&w=350&h=254",
     "Nikita Gusev": "http://www.hockeydb.com/ihdb/photos/nikita-gusev-2019-5033.jpg",
     "Lias Andersson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4232875.png&w=350&h=254",
-    "Emil Bemstrom": "hhttps://cdn1.shl.se/sports/player/portrait/200/qRm-7DyFIL7kE-1535029348.jpg",
+    "Emil Bemstrom": "https://cdn2.shl.se/sports/player/portrait/200/qRm-7DyFIL7kE-1519028169.jpg",
 }
 
 new_player_images = {}
