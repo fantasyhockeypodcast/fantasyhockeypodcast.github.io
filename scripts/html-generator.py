@@ -936,6 +936,12 @@ imagedict = {
     "Nikita Gusev": "http://www.hockeydb.com/ihdb/photos/nikita-gusev-2019-5033.jpg",
     "Lias Andersson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4232875.png&w=350&h=254",
     "Emil Bemstrom": "https://cdn2.shl.se/sports/player/portrait/200/qRm-7DyFIL7kE-1519028169.jpg",
+    "Ivan Chekovich": "http://www.hockeydb.com/ihdb/photos/ivan-chekhovich-2019-44.jpg",
+    "Philippe Myers": "https://a.espncdn.com/i/headshots/nhl/players/full/3042013.png",
+    "Alexander Chmelevski": "http://www.hockeydb.com/ihdb/photos/sasha-chmelevski-2019-44.jpg",
+    "Oliver Kylington": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478430.jpg",
+    "Ethan Bear": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941966.png&w=350&h=254",
+    "Kirby Dach": "http://www.hockeydb.com/ihdb/photos/kirby-dach-2019-1005.jpg",
 }
 
 new_player_images = {}
