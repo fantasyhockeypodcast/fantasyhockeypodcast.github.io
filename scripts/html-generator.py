@@ -64,14 +64,14 @@ html = """<!doctype html>
     <!-- Add to homescreen for Chrome on Android -->
     <meta name=\"mobile-web-app-capable\" content=\"yes\">
     <meta name=\"Hockey On Stats\" content=\"\">
-    <link rel=\"icon\" sizes=\"192x192\" href=\"images/Artboard%206.png\">
+    <link rel=\"icon\" sizes=\"192x192\" href=\"images/fhp.png\">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name=\"Fantasy Hockey Podcast\" content=\"\">
-    <link rel=\"apple-touch-icon\" href=\"images/Artboard%206.png\">
+    <link rel=\"apple-touch-icon\" href=\"images/fhp.png\">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name=\"msapplication-TileImage\" content=\"images/artboard%206\">
+    <meta name=\"msapplication-TileImage\" content=\"images/fhp.png\">
     <meta name=\"msapplication-TileColor\" content=\"#444443\">
 
     <!-- Color the status bar on mobile devices -->
@@ -913,6 +913,35 @@ imagedict = {
     "Adam Boqvist": "http://www.hockeydb.com/ihdb/photos/adam-boqvist-2019-35.jpg",
     "Dylan Sikura": "http://ssref.net/scripts/image_resize.cgi?min=200&url=https://d9kjk42l7bfqz.cloudfront.net/req/201905221/images/headshots/sikurdy01-2018.jpg",
     "John Quenneville": "http://www.hockeydb.com/ihdb/photos/john-quenneville-2017-51.jpg",
+    "Alex Formenton": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233882.png&w=350&h=254",
+    "Dylan Cozens": "http://www.hockeydb.com/ihdb/photos/dylan-cozens-2019-997.jpg",
+    "Denis Malgin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3942715.png&w=350&h=254",
+    "Noah Juulsen": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900504.png&w=350&h=254",
+    "Max Veronneau": "http://www.hockeydb.com/ihdb/photos/max-veronneau-2019-54.jpg",
+    "Rudolfs Balcers": "http://www.hockeydb.com/ihdb/photos/rudolfs-balcers-2019-54.jpg",
+    "Christian Wolanin": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3942106.png&w=350&h=254",
+    "Ilya Mikheyev": "https://en.khl.ru/images/teamplayers/10145/17692.jpg",
+    "Evgeny Svechnikov": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478431.jpg",
+    "Jayce Hawryluk": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477963.jpg",
+    "Aleksi Heponiemi": "http://www.hockeydb.com/ihdb/photos/aleksi-heponiemi-2018-234.jpg",
+    "Libor Hajek": "http://www.hockeydb.com/ihdb/photos/libor-hajek-2019-48.jpg",
+    "Alexandre Texier": "http://www2.pictures.zimbio.com/gi/Alexandre+Texier+Ml5osNRMWoYm.jpg",
+    "Jake Bean": "http://www.hockeydb.com/ihdb/photos/jake-bean-2018-979.jpg",
+    "Brendan Lemieux": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477962.jpg",
+    "Michael Dal Colle": "https://assets.leaguestat.com/ahl/240x240/6355.jpg",
+    "Dominik Kahun": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4294651.png&w=350&h=254",
+    "Brett Howden": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024989.png&w=350&h=254",
+    "Alex Nedeljkovic": "http://www.hockeydb.com/ihdb/photos/alex-nedeljkovic-2019-979.jpg",
+    "Haydn Fleury": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114735.png&w=350&h=254",
+    "Nikita Gusev": "http://www.hockeydb.com/ihdb/photos/nikita-gusev-2019-5033.jpg",
+    "Lias Andersson": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4232875.png&w=350&h=254",
+    "Emil Bemstrom": "https://cdn2.shl.se/sports/player/portrait/200/qRm-7DyFIL7kE-1519028169.jpg",
+    "Ivan Chekovich": "http://www.hockeydb.com/ihdb/photos/ivan-chekhovich-2019-44.jpg",
+    "Philippe Myers": "https://a.espncdn.com/i/headshots/nhl/players/full/3042013.png",
+    "Alexander Chmelevski": "http://www.hockeydb.com/ihdb/photos/sasha-chmelevski-2019-44.jpg",
+    "Oliver Kylington": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478430.jpg",
+    "Ethan Bear": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941966.png&w=350&h=254",
+    "Kirby Dach": "http://www.hockeydb.com/ihdb/photos/kirby-dach-2019-1005.jpg",
 }
 
 new_player_images = {}
