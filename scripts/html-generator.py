@@ -3,8 +3,7 @@ import fileinput
 episode_number = raw_input("Enter episode number: ")
 page_title = raw_input("Enter a title for the page: ") + " | Fantasy Hockey Podcast"
 page_description = raw_input("Enter a description for the page: ")
-youtube_link = raw_input("Enter YouTube link (optional):")
-show_draft_ad = raw_input("Show DRAFT promo code ad? (Y/N): ")
+youtube_link = raw_input("Enter YouTube link (optional): ")
 page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
@@ -14,9 +13,6 @@ daydict = {
         "friday":{"show_notes":["NHL News", "Weekend Pickup Suggestions"], "titles":["Players in the News", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
-draft_ad = ""
-if show_draft_ad.upper() == "Y":
-    draft_ad = "<br><br>Download the DRAFT app on iOS or Android or visit <a href=\"https://draft.com/FHP\" target=\"_blank\">draft.com</a> and use promo code 'FHP' when you sign up for a $3 ticket on your first deposit AND a $100 satisfaction guarantee."
 podcast_type = raw_input("Enter a podcast type (monday, tuesday, etc) or leave blank for custom: ").lower()
 show_notes_list = []
 if podcast_type:
@@ -121,12 +117,12 @@ html = """<!doctype html>
             <audio controls style=\"width:70%;opacity:1;\">
             <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
-            </audio> 
-        </p>"""
+            </audio>"""
 if len(youtube_link) > 0:
     html += "<a style=\"color:black;\" href=\"" + youtube_link + "\"><img style=\"width: 15%; padding-left: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
 
 html += """
+        </p>
         <!----ITUNES--->
         <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
         <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='20%'></a> 
@@ -147,7 +143,7 @@ html += """
             Summary
         </p>
 
-        <p class=\"main-paragraphs\"><text class=\"first-letter\">""" + page_description[0] + """</text>""" + page_description[1:] + draft_ad + """</p>
+        <p class=\"main-paragraphs\"><text class=\"first-letter\">""" + page_description[0] + """</text>""" + page_description[1:] + """</p>
         <p class=\"interlude\">
             Show Notes
         </p>
