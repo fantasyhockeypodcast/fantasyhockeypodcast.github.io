@@ -93,7 +93,7 @@ html, body {
   min-height: 200px;
     background-color: black;
     opacity: .8;
-    background: url('/images/fhp-new.png') center/cover;
+    background: url('images/fhp-new.png') center/cover;
 }
 
 .mdl section > .section__play-btn.ep38 {
