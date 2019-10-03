@@ -3,6 +3,7 @@ import fileinput
 episode_number = raw_input("Enter episode number: ")
 page_title = raw_input("Enter a title for the page: ") + " | Fantasy Hockey Podcast"
 page_description = raw_input("Enter a description for the page: ")
+youtube_link = raw_input("Enter YouTube link (optional):")
 show_draft_ad = raw_input("Show DRAFT promo code ad? (Y/N): ")
 page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
@@ -121,8 +122,11 @@ html = """<!doctype html>
             <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
             </audio> 
-        </p>
-        
+        </p>"""
+if len(youtube_link) > 0:
+    html += "<a style=\"color:black;\" href=\"" + youtube_link + "\"><img style=\"width: 15%; padding-left: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
+
+html += """
         <!----ITUNES--->
         <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
         <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='20%'></a> 
@@ -1002,7 +1006,7 @@ episode = """
             <div class=\"mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone\">
               <div class=\"mdl-card__supporting-text\">
                 <h4 style=\"font-family:product sans;\">""" + page_title + """</h4>
-                """ + page_description + draft_ad + """
+                """ + page_description + """
                 <br>
                   
                   <br>
@@ -1014,7 +1018,10 @@ episode = """
                   </div>
               </div>
               <div class=\"mdl-card__actions\">
-                <a href=""" + "\"" + episode_filename + """\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\">Read more</a>
+                <a href=""" + "\"" + episode_filename + """\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\">Read more</a>"""
+if len(youtube_link) > 0:
+    episode += "<a href=\"" + youtube_link + "\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\"><img style=\"height:50%;padding-bottom: 3px; padding-right: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
+episode += """
                  <i style=\"vertical-align:middle;opacity:.7;\" class=\"material-icons\">schedule</i>
                   <text style=\"font-size:.8em;opacity:.6\"> """ + pod_length + """ min.</text>
                 
