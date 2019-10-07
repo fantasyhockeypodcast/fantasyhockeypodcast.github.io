@@ -942,6 +942,7 @@ imagedict = {
     "Oliver Kylington": "https://nhl.bamcontent.com/images/headshots/current/168x168/8478430.jpg",
     "Ethan Bear": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941966.png&w=350&h=254",
     "Kirby Dach": "http://www.hockeydb.com/ihdb/photos/kirby-dach-2019-1005.jpg",
+    "Ville Heinola": "http://www.hockeydb.com/ihdb/photos/ville-heinola-2019-1221.jpg",
 }
 
 new_player_images = {}
