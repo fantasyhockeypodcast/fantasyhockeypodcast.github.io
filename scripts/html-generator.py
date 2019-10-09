@@ -28,12 +28,20 @@ if not show_notes_list:
 
 show_notes = ""
 for note in show_notes_list:
-    time = raw_input("Enter a time for note " + note + ": ")
+    time = int(raw_input("Enter a time for note " + note + " (in seconds): "))
+    if time == "":
+        continue
     if show_notes == "":
         show_notes = "\n    "
     else:
         show_notes += "\n    <br>"
-    show_notes += note + " - " + time
+    hours = time/3600
+    minutes = (time%3600)/60
+    seconds = time%60
+    time_string = str(minutes) + ":" + str(seconds).zfill(2)
+    if hours > 0:
+        time_string = str(hours) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
+    show_notes += note + " - " + "<a href=\"#\" onclick=\"audioTime(" + str(time) + ");return false;\">" + time_string + "</a>"
 
 gambi_script = raw_input("Enter Gambi's script link: ")
 brandon_script = raw_input("Enter Brandon's script link: ")
@@ -114,7 +122,7 @@ html = """<!doctype html>
         <p style=\"font-style:italic;opacity:.5;\">Episode """ + episode_number + """ - """ + page_title + """</p>
 
         <p> 
-            <audio controls style=\"width:70%;opacity:1;\">
+            <audio id=\"audio\" controls style=\"width:70%;opacity:1;\">
             <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
             </audio>"""
@@ -187,7 +195,15 @@ html_close = """
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src=\"scripts/main.js\"></script>
     <!-- endbuild -->
-      
+    
+    <script>
+        function audioTime(audioTime) {
+            var audio = document.getElementById("audio");
+            audio.currentTime = audioTime;
+            audio.play();
+        }
+    </script>
+     
     <script>
 
         (function(document){
@@ -844,7 +860,7 @@ imagedict = {
     "Nick Ritchie": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114742.png&w=350&h=254",
     "Tyler Jost": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4024879.png&w=350&h=254",
     "Anthony Duclair": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042086.png&w=350&h=254",
-"Samuel Montembeault": "http://www.hockeydb.com/ihdb/photos/samuel-montembeault-2019-7600.jpg",
+    "Samuel Montembeault": "http://www.hockeydb.com/ihdb/photos/samuel-montembeault-2019-7600.jpg",
     "Tony DeAngelo": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114769.png&w=350&h=254",
     "Travis Sanheim": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114757.png&w=350&h=254",
     "Jared McCann": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3114777.png&w=350&h=254",
