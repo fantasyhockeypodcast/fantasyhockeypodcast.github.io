@@ -125,7 +125,9 @@ html = """<!doctype html>
             <audio id=\"audio\" controls style=\"width:70%;opacity:1;\">
             <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
-            </audio>"""
+            </audio>
+            <button id="speed-button" class="mdl-button mdl-js-button" onclick="changeAudioSpeed();return false;">1.0x</button>
+            """
 if len(youtube_link) > 0:
     html += "<a style=\"color:black;\" href=\"" + youtube_link + "\"><img style=\"width: 15%; padding-left: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
 
@@ -187,7 +189,7 @@ html_close = """
     </button>
     <ul class=\"mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect\" for=\"menu-top-right\">
         <li class=\"mdl-menu__item\"><div style=\"left:50px;\" class=\"fb-share-button\" data-href=\"http://fantasyhockeypodcast.com\" data-layout=\"button\"></div></li>
-        <li class=\"mdl-menu__item\"><div style=\"margin-left:53%;margin-top:10%;\"><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"fntasyhockeypod\" data-related=\"Daveedgamboa\">Tweet</a>
+        <li class=\"mdl-menu__item\"><div style=\"margin-left:53%;margin-top:10%;\"><a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-via=\"FantasyHockeyPD\" data-related=\"Daveedgamboa\">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div></li>
     </ul>
     </div>
@@ -201,6 +203,25 @@ html_close = """
             var audio = document.getElementById("audio");
             audio.currentTime = audioTime;
             audio.play();
+        }
+
+        function changeAudioSpeed() {
+            var audio = document.getElementById("audio");
+            var speedButton = document.getElementById("speed-button");
+            switch(audio.playbackRate) {
+                case 1.0:
+                    audio.playbackRate = 1.5;
+                    speedButton.innerText = "1.5x"
+                    break;
+                case 1.5:
+                    audio.playbackRate = 2.0;
+                    speedButton.innerText = "2.0x"
+                    break;
+                default:
+                    audio.playbackRate = 1.0;
+                    speedButton.innerText = "1.0x"
+                    break;
+            }
         }
     </script>
      
