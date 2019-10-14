@@ -28,7 +28,10 @@ if not show_notes_list:
 
 show_notes = ""
 for note in show_notes_list:
-    time = int(raw_input("Enter a time for note " + note + " (in seconds): "))
+    t = raw_input("Enter a time for note " + note + " (in seconds): ")
+    if not t:
+        continue
+    time = int(t)
     if time == "":
         continue
     if show_notes == "":
