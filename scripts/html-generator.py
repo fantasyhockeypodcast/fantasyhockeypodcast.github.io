@@ -8,7 +8,7 @@ page_image = raw_input("Enter an image for the page: ")
 pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
-        "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Long Term Pickup Suggestions", "Week Preview and Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
+        "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Long Term Pickup Suggestions", "Schedule Info", "Short Term Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
         "wednesday":{"show_notes":["Unsustainable Recap", "Unsustainable Segment"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
         "friday":{"show_notes":["Ten Takes", "Schedule Info", "Weekend Pickup Suggestions"], "titles":["Ten Takes", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
