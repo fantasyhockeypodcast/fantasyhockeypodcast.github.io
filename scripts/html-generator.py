@@ -9,7 +9,7 @@ pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
         "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Long Term Pickup Suggestions", "Schedule Info", "Short Term Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
-        "wednesday":{"show_notes":["Unsustainable Recap", "Unsustainable Segment"], "titles":["Last Week's Unsustainably High Picks", "Last Week's Unsustainably Low Picks", "Last Week's Sustainably High Picks", "Last Week's Sustainably Low Picks (Trade or Drop Options)", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
+        "wednesday":{"show_notes":["Unsustainable Recap", "Unsustainably High", "Unsustainably Low", "Sustainably High", "Sustainably Low"], "titles":["Last Week's Unsustainable Recap", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
         "friday":{"show_notes":["Ten Takes", "Schedule Info", "Weekend Pickup Suggestions"], "titles":["Ten Takes", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
@@ -985,6 +985,7 @@ imagedict = {
     "Ville Heinola": "http://www.hockeydb.com/ihdb/photos/ville-heinola-2019-1221.jpg",
     "Sammy Blais": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3149697.png",
     "Cody Ceci": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976843.png",
+    "Sam Lafferty": "http://www.hockeydb.com/ihdb/photos/sam-lafferty-2019-50.jpg",
 }
 
 new_player_images = {}
