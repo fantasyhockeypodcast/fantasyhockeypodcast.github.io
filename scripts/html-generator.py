@@ -28,23 +28,26 @@ if not show_notes_list:
 
 show_notes = ""
 for note in show_notes_list:
-    t = raw_input("Enter a time for note " + note + " (in seconds): ")
-    if not t:
+    time_string = raw_input("Enter a time for note " + note + ": ")
+    if not time_string:
         continue
-    time = int(t)
-    if time == "":
-        continue
+    time_array = time_string.split(":")
     if show_notes == "":
         show_notes = "\n    "
     else:
         show_notes += "\n    <br>"
-    hours = time/3600
-    minutes = (time%3600)/60
-    seconds = time%60
-    time_string = str(minutes) + ":" + str(seconds).zfill(2)
-    if hours > 0:
-        time_string = str(hours) + ":" + str(minutes).zfill(2) + ":" + str(seconds).zfill(2)
-    show_notes += note + " - " + "<a href=\"#\" onclick=\"audioTime(" + str(time) + ");return false;\">" + time_string + "</a>"
+    time_int = 0
+    array_length = len(time_array)
+    for i in range(0, array_length):
+        magnitude = array_length-1 - i
+        time_section = time_array[i]
+        if magnitude == 0:
+            time_int += int(time_section)
+        elif magnitude == 1:
+            time_int += int(time_section)*60
+        else:
+            time_int += int(time_section)*3600
+    show_notes += note + " - " + "<a href=\"#\" onclick=\"audioTime(" + str(time_int) + ");return false;\">" + time_string + "</a>"
 
 gambi_script = raw_input("Enter Gambi's script link: ")
 brandon_script = raw_input("Enter Brandon's script link: ")
