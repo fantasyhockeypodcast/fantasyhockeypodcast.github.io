@@ -9,7 +9,7 @@ pod_url = raw_input("Add a url for the cast: ")
 pod_length = raw_input("Length of pod (in minutes): ")
 daydict = {
         "monday":{"show_notes":["Grammar School", "Week Review", "Injury News", "Drop Candidates", "Long Term Pickup Suggestions", "Schedule Info", "Short Term Pickup Suggestions"], "titles":["Grammar School", "Week's Notable Players", "Injury News", "Drop Candidates", "Long Term Pickup Suggestions", "Short Term Pickup Suggestions"]},
-        "wednesday":{"show_notes":["Unsustainable Recap", "Unsustainably High", "Unsustainably Low", "Sustainably High", "Sustainably Low"], "titles":["Last Week's Unsustainable Recap", "Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
+        "wednesday":{"show_notes":["Unsustainably High", "Unsustainably Low", "Sustainably High", "Sustainably Low"], "titles":["Unsustainably High Picks", "Unsustainably Low Picks", "Sustainably High Picks", "Sustainably Low Picks (Trade or Drop Options)"]},
         "friday":{"show_notes":["Ten Takes", "Schedule Info", "Weekend Pickup Suggestions"], "titles":["Ten Takes", "Weekend Pickup Suggestions"]},
         "saturday":{"show_notes":["Game Previews", "Goalie Ranking", "Sit/Start Picks"], "titles":["Top Goalies", "Start Picks", "Sit Picks"]}
         }
