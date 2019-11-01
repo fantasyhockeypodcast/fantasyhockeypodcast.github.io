@@ -989,6 +989,10 @@ imagedict = {
     "Sammy Blais": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3149697.png",
     "Cody Ceci": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2976843.png",
     "Sam Lafferty": "http://www.hockeydb.com/ihdb/photos/sam-lafferty-2019-50.jpg",
+    "Tim Schaller": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069290.png",
+    "Denis Gurianov": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3900147.png&w=350&h=254",
+    "Josh Mahura": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4063504.png&w=350&h=254",
+    "Korbinian Holzer": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5507.png&w=350&h=254",
 }
 
 new_player_images = {}
