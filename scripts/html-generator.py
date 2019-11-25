@@ -995,6 +995,7 @@ imagedict = {
     "Korbinian Holzer": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5507.png&w=350&h=254",
     "Nick Paul": "http://www.hockeydb.com/ihdb/photos/nick-paul-1934-5432.jpg",
     "Justin Dowling": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067879.png&w=350&h=254",
+    "Ben Chiarot": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5246.png&w=350&h=254",
 }
 
 new_player_images = {}
