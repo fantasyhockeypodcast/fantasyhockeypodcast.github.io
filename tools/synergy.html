@@ -1,0 +1,768 @@
+<html>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<style>
+th {
+    cursor: pointer;
+}
+
+    td {
+        height: auto;
+        width: auto;
+        font-size: 16px;
+      margin-left: auto;
+  margin-right: auto;
+    }
+    img {
+    mix-blend-mode: multiply;
+      opacity: 1.0;
+      font-style: bold;
+      font-family: fantasy;
+    }
+
+    img.drop {
+        width: 75px;
+        padding-left:15px;
+        padding-right: 15px;
+        height: auto;
+        padding: 15px;
+    }
+    img.recommend {
+        width: 70px;
+        height: auto;
+    }
+    img.slot {
+        margin-top: 10px;
+    }
+    img.tableicon {
+        width: 35px;
+        height: auto;
+    }
+    img.team {
+        opacity: .8;
+    }
+    img.doesntcount {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+      opacity: 0.5;
+      color: grey;
+      font-family: serif;
+      font-style: italic;
+      filter: alpha(opacity=50); /* For IE8 and earlier */
+    }
+
+
+ td,  th {
+  border: 1px solid #ddd;
+}
+ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+   tr:nth-child(odd) { background: #f2f2f2;}
+
+
+</style>
+<style>
+    .box {
+  background-color: black;
+  cursor: pointer;
+}
+
+.holder {
+  height: 75px;
+  width: 75px;
+  background-image: url("./static/emptyslot.png");
+  background-size: 75px 75px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.hovered {
+  border: dotted 5px black;
+}
+
+.invisible {
+  display: none;
+}
+
+#container {
+  margin: auto;
+  position: relative;
+}
+
+:empty:not(:focus):before{
+    content:attr(data-text)
+}
+
+</style>
+<style>
+    .container{
+    width: %100;
+    /* center a div insie another div*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+    .content3{
+    width: auto;
+        height: auto;
+        margin: 0px;
+        padding:5px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .content2{
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding:5px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .content{
+    width: auto;
+        height: auto;
+        margin: 0px;
+        padding:5px;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .slot {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding-right: 30px;
+    }
+
+</style>
+<style>
+    input[type=number] {
+    height: 25px;
+    width: 50px;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button {
+    width: 14px;
+    height: 25px;
+}
+</style>
+<script>
+    var icons = {"Anaheim Ducks": "./static/ana.gif", "Arizona Coyotes": "./static/ari.gif", "Boston Bruins": "./static/bos.gif", "Buffalo Sabres": "./static/buf.gif", "Calgary Flames": "./static/cal.gif", "Carolina Hurricanes": "./static/car.gif", "Chicago Blackhawks": "./static/chi.gif", "Colorado Avalanche": "./static/col.gif", "Columbus Blue Jackets": "./static/cbj.gif", "Dallas Stars": "./static/dal.gif", "Detroit Red Wings": "./static/det.gif", "Edmonton Oilers": "./static/edm.gif", "Florida Panthers": "./static/fla.gif", "Los Angeles Kings": "./static/los.gif", "Minnesota Wild": "./static/min.gif", "Montreal Canadiens": "./static/mon.gif", "Nashville Predators": "./static/nas.gif", "New Jersey Devils": "./static/njd.gif", "New York Islanders": "./static/nyi.gif", "New York Rangers": "./static/nyr.gif", "Ottawa Senators": "./static/ott.gif", "Philadelphia Flyers": "./static/phi.gif", "Pittsburgh Penguins": "./static/pit.gif", "San Jose Sharks": "./static/san.gif", "St. Louis Blues": "./static/stl.gif", "Tampa Bay Lightning": "./static/tbl.gif", "Toronto Maple Leafs": "./static/tor.gif", "Vancouver Canucks": "./static/van.gif", "Vegas Golden Knights": "./static/veg.gif", "Washington Capitals": "./static/was.gif", "Winnipeg Jets": "./static/win.gif"};
+</script>
+<script>
+    var schedulehex = {
+        "St. Louis Blues": "252a54b2cc932aad495528aa9552019952b5aa92a5549550",
+        "Dallas Stars": "16aab4a4c84d2acaa934d0650d2a014b32b2aa952aca9ad0",
+        "Vancouver Canucks": "24495a4acb552aa6895aa86295aa014d55124acaad2d5a50",
+        "Colorado Avalanche": "142ab462ca952a2c6aa5a8cab22a80095aaac5aad5555550",
+        "New Jersey Devils": "0c6a5042cb4b2655993168aa95aa012952d54ad32b552d50",
+        "Vegas Golden Knights": "28ad56514ac9aaa9a56a98ca952a401952a96552c9654550",
+        "Washington Capitals": "2caaaac4a2ab522cd29468c9594a015514a96a4d4a9aab50",
+        "Montreal Canadiens": "146958a34a933256b192a86ab55a012d55654a952954a990",
+        "Minnesota Wild": "142b4aa64a952acaa95aa8a8c4aaa0096aa2ab558b592d50",
+        "Winnipeg Jets": "1aad4a24c9552a2ca54aa8aaaca560195a556a92534a9550",
+        "Tampa Bay Lightning": "1629512681852aacab52a86ad5ac015956a94a95ab2c5950",
+        "San Jose Sharks": "2ca492d4ca952aacad5230cad52a014944696a9596555550",
+        "Anaheim Ducks": "14b2aab4a8554aa9155330aa554c01596a9aa95aa3294cb0",
+        "Arizona Coyotes": "142952ca5ab54b2cb552986a96aa006956ab488a4aaa4d50",
+        "Philadelphia Flyers": "084994b4cacb2aaca89aa86a995a401a56a5494d2b4cacd0",
+        "Carolina Hurricanes": "1699a0a4caa52b2ca952a8c9534d40155254c985ab56ad30",
+        "Columbus Blue Jackets": "0d18b4a2ca922aacaa56a8aab52b200d34d559498a959a60",
+        "Edmonton Oilers": "24aaaa9655552b265555688aa522005952b2acb555a95510",
+        "Buffalo Sabres": "1552d2c8c185a9ad2d52a8aa85aa00a96a9465954d56aa50",
+        "Ottawa Senators": "242a55505aab34acca96a832932a019952b55a95352ca950",
+        "Nashville Predators": "14a952a552912aac8956a8c4d4aa016954b4cab52b16acd0",
+        "Chicago Blackhawks": "082a2ab46ac9aa4d3559a8aa553340098b32aa9696565550",
+        "Boston Bruins": "14aa523459532a6aaad2a8aa956940199932ca9526b4a950",
+        "Pittsburgh Penguins": "14acb32452932cac595260d2d2ad401452556595ab2acd50",
+        "Calgary Flames": "14ad5aa56a89aaa42b5298aa554a00c955a8aaca8ad55150",
+        "New York Islanders": "0a9a50d0ca892aa5aa52a8aab16b400956aaaa952d56ab50",
+        "Detroit Red Wings": "06a96354d5552b2d095a306952a6a01a6ab4aaa2aa8ca950",
+        "New York Rangers": "14086a94565516ad355458ca9549401aaad2cb5532aaaad0",
+        "Toronto Maple Leafs": "2d2996644acb2a2cc95268caa8aa014ab2b54a962a556950",
+        "Los Angeles Kings": "04cd52b24a954aad595aa8c8ad2a0069592564c55256b530",
+        "Florida Panthers": "149a329a42d52b248d54686ad48ac00b56ab4ac52ad5aa50"
+    }
+</script>
+<script>
+    // n is number, b is padding
+    const sum = arr => arr.reduce((a,b) => a + b, 0)
+    const bits = (n,b=4) => [...Array(b)].map((x,i)=>(n>>i)&1).reverse();
+    var datastart = moment("2019-09-30")
+
+    function ToBits(hexChar){
+        return bits(parseInt(hexChar, 16))
+    }
+
+    function GetIndex(yyyymmdd){
+        let pos = moment(yyyymmdd).diff(datastart, "days")/4; // 4 days per character
+        let int = Math.floor(pos)
+        let bit = (pos-int) * 4; // 4 bits/days per character
+        return {int, bit};
+    }
+
+    function DoesTeamPlay(team, yyyymmdd){
+        let t = schedulehex[team];
+        pos = GetIndex(yyyymmdd);
+        let char = t[pos.int];
+        return ToBits(char)[pos.bit];
+    }
+
+</script>
+<script>
+
+    let header = ["Slot", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    let garbageData = {"C": [], "LW":[],"RW":[], "D": []};
+    let slots = {  // todo:: css to show overflow
+        "C": 3,
+        "LW": 3,
+        "RW": 3,
+        "D": 3
+    }
+
+    function AddTables(){
+        let d = document.getElementById("tables");
+
+        Object.keys(slots).forEach(slot=>{
+            let table = document.createElement('table');
+            let tableHeader = document.createElement('thead');
+            let row = tableHeader.insertRow()
+            header.forEach(h=>{
+                row.insertCell().innerHTML=h;
+            });
+
+            let tableBody = document.createElement('tbody');
+            tableBody.id = slot;
+            table.appendChild(tableBody);
+            table.appendChild(tableHeader);
+            d.appendChild(table);
+        });
+
+    }
+
+    function CollectMyTeam(){
+        // TODO Check all slots
+        let ret = {};
+        Object.keys(slots).forEach(slot=>{
+            let alts = [];
+            document.querySelectorAll("[data-text='"+slot+"']").forEach(o=>{
+                o.querySelectorAll("img").forEach(m=>{
+                    alts.push(m.alt);
+                });
+            });
+            ret[slot]=alts;
+        });
+        return ret;
+    }
+
+    function CollectDates(){
+        let dates = [];
+        let d = getWeekStart();
+        for(let v=0;v<7;v++){
+            dates.push(d.format("YYYY-MM-DD"));
+            d = d.add(1, 'day');
+
+        }
+        return dates;
+    }
+
+    function UpdateData(){
+        let dates = CollectDates();
+        let myTeam = CollectMyTeam();
+        let ret = {};
+
+        Object.keys(myTeam).forEach(slot=>{
+
+            ret[slot]={}
+            dates.forEach(d=>{
+                let playing = [];
+                myTeam[slot].forEach(team=>{
+                    if(DoesTeamPlay(team, d)){
+                        playing.push(team);
+                    }
+                });
+                ret[slot][d]=playing;
+            });
+
+
+        });
+        return ret;
+    }
+
+    function UpdateTables(){
+        let tables = document.querySelectorAll("tbody");
+        tables.forEach(table=>{
+            while(table.rows.length > 0) {
+              table.deleteRow(0);
+            }
+            let row = table.insertRow();
+            let cell = row.insertCell();
+            cell.innerText = table.id;
+            let sched = UpdateData()[table.id];
+            table.parentNode.hidden = (sum(Object.values(sched).map(e=>e.length)) == 0);
+
+            Object.keys(sched).forEach(k=>{
+                let e = sched[k];
+                let cell = row.insertCell();
+                e.forEach(ea=>{
+                    let t = MakeTeamIcon(ea);
+                    t.classList.add("tableicon");
+                    cell.appendChild(t);
+                });
+                let a = Array.from(cell.querySelectorAll("img"));
+                if(document.getElementById("usetodaycheck").checked && (moment(moment().format("YYYY-MM-DD")) - moment(k)) > 0){
+                    a.forEach(ea=>{
+                        ea.classList.add("doesntcount");
+                    });
+                }
+                else if (a.length > slots[table.id]){
+                    a.splice(slots[table.id]).forEach(ea=>{
+                        ea.classList.add("doesntcount");
+                    });
+                }
+            });
+        });
+    }
+
+    function EncodeTeam(){
+        let d = {};
+        let c = {};
+        Object.keys(slots).forEach(ea=>{
+            d[ea]=Array.from(document.querySelectorAll('#'+ ea +' img.slot')).map(a=>a.alt)
+            c[ea]=document.getElementById("slots" + ea).value;
+        });
+
+        let o = {
+            "slots": d,
+            "count": c
+        }
+        let s = btoa(JSON.stringify(o));
+        document.getElementById("encodedteam").value=s;
+    }
+
+    function CopyToClipboard() {
+      /* Get the text field */
+      EncodeTeam();
+      var copyText = document.getElementById("encodedteam");
+
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+      /* Copy the text inside the text field */
+      document.execCommand("copy");
+    }
+
+    function _LoadTeamString(s){
+        if(s != null){
+            let o = JSON.parse(atob(s))
+            Object.keys(o["count"]).forEach(slot=>{
+                document.getElementById("slots" + slot).value=o["count"][slot];
+            });
+            Object.keys(o["slots"]).forEach(slot=>{
+                document.querySelectorAll('#'+slot+' img.slot').forEach(a=>{
+                    a.parentNode.removeChild(a);
+                });
+                let holders = Array.from(document.querySelectorAll('#'+slot+' div.holder')).reverse();
+                o["slots"][slot].forEach(team=>{
+                    let h = holders.pop()
+                    let ele = MakeDroppedIcon(team);
+                    h.appendChild(ele);
+                });
+            });
+        }
+        UpdateTables();
+        UpdateTotals()
+        UpdateRecommendations();
+    }
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    function LoadTeamString(){
+        let s = prompt("Paste the Team String saved from your last session");
+        _LoadTeamString(s);
+    }
+
+    function UpdateTotals(){
+        let ele = document.getElementById("totals");
+        let st = "";
+        let total = 0;
+        Object.keys(slots).forEach(slot=>{
+            num = document.querySelectorAll('#'+ slot +' td img:not(.doesntcount)').length;
+            st += slot + " (" + num + ") "
+            total += num;
+        });
+        st += "= " + total;
+        ele.innerHTML = st;
+    }
+
+    function UpdateRecommendations(){
+
+        Object.keys(slots).forEach(slot=>{
+            let ele = document.getElementById("recommend" + slot);
+            ele.innerHTML = '';
+            let scores=RecommendTeams(slot, 6);
+            Object.keys(scores).forEach(ea=>{
+                let d = document.createElement("div");
+                let e = MakeTeamIcon(ea);
+                e.classList.add("recommend");
+                d.appendChild(e);
+                e = document.createElement("label");
+                e.innerHTML = scores[ea];
+                d.appendChild(e);
+                ele.appendChild(d);
+            });
+        });
+    }
+
+    function getKeysWithHighestValue(o, n){
+      var keys = Object.keys(o);
+      keys.sort(function(a,b){
+        return o[b] - o[a];
+      })
+      return keys.slice(0,n);
+    }
+
+    function RecommendTeams(slot, n){
+        let scores = {};
+        let data = UpdateData()[slot];
+        // filter full dates
+        let dates = Object.keys(data).filter(ea=>{return data[ea].length<slots[slot]});
+        Object.keys(schedulehex).forEach(team=>{
+            scores[team]=0;
+            for(let d of dates){
+               if (DoesTeamPlay(team, d)){
+                   if(document.getElementById("usetodaycheck").checked){
+                        if((moment(moment().format("YYYY-MM-DD")) - moment(d)) > 0){
+                            continue;
+                        }
+                   }
+                scores[team] += 1;
+               }
+            }
+        });
+        let ret={};
+        getKeysWithHighestValue(scores, n).forEach(ea=>{
+            ret[ea]=scores[ea];
+        });
+        return ret;
+    }
+
+    function AddAllTeamDragable(){
+        let teams = document.getElementById("teams");
+        Object.keys(icons).forEach(t=>{
+            let e = MakeTeamIcon(t);
+            e.classList.add("drop");
+            teams.appendChild(e);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        AddAllTeamDragable();
+        AddTables();
+        SetDraggables();
+        ConnectWeekSlider();
+        ConnectSlotNumbers();
+        UpdateTables();
+        UpdateTotals()
+        UpdateRecommendations();
+        document.getElementById("usetodaycheck").addEventListener("change", function(){
+            UpdateRecommendations();
+            UpdateTables();
+            UpdateTotals();
+        });
+        _LoadTeamString(getUrlVars()['team']);
+    });
+
+    function ConnectSlotNumbers(){
+        Object.keys(slots).forEach(slot=>{
+            let ele = document.getElementById("slots" + slot);
+            ele.addEventListener('change', (event) => {
+                slots[slot]=event.target.value;
+                UpdateTables();
+                UpdateTotals()
+                UpdateRecommendations();
+
+            });
+        });
+    }
+
+</script>
+<script>
+function dragover(e) {
+  e.preventDefault()
+}
+
+window.dd_id = undefined;
+
+function dragenter(e) {
+  e.preventDefault()
+}
+
+function MakeTeamIcon(team){
+    let box = document.createElement("img");
+      box.src = icons[team];
+      box.alt = team;
+      box.addEventListener('mousedown', e=>{
+          window.dd_id = (' ' + e.target.alt).slice(1);
+      });
+      return box;
+  }
+
+function MakeDroppedIcon(team){
+  let box = MakeTeamIcon(team);
+  box.width = 75;
+  box.height = 50;
+  box.classList.add("slot");
+  box.addEventListener('dblclick', e=>{
+      e.target.parentNode.removeChild(e.target);
+      UpdateTables();
+      UpdateTotals()
+      UpdateRecommendations();
+  });
+    return box;
+}
+function drop(e) {
+  e.preventDefault()
+  let box = MakeDroppedIcon(window.dd_id);
+  this.innerHTML = "";
+  this.append(box)
+  UpdateTables();
+  UpdateTotals()
+  UpdateRecommendations();
+}
+    function SetDraggables(){
+        const containers = document.getElementsByClassName('holder')
+        for(const container of containers) {
+          container.addEventListener("dragover", dragover)
+          container.addEventListener("dragenter", dragenter)
+          container.addEventListener("drop", drop)
+        }
+    }
+    function getWeekStart(){
+       let week = parseInt(document.getElementById("weekRange").value);
+       let val = moment().day(1).week(week);
+       return val
+    }
+
+    function ConnectWeekSlider(){
+        var slider = document.getElementById("weekRange");
+        var output = document.getElementById("selectedWeek");
+        slider.oninput = function() {
+            output.innerHTML = getWeekStart().format('ddd ll');
+            UpdateTables();
+            UpdateTotals()
+            UpdateRecommendations();
+        }
+
+        var val = moment().week();
+        if (moment().year() === 2020){
+            val = val + 52;
+        }
+        slider.value = val;
+        output.innerHTML = getWeekStart().format('ddd ll');
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="container">
+                <div class="content3">
+                    <div>
+                        <ol>
+                            <li>Set number of starts per night, per position</li>
+                            <li>Drag and drop from the Left to add your keepers</li>
+                            <li>Drag from the Recommended section to add Streamers</li>
+                            <li>See your personalized Schedule at the bottom</li>
+                            <li>Scrub to other weeks</li>
+                        </ol>
+                    </div>
+                    <div style="width:6em"></div>
+                    <div class="container">
+                        <div class="content2">
+                            <label>Nightly C Starts </label><input id="slotsC" min="1" value="3" type="number" max="10">
+                            <label>Nightly LW Starts </label><input id="slotsLW" min="1" value="3" type="number" max="10">
+                            <label>Nightly RW Starts </label><input id="slotsRW" min="1" value="3" type="number" max="10">
+                            <label>Nightly D Starts </label><input id="slotsD" min="1" value="3" type="number" max="10">
+                            <label>Ignore Past Games </label><input id="usetodaycheck" type="checkbox" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="content2">
+                    <div id="teams" style="display: grid;grid-template-columns: auto auto auto; background-color: eeeeee;" draggable="true"></div>
+                    <div class="content2" style="padding-left:30px; padding-right: 30px; padding-top:30px">
+                        <div id="C" class="slot">
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                            <div class="container">
+                                <div class="holder" data-text="C"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Recommended C</label> <br>
+                            <div class="content2" id="recommendC"></div>
+                        </div>
+                        <div>
+                             <div id="LW" class="slot">
+                                <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                                            <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="LW"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Recommended LW</label><br>
+                            <div class="content2" id="recommendLW"></div>
+                        </div>
+                        <div>
+                             <div id="RW" class="slot">
+                                <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                                            <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="RW"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Recommended RW</label><br>
+                            <div class="content2" id="recommendRW"></div>
+                        </div>
+                        <div>
+                            <div id="D" class="slot">
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                                <div class="container">
+                                    <div class="holder" data-text="D"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Recommended Defense</label><br>
+                            <div class="content2" id="recommendD"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <br>
+    <div class="container">
+        <div class="content1">
+            <div style="display:inline-block">
+                    <button id="prevweek" onclick="var slider = document.getElementById('weekRange');slider.stepDown(1);slider.oninput()"><</button>
+                    <input type="range" min="40" max="66" value="0" class="slider" id="weekRange">
+                    <button id="nextweek" onclick="var slider = document.getElementById('weekRange');slider.stepUp(1);slider.oninput()">></button>
+                    <div id="selectedWeek"></div>
+            </div>
+            <div id="tables"></div>
+            <label id="totals"></label>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content1">
+            <input type="text" id="encodedteam">
+            <button onclick="CopyToClipboard()">Save Team to Clipboard</button>
+            <button onclick="LoadTeamString()">Load Team String</button>
+        </div>
+    </div>
+    <div class="container">
+        <div style="display:inline-block" class="content">
+            <p align="center">
+                Contact: @0GAR over on <a href="https://discord.gg/mTVbYB">FHP Discord</a>
+            </p>
+            </div>
+    </div>
+</body>
+</html>
