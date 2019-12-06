@@ -1,6 +1,10 @@
 <html>
 <script src="https://momentjs.com/downloads/moment.js"></script>
 <style>
+.eligibledd {
+    position: absolute;
+    align-self: baseline;
+}
 th {
     cursor: pointer;
 }
@@ -93,9 +97,9 @@ th {
   position: relative;
 }
 
-:empty:not(:focus):before{
-    content:attr(data-text)
-}
+//:empty:not(:focus):before{
+//    content:attr(data-text)
+//}
 
 </style>
 <style>
@@ -248,14 +252,13 @@ input[type=number]:hover::-webkit-inner-spin-button {
     function CollectMyTeam(){
         // TODO Check all slots
         let ret = {};
-        Object.keys(slots).forEach(slot=>{
-            let alts = [];
-            document.querySelectorAll("[data-text='"+slot+"']").forEach(o=>{
-                o.querySelectorAll("img").forEach(m=>{
-                    alts.push(m.alt);
-                });
-            });
-            ret[slot]=alts;
+        Array.from(document.querySelectorAll("select.eligibledd")).forEach(e=>{
+            let slot = e.selectedOptions[0].text;
+            ret[slot] = ret[slot] || [];
+            let img = e.parentElement.querySelector("img");
+            if (img != undefined){
+                ret[slot].push(img.alt);
+            }
         });
         return ret;
     }
@@ -275,21 +278,45 @@ input[type=number]:hover::-webkit-inner-spin-button {
         let dates = CollectDates();
         let myTeam = CollectMyTeam();
         let ret = {};
-
-        Object.keys(myTeam).forEach(slot=>{
-
-            ret[slot]={}
+        // fill default empty for best-available-if-empty. There's refactoring possible here
+        Object.keys(slots).forEach(slot=>{
+            ret[slot] = {};
             dates.forEach(d=>{
-                let playing = [];
-                myTeam[slot].forEach(team=>{
-                    if(DoesTeamPlay(team, d)){
-                        playing.push(team);
-                    }
-                });
-                ret[slot][d]=playing;
+                ret[slot][d] = [];
             });
 
+        });
 
+        // shortest first means we'll resolve dual/tri-eligible players last!
+        Object.keys(myTeam).sort((a,b)=> a.length - b.length).forEach(slot=>{
+            let eligible = slot.split("/");
+            let teams = myTeam[slot];
+            for (ind in teams){
+                let team = teams[ind];
+                dates.forEach(d=>{
+                    for (ei in eligible){
+                        let elig = eligible[ei];
+                        ret[elig] = ret[elig] || {};
+                        ret[elig][d] = ret[elig][d] || [];
+                    }
+
+                    if(DoesTeamPlay(team, d)){
+                        let pos = eligible[0];
+                        let found = false;
+                        for (ei in eligible){
+                            let elig = eligible[ei];
+                            if (!found){
+                                // check if already full today
+                                if (ret[elig][d].length < slots[elig]){
+                                    pos = elig;
+                                    found = true;
+                                }
+                            }
+                        }
+                        ret[pos][d].push(team);
+                    }
+                });
+            }
         });
         return ret;
     }
@@ -303,10 +330,10 @@ input[type=number]:hover::-webkit-inner-spin-button {
             let row = table.insertRow();
             let cell = row.insertCell();
             cell.innerText = table.id;
-            let sched = UpdateData()[table.id];
+            let sched = UpdateData()[table.id] || {};
             table.parentNode.hidden = (sum(Object.values(sched).map(e=>e.length)) == 0);
 
-            Object.keys(sched).forEach(k=>{
+            Object.keys(sched).sort().forEach(k=>{
                 let e = sched[k];
                 let cell = row.insertCell();
                 e.forEach(ea=>{
@@ -333,7 +360,12 @@ input[type=number]:hover::-webkit-inner-spin-button {
         let d = {};
         let c = {};
         Object.keys(slots).forEach(ea=>{
-            d[ea]=Array.from(document.querySelectorAll('#'+ ea +' img.slot')).map(a=>a.alt)
+            let p = [];
+            Array.from(document.querySelectorAll('#'+ ea +' img.slot')).forEach(a=>{
+                let obj = a.parentElement.parentElement.querySelector("select.eligibledd").selectedOptions[0].text;
+                p.push({team: a.alt, position: obj});
+            });
+            d[ea]=p;
             c[ea]=document.getElementById("slots" + ea).value;
         });
 
@@ -362,17 +394,29 @@ input[type=number]:hover::-webkit-inner-spin-button {
         if(s != null){
             let o = JSON.parse(atob(s))
             Object.keys(o["count"]).forEach(slot=>{
-                document.getElementById("slots" + slot).value=o["count"][slot];
+                document.getElementById("slots" + slot).value=parseInt(o["count"][slot]);
+                // could instead trigger change event?
+                slots[slot]=parseInt(o["count"][slot]);
             });
             Object.keys(o["slots"]).forEach(slot=>{
                 document.querySelectorAll('#'+slot+' img.slot').forEach(a=>{
                     a.parentNode.removeChild(a);
                 });
                 let holders = Array.from(document.querySelectorAll('#'+slot+' div.holder')).reverse();
-                o["slots"][slot].forEach(team=>{
+                o["slots"][slot].forEach(obj=>{
+                    let team = obj["team"];
+                    let pos = obj["position"];
                     let h = holders.pop()
                     let ele = MakeDroppedIcon(team);
                     h.appendChild(ele);
+                    let p = h.parentElement.querySelector("select.eligibledd");
+                    for(let ob=0; ob < p.options.length; ob++){
+                        let e = p.options[ob];
+                        if (e.text == pos){
+                            p.selectedIndex = ob;
+                            break;
+                        }
+                    }
                 });
             });
         }
@@ -434,7 +478,7 @@ input[type=number]:hover::-webkit-inner-spin-button {
 
     function RecommendTeams(slot, n){
         let scores = {};
-        let data = UpdateData()[slot];
+        let data = UpdateData()[slot] || {};
         // filter full dates
         let dates = Object.keys(data).filter(ea=>{return data[ea].length<slots[slot]});
         Object.keys(schedulehex).forEach(team=>{
@@ -480,6 +524,14 @@ input[type=number]:hover::-webkit-inner-spin-button {
             UpdateTables();
             UpdateTotals();
         });
+        document.querySelectorAll("select.eligibledd").forEach(e=>{
+            e.addEventListener("change", function(){
+                UpdateTables();
+                UpdateTotals()
+                UpdateRecommendations();
+            });
+        });
+
         _LoadTeamString(getUrlVars()['team']);
     });
 
@@ -487,7 +539,7 @@ input[type=number]:hover::-webkit-inner-spin-button {
         Object.keys(slots).forEach(slot=>{
             let ele = document.getElementById("slots" + slot);
             ele.addEventListener('change', (event) => {
-                slots[slot]=event.target.value;
+                slots[slot]=parseInt(event.target.value);
                 UpdateTables();
                 UpdateTotals()
                 UpdateRecommendations();
@@ -604,39 +656,111 @@ function drop(e) {
                     <div class="content2" style="padding-left:30px; padding-right: 30px; padding-top:30px">
                         <div id="C" class="slot">
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                             <div class="container">
+                                <select class="eligibledd">
+                                    <option>C</option>
+                                    <option>C/LW</option>
+                                    <option>C/RW</option>
+                                    <option>C/LW/RW</option>
+                                </select>
                                 <div class="holder" data-text="C"></div>
                             </div>
                         </div>
@@ -647,21 +771,45 @@ function drop(e) {
                         <div>
                              <div id="LW" class="slot">
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                                             <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>LW</option>
+                                        <option>LW/RW</option>
+                                    </select>
                                     <div class="holder" data-text="LW"></div>
                                 </div>
                             </div>
@@ -673,21 +821,45 @@ function drop(e) {
                         <div>
                              <div id="RW" class="slot">
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                                             <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>RW</option>
+                                        <option>RW/LW</option>
+                                    </select>
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                             </div>
@@ -699,30 +871,57 @@ function drop(e) {
                         <div>
                             <div id="D" class="slot">
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                                 <div class="container">
+                                    <select class="eligibledd">
+                                        <option>D</option>
+                                    </select>
                                     <div class="holder" data-text="D"></div>
                                 </div>
                             </div>

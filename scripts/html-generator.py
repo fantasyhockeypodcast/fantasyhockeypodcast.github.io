@@ -998,6 +998,7 @@ imagedict = {
     "Ben Chiarot": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5246.png&w=350&h=254",
     "John Marino": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941974.png&w=350&h=254",
     "Calvin de Haan": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5266.png",
+    "Chris Driedger": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067263.png",
 }
 
 new_player_images = {}
