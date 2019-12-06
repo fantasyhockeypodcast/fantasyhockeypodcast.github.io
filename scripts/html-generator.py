@@ -999,6 +999,8 @@ imagedict = {
     "John Marino": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941974.png&w=350&h=254",
     "Calvin de Haan": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5266.png",
     "Chris Driedger": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3067263.png",
+    "Josh Archibald": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2591154.png",
+    "Jujhar Khaira": "https://a.espncdn.com/i/headshots/nhl/players/full/3068670.png",
 }
 
 new_player_images = {}
