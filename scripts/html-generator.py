@@ -1003,6 +1003,7 @@ imagedict = {
     "Jujhar Khaira": "https://a.espncdn.com/i/headshots/nhl/players/full/3068670.png",
     "Brayden McNabb": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5202.png&w=350&h=254",
     "Ryan Graves": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042122.png&w=350&h=254",
+    "Valeri Nichushkin": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042003.png&w=350&h=254",
 }
 
 new_player_images = {}
