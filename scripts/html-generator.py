@@ -1008,6 +1008,8 @@ imagedict = {
     "Anthony DeAngelo": "https://a.espncdn.com/i/headshots/nhl/players/full/3114769.png",
     "Filip Gustavsson": "https://lscluster.hockeytech.com/download.php?client_code=ahl&file_path=media/b02abab361e5cdf62157fefad9ae5d0b.jpg",
     "Noel Acciari": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096237.png",
+    "Kaapo Kahkonen": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151341.png&w=350&h=254",
+    "Robert Thomas": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233637.png&w=350&h=254",
 }
 
 new_player_images = {}
