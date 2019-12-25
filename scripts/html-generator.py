@@ -1004,6 +1004,10 @@ imagedict = {
     "Brayden McNabb": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5202.png&w=350&h=254",
     "Ryan Graves": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042122.png&w=350&h=254",
     "Valeri Nichushkin": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042003.png&w=350&h=254",
+    "Anthony Cirelli": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3941973.png&w=350&h=254",
+    "Anthony DeAngelo": "https://a.espncdn.com/i/headshots/nhl/players/full/3114769.png",
+    "Filip Gustavsson": "https://lscluster.hockeytech.com/download.php?client_code=ahl&file_path=media/b02abab361e5cdf62157fefad9ae5d0b.jpg",
+    "Noel Acciari": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096237.png",
 }
 
 new_player_images = {}
