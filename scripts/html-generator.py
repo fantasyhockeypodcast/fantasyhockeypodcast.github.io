@@ -1010,6 +1010,8 @@ imagedict = {
     "Noel Acciari": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3096237.png",
     "Kaapo Kahkonen": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3151341.png&w=350&h=254",
     "Robert Thomas": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4233637.png&w=350&h=254",
+    "Dennis Gilbert": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3942030.png&w=350&h=254",
+    "Connor Murphy": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2562618.png&w=350&h=254",
 }
 
 new_player_images = {}
