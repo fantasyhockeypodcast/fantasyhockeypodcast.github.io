@@ -1,6 +1,43 @@
 <html>
 <script src="https://momentjs.com/downloads/moment.js"></script>
+<link rel="icon" type="image/png" href="static/fhp.png">
 <style>
+.garbage {
+    position: fixed;
+}
+
+.gl {
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(255,200,200,1));
+    top: 0px;
+    left: 0px;
+    width: 15%;
+    height: 100%;
+}
+
+.gr {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,200,200,1));
+    top: 0px;
+    right: 0px;
+    width: 15%;
+    height: 100%;
+}
+
+.gt {
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(255,200,200,1));
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10%;
+}
+.gb {
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,200,200,1));
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10%;
+}
+
+
 .eligibledd {
     position: absolute;
     align-self: baseline;
@@ -65,8 +102,7 @@ th {
   background-color: #4CAF50;
   color: white;
 }
-   tr:nth-child(odd) { background: #f2f2f2;}
-
+   tr:nth-child(odd) { background: #f2f2f2; }
 
 </style>
 <style>
@@ -226,7 +262,8 @@ input[type=number]:hover::-webkit-inner-spin-button {
         "C": 3,
         "LW": 3,
         "RW": 3,
-        "D": 3
+        "D": 3,
+        "UTIL": 3
     }
 
     function AddTables(){
@@ -290,6 +327,7 @@ input[type=number]:hover::-webkit-inner-spin-button {
         // shortest first means we'll resolve dual/tri-eligible players last!
         Object.keys(myTeam).sort((a,b)=> a.length - b.length).forEach(slot=>{
             let eligible = slot.split("/");
+            eligible.push("UTIL");
             let teams = myTeam[slot];
             for (ind in teams){
                 let team = teams[ind];
@@ -377,17 +415,18 @@ input[type=number]:hover::-webkit-inner-spin-button {
         document.getElementById("encodedteam").value=s;
     }
 
-    function CopyToClipboard() {
+    function CopyStateToURL() {
       /* Get the text field */
       EncodeTeam();
       var copyText = document.getElementById("encodedteam");
 
       /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+      //copyText.select();
+      //copyText.setSelectionRange(0, 99999); /*For mobile devices*/
 
       /* Copy the text inside the text field */
-      document.execCommand("copy");
+      //document.execCommand("copy");
+      window.history.replaceState("", "", addParam(window.location.origin+window.location.pathname, "team", copyText.value));
     }
 
     function _LoadTeamString(s){
@@ -419,6 +458,10 @@ input[type=number]:hover::-webkit-inner-spin-button {
                     }
                 });
             });
+            Object.keys(slots).forEach(slot=>{
+                document.getElementById(slot).style.display = (slots[slot] == 0) ? "None": "";
+                document.getElementById(slot + "Recommended").style.display = (slots[slot] == 0) ? "None": "";
+            });
         }
         UpdateTables();
         UpdateTotals()
@@ -430,6 +473,15 @@ input[type=number]:hover::-webkit-inner-spin-button {
             vars[key] = value;
         });
         return vars;
+    }
+    function addParam(url, param, value) {
+       var a = document.createElement('a'), regex = /(?:\?|&amp;|&)+([^=]+)(?:=([^&]*))*/g;
+       var match, str = []; a.href = url; param = encodeURIComponent(param);
+       while (match = regex.exec(a.search))
+           if (param != match[1]) str.push(match[1]+(match[2]?"="+match[2]:""));
+       str.push(param+(value?"="+ value:""));
+       a.search = str.join("&");
+       return encodeURI(a.href);
     }
     function LoadTeamString(){
         let s = prompt("Paste the Team String saved from your last session");
@@ -476,11 +528,30 @@ input[type=number]:hover::-webkit-inner-spin-button {
       return keys.slice(0,n);
     }
 
+    function GetSlotOpenings(slot){
+    }
+
     function RecommendTeams(slot, n){
         let scores = {};
-        let data = UpdateData()[slot] || {};
+        team = CollectMyTeam()
+
+        // Adding, for example, a C when we have a C/LW may still yield additional starts, so check for flexibility
+        let slotAndBumps = [];
+        Object.keys(team).forEach(s=>{
+            if (s.indexOf(slot) > -1){
+                let d = s.split("/");
+                slotAndBumps = slotAndBumps.concat(d);
+            }
+        });
+        slotAndBumps = [...new Set([...slotAndBumps])];
+
         // filter full dates
-        let dates = Object.keys(data).filter(ea=>{return data[ea].length<slots[slot]});
+        let dates = [];
+        slotAndBumps.forEach(s=>{
+            let data = UpdateData()[s] || {};
+            dates = dates.concat(Object.keys(data).filter(ea=>{return data[ea].length<slots[s]}));
+        });
+        dates = [...new Set([...dates])];
         Object.keys(schedulehex).forEach(team=>{
             scores[team]=0;
             for(let d of dates){
@@ -533,6 +604,22 @@ input[type=number]:hover::-webkit-inner-spin-button {
         });
 
         _LoadTeamString(getUrlVars()['team']);
+
+        document.addEventListener("touchstart", e=>{
+            if (e.target.classList.value == "slot"){
+                document.querySelectorAll(".garbage").forEach(g=>{
+                    g.hidden = false;
+                });
+            }
+        });
+        document.addEventListener("touchend", e=>{
+            document.querySelectorAll(".garbage").forEach(g=>{
+                g.hidden = true;
+            });
+        });
+        document.querySelectorAll(".garbage").forEach(g=>{
+            g.hidden = true;
+        });
     });
 
     function ConnectSlotNumbers(){
@@ -540,6 +627,8 @@ input[type=number]:hover::-webkit-inner-spin-button {
             let ele = document.getElementById("slots" + slot);
             ele.addEventListener('change', (event) => {
                 slots[slot]=parseInt(event.target.value);
+                document.getElementById(slot).style.display = (slots[slot] == 0) ? "None": "";
+                document.getElementById(slot + "Recommended").style.display = (slots[slot] == 0) ? "None": "";
                 UpdateTables();
                 UpdateTotals()
                 UpdateRecommendations();
@@ -567,6 +656,10 @@ function MakeTeamIcon(team){
       box.addEventListener('mousedown', e=>{
           window.dd_id = (' ' + e.target.alt).slice(1);
       });
+      box.addEventListener('touchstart', e=>{
+          window.dd_id = (' ' + e.target.alt).slice(1);
+      });
+      box.addEventListener("touchend", touch)
       return box;
   }
 
@@ -576,21 +669,38 @@ function MakeDroppedIcon(team){
   box.height = 50;
   box.classList.add("slot");
   box.addEventListener('dblclick', e=>{
-      e.target.parentNode.removeChild(e.target);
-      UpdateTables();
-      UpdateTotals()
-      UpdateRecommendations();
+      let target = e.target;
+      if (target && target.parentNode){
+          target.parentNode.removeChild(target);
+          UpdateTables();
+          UpdateTotals()
+          UpdateRecommendations();
+      }
   });
+
     return box;
 }
 function drop(e) {
   e.preventDefault()
-  let box = MakeDroppedIcon(window.dd_id);
-  this.innerHTML = "";
-  this.append(box)
-  UpdateTables();
-  UpdateTotals()
-  UpdateRecommendations();
+  _drop(e.target);
+  }
+
+function touch(e){
+    if (e.changedTouches.length != 0) {
+        let changedTouch = e.changedTouches[0];
+        let target = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
+        _drop(target.closest(".holder"));
+        }
+}
+ function _drop(target){
+  if(target){
+      let box = MakeDroppedIcon(window.dd_id);
+      target.innerHTML = "";
+      target.append(box)
+      UpdateTables();
+      UpdateTotals()
+      UpdateRecommendations();
+  }
 }
     function SetDraggables(){
         const containers = document.getElementsByClassName('holder')
@@ -602,7 +712,7 @@ function drop(e) {
     }
     function getWeekStart(){
        let week = parseInt(document.getElementById("weekRange").value);
-       let val = moment().day(1).week(week);
+       let val = moment().day(1).isoWeek(week-52);
        return val
     }
 
@@ -616,12 +726,11 @@ function drop(e) {
             UpdateRecommendations();
         }
 
-        var val = moment().week();
-        if (moment().year() === 2020){
-            val = val + 52;
-        }
+        let now = moment();
+        let val = now.diff(datastart, "weeks") + datastart.isoWeek();
         slider.value = val;
-        output.innerHTML = getWeekStart().format('ddd ll');
+
+        output.innerHTML = now.isoWeek(now.isoWeek()).day(1).format('ddd ll');
     }
 </script>
 <body>
@@ -641,10 +750,11 @@ function drop(e) {
                     <div style="width:6em"></div>
                     <div class="container">
                         <div class="content2">
-                            <label>Nightly C Starts </label><input id="slotsC" min="1" value="3" type="number" max="10">
-                            <label>Nightly LW Starts </label><input id="slotsLW" min="1" value="3" type="number" max="10">
-                            <label>Nightly RW Starts </label><input id="slotsRW" min="1" value="3" type="number" max="10">
-                            <label>Nightly D Starts </label><input id="slotsD" min="1" value="3" type="number" max="10">
+                            <label>Nightly C Starts </label><input id="slotsC" min="0" value="3" type="number" max="10">
+                            <label>Nightly LW Starts </label><input id="slotsLW" min="0" value="3" type="number" max="10">
+                            <label>Nightly RW Starts </label><input id="slotsRW" min="0" value="3" type="number" max="10">
+                            <label>Nightly D Starts </label><input id="slotsD" min="0" value="3" type="number" max="10">
+                            <label>Nightly UTIL Starts </label><input id="slotsUTIL" min="0" value="3" type="number" max="10">
                             <label>Ignore Past Games </label><input id="usetodaycheck" type="checkbox" checked>
                         </div>
                     </div>
@@ -764,7 +874,7 @@ function drop(e) {
                                 <div class="holder" data-text="C"></div>
                             </div>
                         </div>
-                        <div>
+                        <div id="CRecommended">
                             <label>Recommended C</label> <br>
                             <div class="content2" id="recommendC"></div>
                         </div>
@@ -814,12 +924,11 @@ function drop(e) {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div id="LWRecommended">
                             <label>Recommended LW</label><br>
                             <div class="content2" id="recommendLW"></div>
                         </div>
-                        <div>
-                             <div id="RW" class="slot">
+                        <div id="RW" class="slot">
                                 <div class="container">
                                     <select class="eligibledd">
                                         <option>RW</option>
@@ -863,12 +972,10 @@ function drop(e) {
                                     <div class="holder" data-text="RW"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
+                        <div id="RWRecommended">
                             <label>Recommended RW</label><br>
                             <div class="content2" id="recommendRW"></div>
                         </div>
-                        <div>
                             <div id="D" class="slot">
                                 <div class="container">
                                     <select class="eligibledd">
@@ -925,10 +1032,71 @@ function drop(e) {
                                     <div class="holder" data-text="D"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
+                        <div id="DRecommended">
                             <label>Recommended Defense</label><br>
                             <div class="content2" id="recommendD"></div>
+                        </div>
+                        <div id="UTILRecommended">
+                            <label>Recommended Utility</label><br>
+                            <div class="content2" id="recommendUTIL"></div>
+                        </div>
+                                                <div hidden>
+                            <div id="UTIL" class="slot">
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                                <div class="container">
+                                    <select class="eligibledd">
+                                        <option>UTIL</option>
+                                    </select>
+                                    <div class="holder" data-text="UTIL"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -952,7 +1120,7 @@ function drop(e) {
     <div class="container">
         <div class="content1">
             <input type="text" id="encodedteam">
-            <button onclick="CopyToClipboard()">Save Team to Clipboard</button>
+            <button onclick="CopyStateToURL()">Save Team to URL</button>
             <button onclick="LoadTeamString()">Load Team String</button>
         </div>
     </div>
@@ -962,6 +1130,18 @@ function drop(e) {
                 Contact: @0GAR over on <a href="https://discord.gg/mTVbYB">FHP Discord</a>
             </p>
             </div>
+    </div>
+    <div class="garbage gl">
+
+    </div>
+    <div class="garbage gr">
+
+    </div>
+<div class="garbage gt">
+
+    </div>
+<div class="garbage gb">
+
     </div>
 </body>
 </html>

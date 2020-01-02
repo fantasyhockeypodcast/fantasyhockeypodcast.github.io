@@ -460,10 +460,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("DOMContentLoaded", function(){
         PopulateForm();
         var slider = document.getElementById("weekRange");
-        var val = moment().isoWeek();
-        if (moment().year() === 2020){
-            val = val + 52;
-        }
+        let now = moment();
+        let datastart = moment(all_games[0].date);
+        // get Mondays...
+        now = now.isoWeek(now.isoWeek()).day(1);
+        datastart = datastart.isoWeek(datastart.isoWeek()).day(1);
+        let val = now.diff(datastart, "weeks") + datastart.isoWeek();
         slider.value = val;
         triggerRedraw();
     });
