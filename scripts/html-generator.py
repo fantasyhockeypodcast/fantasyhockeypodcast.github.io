@@ -1015,6 +1015,8 @@ imagedict = {
     "Adam Pelech": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069621.png&w=350&h=254",
     "Igor Shesterkin": "http://www.hockeydb.com/ihdb/photos/igor-shesterkin-2020-48.jpg",
     "Matt Martin": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5050.png&w=350&h=254",
+    "Rasmus Sandin": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4352803.png&w=350&h=254",
+    "Andrew Copp": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042114.png&w=350&h=254",
 }
 
 new_player_images = {}
