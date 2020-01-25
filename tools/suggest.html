@@ -405,6 +405,7 @@ th {
             shortHandedTimeOnIce: "01:51"
     */
 
+    // TODO:: expose startDate as rolling window of days and/or games?
     let startDate = moment().add(-14, 'days');
     let gamesRemaining = {};  // Team: games remaining in selected week
     let operation = "median";
@@ -415,6 +416,12 @@ th {
         "average": average
     };
 
+    let windows = {
+        "14 days": moment().add(-14, 'days'),
+        "30 days": moment().add(-30, 'days'),
+        //"7 days": moment().add(-7, 'days'),
+        "Season": datastart
+    };
     let weights = {
         "played_games":0.00,
         "remaining_games":0.00,
@@ -437,6 +444,17 @@ th {
             e.parentElement.removeChild(e)
         });
         trackedPlayers.forEach(e=>AddPlayer(e));
+    }
+
+    function PopulateWindowSelect(){
+        let selector = document.getElementById("windowselect");
+        selector.addEventListener('input', e=>{
+            startDate = windows[e.target.value];
+            RedrawTables();
+        });
+        Object.keys(windows).sort().forEach(niceName=>{
+            selector.options.add( new Option(niceName, niceName, false) );
+        });
     }
 
     function PopulateOperationSelect(){
@@ -633,7 +651,11 @@ th {
     }
 
     function Decode(s){
-        return JSON.parse(atob(s));
+        try {
+            return JSON.parse(atob(s));
+            } catch{
+                return {"recommended":[]};
+            }
     }
 
     function SetGamesRemaining(aday_str, window_days){
@@ -812,6 +834,7 @@ th {
 
     document.addEventListener("DOMContentLoaded", async function() {
         PopulateOperationSelect();
+        PopulateWindowSelect();
         PopulatePlayerTable();
         HookupSortable();
         ConnectSlider();
@@ -852,6 +875,7 @@ th {
                                 <div class="collapsecontent">
                                     <div id="includes" class="weights">
                                         <label>operation: </label><select id="operationselect" style="width: fit-content"></select>
+                                        <label>window: </label><select id="windowselect" style="width: fit-content"></select>
                                     </div>
                                 </div>
                             </div>
