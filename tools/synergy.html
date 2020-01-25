@@ -1,4 +1,11 @@
+
 <html>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 <script src="https://momentjs.com/downloads/moment.js"></script>
 <link rel="icon" type="image/png" href="static/fhp.png">
 <style>
@@ -632,9 +639,12 @@ input[type=number]:hover::-webkit-inner-spin-button {
                 UpdateTables();
                 UpdateTotals()
                 UpdateRecommendations();
-
             });
         });
+    }
+
+    function LaunchPlayerSuggestions(){
+        window.open("suggest.html?recommend=" + ExportToPlayerRecommendations() );
     }
 
 </script>
@@ -732,6 +742,27 @@ function touch(e){
 
         output.innerHTML = now.isoWeek(now.isoWeek()).day(1).format('ddd ll');
     }
+</script>
+<script>
+    // Recommend extensions
+    function ExportToPlayerRecommendations(){
+       let data = {};
+       Object.keys(slots).forEach(ea=>{
+            let results = RecommendTeams(ea, 31);
+            let lastmax = Object.values(results).lastIndexOf(Object.values(results)[0] - 1);
+            data[ea]=results = RecommendTeams(ea, lastmax);
+        });
+       r = {
+           week: getWeekStart().format("YYYY-MM-DD"),
+           recommended: data
+       }
+       return(btoa(JSON.stringify(r)));
+    }
+
+    function Decode(s){
+        return JSON.parse(atob(s));
+    }
+
 </script>
 <body>
     <div class="container">
@@ -1119,9 +1150,10 @@ function touch(e){
     </div>
     <div class="container">
         <div class="content1">
-            <input type="text" id="encodedteam">
+            <input type="text" id="encodedteam" hidden>
             <button onclick="CopyStateToURL()">Save Team to URL</button>
-            <button onclick="LoadTeamString()">Load Team String</button>
+            <button onclick="LoadTeamString()" hidden>Load Team String</button>
+            <button onclick="LaunchPlayerSuggestions()">Suggest Players</button>
         </div>
     </div>
     <div class="container">

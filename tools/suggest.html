@@ -1,0 +1,887 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="static/fhp.png">
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    .sortable {
+        color: #fff;
+        text-align:center;
+    }
+
+    .container{
+        width: 100%;
+        /* center a div inside another div*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding:5px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+</style>
+<style>
+    /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  width: 50%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 16px;
+  width: -webkit-fill-available
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.weights {
+    width: 50%;
+    grid-template-columns: auto auto;
+    display: inline-grid;
+}
+.collapsecontent {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<style>
+    tr:not(.ftable) {
+        counter-increment: rowNumber ;
+    }
+    tbody {
+        width: 50%
+    }
+    atbody tr:not(.ftable) td:first-child::after {
+        content: counter(rowNumber);
+        min-width: 1em;
+    }
+</style>
+<style>
+th {
+    cursor: pointer;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+    td {
+        height: auto;
+        width: fit-content;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+ td, th {
+   border: 1px solid #eee;
+ }
+ th {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+  tr:nth-child(even) { background: #f2f2f2;}
+
+
+</style>
+<style>
+    .played_games {
+        display: none;
+    }
+</style>
+<script>
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+</script>
+<script>
+    // cached 50%+ ownership Jan 23/2020
+    blacklist = [
+    "Aaron Ekblad",
+    "Aleksander Barkov",
+    "Alex DeBrincat",
+    "Alex Killorn",
+    "Alex Ovechkin",
+    "Alex Pietrangelo",
+    "Alexander Edler",
+    "Alexander Radulov",
+    "Anders Lee",
+    "Andrei Svechnikov",
+    "Andrei Vasilevskiy",
+    "Anthony Mantha",
+    "Anze Kopitar",
+    "Artemi Panarin",
+    "Auston Matthews",
+    "Ben Bishop",
+    "Blake Coleman",
+    "Blake Wheeler",
+    "Bo Horvat",
+    "Brad Marchand",
+    "Braden Holtby",
+    "Brady Tkachuk",
+    "Brayden Point",
+    "Brayden Schenn",
+    "Brendan Gallagher",
+    "Brent Burns",
+    "Brock Boeser",
+    "Brock Nelson",
+    "Bryan Rust",
+    "Cale Makar",
+    "Cam Atkinson",
+    "Carey Price",
+    "Carter Hart",
+    "Charlie McAvoy",
+    "Chris Kreider",
+    "Claude Giroux",
+    "Clayton Keller",
+    "Connor Hellebuyck",
+    "Connor McDavid",
+    "Darcy Kuemper",
+    "Darnell Nurse",
+    "David Pastrnak",
+    "David Perron",
+    "David Rittich",
+    "Devan Dubnyk",
+    "Dominik Kubalik",
+    "Dougie Hamilton",
+    "Drew Doughty",
+    "Dylan Larkin",
+    "Elias Lindholm",
+    "Elias Pettersson",
+    "Elvis Merzlikins",
+    "Erik Karlsson",
+    "Evander Kane",
+    "Evgeni Malkin",
+    "Evgenii Dadonov",
+    "Evgeny Kuznetsov",
+    "Filip Forsberg",
+    "Frederik Andersen",
+    "Gabriel Landeskog",
+    "Henrik Lundqvist",
+    "Ilya Samsonov",
+    "Ivan Provorov",
+    "J.T. Miller",
+    "Jaccob Slavin",
+    "Jack Eichel",
+    "Jacob Markstrom",
+    "Jacob Trouba",
+    "Jaden Schwartz",
+    "Jake Guentzel",
+    "Jakub Voracek",
+    "Jakub Vrana",
+    "Jamie Benn",
+    "Jaroslav Halak",
+    "Jean-Gabriel Pageau",
+    "Jeff Petry",
+    "Jeff Skinner",
+    "Joe Pavelski",
+    "John Carlson",
+    "John Gibson",
+    "John Klingberg",
+    "John Tavares",
+    "Johnny Gaudreau",
+    "Jonathan Huberdeau",
+    "Jonathan Marchessault",
+    "Jonathan Toews",
+    "Jordan Binnington",
+    "Josh Morrissey",
+    "Keith Yandle",
+    "Kevin Shattenkirk",
+    "Kris Letang",
+    "Kyle Connor",
+    "Kyle Palmieri",
+    "Leon Draisaitl",
+    "Logan Couture",
+    "Marc-Andre Fleury",
+    "Mark Giordano",
+    "Mark Scheifele",
+    "Mark Stone",
+    "Martin Jones",
+    "Mathew Barzal",
+    "Matt Duchene",
+    "Matt Dumba",
+    "Matt Murray",
+    "Matthew Tkachuk",
+    "Mattias Ekholm",
+    "Max Domi",
+    "Max Pacioretty",
+    "Mika Zibanejad",
+    "Mike Hoffman",
+    "Mikhail Sergachev",
+    "Mikko Rantanen",
+    "Miro Heiskanen",
+    "Mitchell Marner",
+    "Morgan Rielly",
+    "Nathan MacKinnon",
+    "Nazem Kadri",
+    "Neal Pionk",
+    "Nicklas Backstrom",
+    "Nikita Kucherov",
+    "Nikolaj Ehlers",
+    "Oliver Ekman-Larsson",
+    "Oscar Klefbom",
+    "P.K. Subban",
+    "Patric Hornqvist",
+    "Patrice Bergeron",
+    "Patrick Kane",
+    "Patrik Laine",
+    "Pekka Rinne",
+    "Petr Mrazek",
+    "Phil Kessel",
+    "Philipp Grubauer",
+    "Pierre-Luc Dubois",
+    "Quinn Hughes",
+    "Rasmus Dahlin",
+    "Rasmus Ristolainen",
+    "Reilly Smith",
+    "Rickard Rakell",
+    "Robin Lehner",
+    "Roman Josi",
+    "Ryan Ellis",
+    "Ryan Nugent-Hopkins",
+    "Ryan O'Reilly",
+    "Ryan Pulock",
+    "Ryan Strome",
+    "Ryan Suter",
+    "Sam Reinhart",
+    "Sean Couturier",
+    "Sean Monahan",
+    "Sebastian Aho",
+    "Semyon Varlamov",
+    "Sergei Bobrovsky",
+    "Seth Jones",
+    "Shea Theodore",
+    "Shea Weber",
+    "Sidney Crosby",
+    "Steven Stamkos",
+    "T.J. Oshie",
+    "Taylor Hall",
+    "Teuvo Teravainen",
+    "Thomas Chabot",
+    "Thomas Greiss",
+    "Timo Meier",
+    "Tom Wilson",
+    "Tomas Hertl",
+    "Tomas Tatar",
+    "Tony DeAngelo",
+    "Torey Krug",
+    "Travis Konecny",
+    "Tristan Jarry",
+    "Tuukka Rask",
+    "Tyler Seguin",
+    "Tyson Barrie",
+    "Victor Hedman",
+    "Viktor Arvidsson",
+    "Vincent Trocheck",
+    "Vladimir Tarasenko",
+    "William Karlsson",
+    "William Nylander",
+    "Zach Werenski"
+]
+</script>
+<script>
+    // Schedule
+    var schedulehex = {
+        "St. Louis Blues": "252a54b2cc932aad495528aa9552019952b5aa92a5549550",
+        "Dallas Stars": "16aab4a4c84d2acaa934d0650d2a014b32b2aa952aca9ad0",
+        "Vancouver Canucks": "24495a4acb552aa6895aa86295aa014d55124acaad2d5a50",
+        "Colorado Avalanche": "142ab462ca952a2c6aa5a8cab22a80095aaac5aad5555550",
+        "New Jersey Devils": "0c6a5042cb4b2655993168aa95aa012952d54ad32b552d50",
+        "Vegas Golden Knights": "28ad56514ac9aaa9a56a98ca952a401952a96552c9654550",
+        "Washington Capitals": "2caaaac4a2ab522cd29468c9594a015514a96a4d4a9aab50",
+        "Montreal Canadiens": "146958a34a933256b192a86ab55a012d55654a952954a990",
+        "Minnesota Wild": "142b4aa64a952acaa95aa8a8c4aaa0096aa2ab558b592d50",
+        "Winnipeg Jets": "1aad4a24c9552a2ca54aa8aaaca560195a556a92534a9550",
+        "Tampa Bay Lightning": "1629512681852aacab52a86ad5ac015956a94a95ab2c5950",
+        "San Jose Sharks": "2ca492d4ca952aacad5230cad52a014944696a9596555550",
+        "Anaheim Ducks": "14b2aab4a8554aa9155330aa554c01596a9aa95aa3294cb0",
+        "Arizona Coyotes": "142952ca5ab54b2cb552986a96aa006956ab488a4aaa4d50",
+        "Philadelphia Flyers": "084994b4cacb2aaca89aa86a995a401a56a5494d2b4cacd0",
+        "Carolina Hurricanes": "1699a0a4caa52b2ca952a8c9534d40155254c985ab56ad30",
+        "Columbus Blue Jackets": "0d18b4a2ca922aacaa56a8aab52b200d34d559498a959a60",
+        "Edmonton Oilers": "24aaaa9655552b265555688aa522005952b2acb555a95510",
+        "Buffalo Sabres": "1552d2c8c185a9ad2d52a8aa85aa00a96a9465954d56aa50",
+        "Ottawa Senators": "242a55505aab34acca96a832932a019952b55a95352ca950",
+        "Nashville Predators": "14a952a552912aac8956a8c4d4aa016954b4cab52b16acd0",
+        "Chicago Blackhawks": "082a2ab46ac9aa4d3559a8aa553340098b32aa9696565550",
+        "Boston Bruins": "14aa523459532a6aaad2a8aa956940199932ca9526b4a950",
+        "Pittsburgh Penguins": "14acb32452932cac595260d2d2ad401452556595ab2acd50",
+        "Calgary Flames": "14ad5aa56a89aaa42b5298aa554a00c955a8aaca8ad55150",
+        "New York Islanders": "0a9a50d0ca892aa5aa52a8aab16b400956aaaa952d56ab50",
+        "Detroit Red Wings": "06a96354d5552b2d095a306952a6a01a6ab4aaa2aa8ca950",
+        "New York Rangers": "14086a94565516ad355458ca9549401aaad2cb5532aaaad0",
+        "Toronto Maple Leafs": "2d2996644acb2a2cc95268caa8aa014ab2b54a962a556950",
+        "Los Angeles Kings": "04cd52b24a954aad595aa8c8ad2a0069592564c55256b530",
+        "Florida Panthers": "149a329a42d52b248d54686ad48ac00b56ab4ac52ad5aa50"
+    }
+
+</script>
+<script>
+    // Schedule checking
+    // n is number, b is padding
+    const sum = arr => arr.reduce((a,b) => a + b, 0)
+    const bits = (n,b=4) => [...Array(b)].map((x,i)=>(n>>i)&1).reverse();
+    var datastart = moment("2019-09-30")
+
+    function ToBits(hexChar){
+        return bits(parseInt(hexChar, 16))
+    }
+
+    function GetIndex(yyyymmdd){
+        let pos = moment(yyyymmdd).diff(datastart, "days")/4; // 4 days per character
+        let int = Math.floor(pos)
+        let bit = (pos-int) * 4; // 4 bits/days per character
+        return {int, bit};
+    }
+
+    function DoesTeamPlay(team, yyyymmdd){
+        let t = schedulehex[team];
+        pos = GetIndex(yyyymmdd);
+        let char = t[pos.int];
+        return ToBits(char)[pos.bit];
+    }
+
+</script>
+<script>
+    // Maths!
+    const median = arr => {
+      const mid = Math.floor(arr.length / 2),
+        nums = [...arr].sort((a, b) => a - b);
+      return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+    };
+
+    const average = arr => {
+        return sum(arr) / arr.length;
+    };
+
+    const prettyNumber = n => {
+        return n.toFixed(2);
+    };
+
+    // Extras
+    function getKeyByValue(object, value) {
+      return Object.keys(object).find(key => object[key] === value);
+    }
+
+</script>
+<script>
+    // View-focused logic
+
+    /*
+        TODO:: support Goalies
+        available:
+            powerPlayGoals: 0
+            powerPlayTimeOnIce: "01:49"
+            evenTimeOnIce: "22:16"
+            shotPct: 0
+            overTimeGoals: 0
+            shortHandedGoals: 0
+            shortHandedPoints: 0
+            shortHandedTimeOnIce: "01:51"
+    */
+
+    let startDate = moment().add(-14, 'days');
+    let gamesRemaining = {};  // Team: games remaining in selected week
+    let operation = "median";
+
+    let operations = {
+        "total": sum,
+        "median": median,
+        "average": average
+    };
+
+    let weights = {
+        "played_games":0.00,
+        "remaining_games":0.00,
+        "goals": 1.00,
+        "assists": 0.60,
+        "pim": 0.37,
+        "shots": 0.09,
+        "powerPlayPoints": 1.78,
+        "hits": 0.13,
+        "blocked": 0.21,
+        //"gameWinningGoals",
+        //"plusMinus"
+    };
+
+    let trackedPlayers = [];
+
+    function RedrawTables(){
+        document.querySelectorAll("tr.player").forEach(e=>{
+            //console.log(e);
+            e.parentElement.removeChild(e)
+        });
+        trackedPlayers.forEach(e=>AddPlayer(e));
+    }
+
+    function PopulateOperationSelect(){
+        let selector = document.getElementById("operationselect");
+        selector.addEventListener('input', e=>{
+            operation = e.target.value;
+            RedrawTables();
+        });
+        Object.keys(operations).sort().forEach(niceName=>{
+            selector.options.add( new Option(niceName, niceName, false) );
+        });
+        operation = selector.selectedOptions[0].value;
+    }
+
+    async function PopulatePlayerSelect(){
+        let selector = document.getElementById("playerselect");
+        selector.addEventListener('focus', e=>{
+            let niceNames = Object.keys(playerToID);
+            if (selector.length != niceNames){
+                niceNames.sort().forEach(niceName=>{
+                    selector.options.add( new Option(niceName, niceName, false) );
+                });
+            }
+        });
+        selector.addEventListener('input', async e=>{
+            let item  = e.target.value;
+            var index = trackedPlayers.indexOf(item);
+            if (index === -1) trackedPlayers.push(item);
+            await AddPlayer(e.target.value);
+        });
+    }
+
+    async function AddPlayer(niceName){
+        let pid = playerToID[niceName];
+        if (!cachedPlayers[pid]){
+            await CachePlayer(pid);
+        }
+        let data = cachedPlayers[pid].filter(d=>{return moment(d.date) > startDate});
+
+        let props = {};
+        Object.keys(weights).forEach(prp=>{
+            let val = operations[operation](
+                data.map(
+                    g=>{
+                        return g.stat[prp];
+                    }
+                 )
+            );
+
+            props[prp] = val;
+        });
+        props["played_games"] = data.length;
+        props["remaining_games"] = 0;
+        props["position"] = cachedPlayers[pid]["position"];
+        if (data.length){
+            props["remaining_games"] = gamesRemaining[data[0].team.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")];
+            AddPlayerToTable(niceName, props);
+        }
+    }
+
+    function PopulatePlayerTable(){
+        let table = document.getElementById("playertable");
+        var hr = table.createTHead();
+
+        // "remove" button
+        hd = document.createElement("TH");
+        hd.innerHTML="";
+        hd.classList.add("sortable");
+        hr.appendChild(hd);
+
+        // position
+        var hd = document.createElement("TH");
+        hd.innerHTML="pos";
+        hd.classList.add("sortable");
+        hr.appendChild(hd);
+
+        // Player Name
+        hd = document.createElement("TH");
+        hd.innerHTML="name";
+        hd.classList.add("sortable");
+        hr.appendChild(hd);
+
+        // Score
+        hd = document.createElement("TH");
+        hd.innerHTML="total";
+        hd.classList.add("sortable");
+        hr.appendChild(hd);
+
+        // Score
+        hd = document.createElement("TH");
+        hd.innerHTML="ngpg";
+        hd.classList.add("sortable");
+        hr.appendChild(hd);
+
+        Object.keys(weights).forEach(w=>{
+            // player name
+            hd = document.createElement("TH");
+            hd.classList.add(w);
+            hd.classList.add("sortable");
+            let label = document.createElement("label");
+            label.innerHTML = w;
+            if (w == "powerPlayPoints"){
+                label.innerHTML = "ppp";
+            }
+            if (w == "remaining_games"){
+                label.innerHTML = "games remaining";
+            }
+            if (w == "blocked"){
+                label.innerHTML = "blocks";
+            }
+            let cb = document.createElement("input");
+            cb.id = w + "checkbox";
+            cb.type = "checkbox";
+            cb.checked = true;
+            cb.addEventListener('input', e=>{
+                RedrawTables();
+            });
+            hd.appendChild(label);
+            if (w =="played_games" || w=="remaining_games"){
+                cb.hidden = true;
+            }
+            hd.appendChild(cb);
+            hr.appendChild(hd);
+        });
+
+
+    }
+
+    function AddPlayerToTable(name, props){
+        let table = document.getElementById("playertable");
+
+        let tr = document.createElement("tr");
+        tr.classList.add("player");
+
+        // close btn
+        td = document.createElement("td");
+        let btn = document.createElement("button")
+        btn.innerHTML = "x";
+        btn.addEventListener("click", e=>{
+            tr.parentElement.removeChild(tr);
+            var index = trackedPlayers.indexOf(name);
+            if (index !== -1) trackedPlayers.splice(name, 1);
+        });
+
+        td.appendChild(btn);
+        tr.appendChild(td);
+
+        // player Pos
+        var td = document.createElement("TD");
+        td.innerHTML=props["position"];
+        tr.appendChild(td);
+
+        // player name
+        td = document.createElement("TD");
+        td.innerHTML=name;
+        tr.appendChild(td);
+
+        // SCORE
+        let std = document.createElement("td");
+        let std2 = document.createElement("td");
+        tr.appendChild(std);
+        tr.appendChild(std2);
+        let score = 0;
+
+        // add all the stats
+        Object.keys(weights).forEach(k=>{
+            let td = document.createElement("td");
+            td.classList.add(k);
+            td.innerHTML = prettyNumber(props[k]);
+            if (document.getElementById(k + "checkbox").checked)
+                score  += props[k] * document.getElementById(k + "spinner").value;
+            tr.appendChild(td);
+        });
+
+        std.innerHTML = prettyNumber(score * props["remaining_games"]);
+        std2.innerHTML = prettyNumber(score);
+
+        table.querySelector("tbody").appendChild(tr);
+    }
+
+    function RecommendPlayers(positionCode, teamName, limit){
+        let posRoster = rosters[teamName]
+            .filter(p=>p.position.abbreviation==positionCode)
+            .filter(p=>blacklist.indexOf(p.person.fullName) === -1);
+        posRoster.map(p=>{
+            return getKeyByValue(playerToID, p.person.id)
+        }).forEach(ea=>{
+            var index = trackedPlayers.indexOf(ea);
+            if (index === -1) {
+                trackedPlayers.push(ea);
+                AddPlayer(ea);
+            }
+        })
+    }
+
+    function Decode(s){
+        return JSON.parse(atob(s));
+    }
+
+    function SetGamesRemaining(aday_str, window_days){
+        let yesterday = moment().add(-1, 'day');
+        let g = moment(aday_str).isoWeek(moment(aday_str).isoWeek()).day(1);
+
+        Object.keys(schedulehex).forEach(team=>{
+            gamesRemaining[team] = 0;
+            let d = moment(g.format("YYYYMMDD"));
+            for(let a=1; a<window_days;a++){
+                let ds = d.format("YYYYMMDD");
+                if (d.diff(yesterday) >= 0){
+                    if (DoesTeamPlay(team, ds))
+                        gamesRemaining[team]+=1;
+                }
+                d.add(1, 'day')
+            }
+        });
+
+    }
+
+    async function LoadRecommendString(){
+        // let s = "eyJ3ZWVrIjoiMjAyMC0wMS0wNiIsInJlY29tbWVuZGVkIjp7IkMiOnsiVmFuY291dmVyIENhbnVja3MiOjIsIk5ldyBKZXJzZXkgRGV2aWxzIjoyLCJUYW1wYSBCYXkgTGlnaHRuaW5nIjoyLCJCdWZmYWxvIFNhYnJlcyI6MiwiU3QuIExvdWlzIEJsdWVzIjoxLCJEYWxsYXMgU3RhcnMiOjF9LCJMVyI6eyJWYW5jb3V2ZXIgQ2FudWNrcyI6MiwiTmV3IEplcnNleSBEZXZpbHMiOjIsIlRhbXBhIEJheSBMaWdodG5pbmciOjIsIkJ1ZmZhbG8gU2FicmVzIjoyLCJTdC4gTG91aXMgQmx1ZXMiOjEsIkRhbGxhcyBTdGFycyI6MX0sIlJXIjp7IlN0LiBMb3VpcyBCbHVlcyI6MCwiRGFsbGFzIFN0YXJzIjowLCJWYW5jb3V2ZXIgQ2FudWNrcyI6MCwiQ29sb3JhZG8gQXZhbGFuY2hlIjowLCJOZXcgSmVyc2V5IERldmlscyI6MCwiVmVnYXMgR29sZGVuIEtuaWdodHMiOjB9LCJEIjp7IlZhbmNvdXZlciBDYW51Y2tzIjoyLCJOZXcgSmVyc2V5IERldmlscyI6MiwiVGFtcGEgQmF5IExpZ2h0bmluZyI6MiwiQnVmZmFsbyBTYWJyZXMiOjIsIlN0LiBMb3VpcyBCbHVlcyI6MSwiRGFsbGFzIFN0YXJzIjoxfSwiVVRJTCI6eyJTdC4gTG91aXMgQmx1ZXMiOjAsIkRhbGxhcyBTdGFycyI6MCwiVmFuY291dmVyIENhbnVja3MiOjAsIkNvbG9yYWRvIEF2YWxhbmNoZSI6MCwiTmV3IEplcnNleSBEZXZpbHMiOjAsIlZlZ2FzIEdvbGRlbiBLbmlnaHRzIjowfX19";
+        let s = getUrlVars().recommend;
+        let data = Decode(s);
+        SetGamesRemaining(data.week, 7);
+        var slider = document.getElementById("weekRange");
+        slider.value = moment(data.week).diff(datastart, "weeks") + datastart.isoWeek();
+        var output = document.getElementById("selectedWeek");
+        output.innerHTML = moment(data.week).isoWeek(moment(data.week).isoWeek()).day(1).format('ddd ll');
+
+        Object.keys(data.recommended).forEach(
+            slot=>{
+                Object.keys(data.recommended[slot]).forEach(t=>{
+                    if(data.recommended[slot][t]>0){
+                        RecommendPlayers(slot, t, 3);
+                    }
+                })
+        });
+    }
+
+    function ConnectSlider(){
+        var slider = document.getElementById("weekRange");
+        slider.value = moment().diff(datastart, "weeks") + datastart.isoWeek();
+        var output = document.getElementById("selectedWeek");
+        output.innerHTML = moment().isoWeek(moment().isoWeek()).day(1).format('ddd ll');
+        function SliderInput(){
+            var slider = document.getElementById("weekRange");
+            let newd = moment(datastart.format("YYYYMMDD")).add(parseInt(slider.value) - datastart.isoWeek(), "weeks");
+            let newdate = newd.format("YYYYMMDD");
+            var output = document.getElementById("selectedWeek");
+            output.innerHTML = newd.format('ddd ll');
+            SetGamesRemaining(newdate, 7);
+            RedrawTables();
+        }
+        slider.oninput = SliderInput;
+        slider.addEventListener('input', SliderInput);
+        SetGamesRemaining(moment().format("YYYYMMDD"), 7);
+    }
+
+    function AddWeights(){
+        let root = document.getElementById("includes");
+        Object.keys(weights).forEach(e=>{
+            let val = weights[e];
+            let la = document.createElement("label");
+            la.innerHTML = e + ": ";
+            let n = document.createElement("input");
+            n.type = "number";
+            n.style = "width:45";
+            n.id = e + "spinner";
+            n.min = 0;
+            n.step = 0.01;
+            n.value = val;
+            n.addEventListener("change", RedrawTables);
+
+            root.appendChild(la);
+            root.appendChild(n);
+            if (e.indexOf("games") !== -1){
+                la.hidden=true;
+                n.hidden=true;
+            }
+        })
+    }
+    function CollapseLogic(){
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "contents") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "contents";
+            }
+          });
+        }
+    }
+</script>
+<script>
+    // Data
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
+    let teamsIdsURL = "https://statsapi.web.nhl.com/api/v1/teams";
+    let peopleURL = "https://statsapi.web.nhl.com/api/v1/people";
+    let season = "20192020";
+    var teamsIds = {};  // Full Name: obj
+    var rosters = {};  // Full Name: obj
+    var teamInfo = {};  // Full Name: obj
+    var cachedPlayers = {};  // PID: obj
+    var playerToID = {};
+
+
+    function doGet(url){
+        var url = proxy + url;
+        return fetch(url).then(r=>{return r.json()}).catch(e=>console.log(e));
+    }
+
+    function NiceName(player, team_abbrv) {
+        return player + " (" + team_abbrv + ")";
+    }
+
+    async function CacheTeam(tid){
+        let rosterURL = teamsIdsURL + "/" + tid +"?expand=team.roster&season=" + season;
+        let data = await doGet(rosterURL);
+        for (let ind in data["teams"]){
+            let t = data["teams"][ind];
+            t_name = t.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            teamInfo[t_name] = t;
+            rosters[t_name] = t["roster"]["roster"];
+            rosters[t_name].forEach(p=>{
+                if (p.position.code != "G"){
+                    let niceName = NiceName(p.person.fullName, t.abbreviation);
+                    playerToID[niceName] = p.person.id;
+                }
+            });
+        }
+    }
+
+    async function CachePlayer(pid){
+        let playerURL = peopleURL + "/" + pid + "/stats?stats=gameLog&season=" + season;
+        let data = await doGet(playerURL)
+        cachedPlayers[pid]=data.stats[0].splits;
+
+        playerURL = peopleURL + "/" + pid;
+        let moredata = await doGet(playerURL);
+        cachedPlayers[pid]["position"] = moredata["people"][0]["primaryPosition"]["code"];
+    }
+
+    async function CacheTeamIds(){
+        let data = await doGet(teamsIdsURL);
+        for (let ind in data["teams"]){
+            let t = data["teams"][ind];
+            if (t.active){
+                teamsIds[t.name] = t;
+                await CacheTeam(t.id);
+            }
+        }
+    }
+
+    function HookupSortable(){
+        const getCellValue = (tr, idx) => tr.children[idx].sort || tr.children[idx].innerText || tr.children[idx].textContent;
+
+        const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+            v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? b : a, idx), getCellValue(asc ? a : b, idx));
+
+        // do the work...
+        document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+            const table = th.closest('table').querySelectorAll("tbody")[0];
+            Array.from(table.querySelectorAll('tr:nth-child(n)'))
+                .sort(comparer(Array.from(document.querySelectorAll(".sortable")).indexOf(th), this.asc = !this.asc))
+                .forEach(tr => table.appendChild(tr) );
+        })));
+    }
+
+    document.addEventListener("DOMContentLoaded", async function() {
+        PopulateOperationSelect();
+        PopulatePlayerTable();
+        HookupSortable();
+        ConnectSlider();
+        AddWeights();
+        CollapseLogic();
+
+        await CacheTeamIds();
+        await LoadRecommendString();
+        await PopulatePlayerSelect();
+    });
+
+</script>
+<style>
+    table .col3 { display: none; }
+    table .col4 { display: none; }
+</style>
+
+<body>
+<div class="container">
+    <div class="container">
+        <div class="content">
+            <table id="playertable">
+                <thead>
+                    <tr style="text-align: end">
+                        <td colspan="14">
+                            <div style="display:inline-block">
+                                    <button id="prevweek" onclick="var slider = document.getElementById('weekRange');slider.stepDown(1);slider.oninput()"><</button>
+                                    <input type="range" min="40" max="66" value="0" class="slider" id="weekRange">
+                                    <button id="nextweek" onclick="var slider = document.getElementById('weekRange');slider.stepUp(1);slider.oninput()">></button>
+                                <div id="selectedWeek"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="text-align: end">
+                        <td colspan="14">
+                            <div>
+                                <button type="button" class="collapsible">Configure Weights + </button>
+                                <div class="collapsecontent">
+                                    <div id="includes" class="weights">
+                                        <label>operation: </label><select id="operationselect" style="width: fit-content"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style="text-align: end">
+                        <td colspan="14">
+                            <select id="playerselect" style="width:215px"><option>Add Player...</option></select>
+                            <button onclick="LoadRecommendString()" hidden>Load Recommendations</button>
+                            <button onclick="" hidden>TODO:: LOAD TEAM</button>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="content">
+        <div style="display:inline-block" class="content">
+            <p align="center">
+                calculations based on Event Rarity from 2018-2019 schedule data, normalized to Goals (1 goal = 1 goal)
+            </p>
+            <p align="center">
+                Total = games remaining * NGPG (Normalized Goals Per Game)
+            </p>
+            <p align="center">
+                Contact: @0GAR over on <a href="https://discord.gg/mTVbYB">FHP Discord</a>
+            </p>
+            </div>
+    </div>
+</div>
+</body>
+</html>
