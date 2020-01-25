@@ -527,7 +527,7 @@ input[type=number]:hover::-webkit-inner-spin-button {
         });
     }
 
-    function getKeysWithHighestValue(o, n){
+    function GetKeysWithHighestValue(o, n){
       var keys = Object.keys(o);
       keys.sort(function(a,b){
         return o[b] - o[a];
@@ -535,45 +535,98 @@ input[type=number]:hover::-webkit-inner-spin-button {
       return keys.slice(0,n);
     }
 
-    function GetSlotOpenings(slot){
+    function GetHardSchedule(slot){
+        let team = CollectMyTeam()
+
+        // first, filter dates already full without multi-eligability
+        let dates = CollectDates();
+        let hardeligable = team[slot];
+        let scheduled = {};
+        dates.forEach(d=>{
+            scheduled[d] = [];
+        });
+
+        for(let d of dates){
+            for (let t of hardeligable){
+                if (DoesTeamPlay(t, d)){
+                    //console.log(t + " plays " + d);
+                    scheduled[d].push(t)
+                }
+            }
+       }
+       return scheduled;
     }
 
-    function RecommendTeams(slot, n){
+    function RateTeamsForDates(dates){
         let scores = {};
-        team = CollectMyTeam()
-
-        // Adding, for example, a C when we have a C/LW may still yield additional starts, so check for flexibility
-        let slotAndBumps = [];
-        Object.keys(team).forEach(s=>{
-            if (s.indexOf(slot) > -1){
-                let d = s.split("/");
-                slotAndBumps = slotAndBumps.concat(d);
-            }
-        });
-        slotAndBumps = [...new Set([...slotAndBumps])];
-
-        // filter full dates
-        let dates = [];
-        slotAndBumps.forEach(s=>{
-            let data = UpdateData()[s] || {};
-            dates = dates.concat(Object.keys(data).filter(ea=>{return data[ea].length<slots[s]}));
-        });
-        dates = [...new Set([...dates])];
-        Object.keys(schedulehex).forEach(team=>{
-            scores[team]=0;
+        Object.keys(schedulehex).forEach(t=>{
+            scores[t]=0;
             for(let d of dates){
-               if (DoesTeamPlay(team, d)){
+               if (DoesTeamPlay(t, d)){
                    if(document.getElementById("usetodaycheck").checked){
                         if((moment(moment().format("YYYY-MM-DD")) - moment(d)) > 0){
                             continue;
                         }
                    }
-                scores[team] += 1;
+                scores[t] += 1;
                }
             }
         });
+        return scores;
+    }
+
+    function GetBumpableSlots(slot){
+        let team = CollectMyTeam();
+        let multielig = Object.keys(team).filter(e=>{return (e.indexOf("/") != -1) && e.indexOf(slot) != -1 });
+        let bumps = [];
+        multielig.forEach(e=>{
+            bumps = bumps.concat(e.split("/"));
+        });
+        return [ multielig, [...new Set([...bumps])] ];
+    }
+
+    function RecommendTeams(slot, n){
+        // Factor in multi-eligable players who cannot fit into one of their other slots
+        let [multielig, bumps] = GetBumpableSlots(slot);
+        let allschedule = {
+        };
+        allschedule[slot]=GetHardSchedule(slot);
+        bumps.forEach(e=>{
+            allschedule[e] = GetHardSchedule(e);
+        });
+
+        let alldays = CollectDates();
+        let team = CollectMyTeam();
+
+        multielig.forEach(m=>{
+            let otherslots = m.split("/").filter(r=>{return r != slot});
+            for (let ind in team[m]){
+                let t = team[m][ind];
+                let player = alldays.filter(e=>{
+                    return DoesTeamPlay(t, e)
+                });
+                let mustuse = player.filter(d=>{
+                    return otherslots.filter(os=>{
+                        return slots[os] - allschedule[os][d].length > 0;
+                    }).length <= 0;
+                });
+                mustuse.forEach(e=>{
+                    allschedule[slot][e].push(t);
+                });
+            }
+        });
+
+        let dates = alldays;
+        let slotschedule = allschedule[slot];
+        if (slotschedule){
+            dates = dates.filter(e=>{
+                return slots[slot] - slotschedule[e].length > 0;
+            });
+        }
+        let scores = RateTeamsForDates(dates);
+
         let ret={};
-        getKeysWithHighestValue(scores, n).forEach(ea=>{
+        GetKeysWithHighestValue(scores, n).forEach(ea=>{
             ret[ea]=scores[ea];
         });
         return ret;
