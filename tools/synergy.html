@@ -723,6 +723,12 @@ input[type=number]:hover::-webkit-inner-spin-button {
 
 </script>
 <script>
+    function LaunchOtherSynergy(){
+        EncodeTeam();
+        window.open("posynergy.html?team=" + (document.getElementById("encodedteam").value ||  getUrlVars()["team"]));
+    }
+</script>
+<script>
 function dragover(e) {
   e.preventDefault()
 }
@@ -1228,6 +1234,7 @@ function touch(e){
             <button onclick="CopyStateToURL()">Save Team to URL</button>
             <button onclick="LoadTeamString()" hidden>Load Team String</button>
             <button onclick="LaunchPlayerSuggestions()">Suggest Players</button>
+            <button onclick="LaunchOtherSynergy()">Go To Playoffs Synergy</button>
         </div>
     </div>
     <div class="container">

@@ -877,6 +877,12 @@ function touch(e){
     }
 
 </script>
+<script>
+    function LaunchOtherSynergy(){
+        EncodeTeam();
+        window.open("synergy.html?team=" + (document.getElementById("encodedteam").value ||  getUrlVars()["team"]));
+    }
+</script>
 <body>
     <div class="container">
         <div class="content">
@@ -1265,6 +1271,7 @@ function touch(e){
         <div class="content1">
             <input type="text" id="encodedteam" hidden>
             <button onclick="CopyStateToURL()">Save Team to URL</button>
+            <button onclick="LaunchOtherSynergy()">Go To Weekly Synergy</button>
             <button onclick="LoadTeamString()" hidden>Load Team String</button>
             <button onclick="LaunchPlayerSuggestions()" hidden>Suggest Players</button>
         </div>
