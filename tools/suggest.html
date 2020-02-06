@@ -665,7 +665,7 @@ th {
         Object.keys(schedulehex).forEach(team=>{
             gamesRemaining[team] = 0;
             let d = moment(g.format("YYYYMMDD"));
-            for(let a=1; a<window_days;a++){
+            for(let a=1; a<=window_days;a++){
                 let ds = d.format("YYYYMMDD");
                 if (d.diff(yesterday) >= 0){
                     if (DoesTeamPlay(team, ds))
