@@ -1018,6 +1018,7 @@ imagedict = {
     "Rasmus Sandin": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/4352803.png&w=350&h=254",
     "Andrew Copp": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042114.png&w=350&h=254",
     "Michael Hutchinson": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5133.png",
+    "Barclay Goodrow": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069411.png",
 }
 
 new_player_images = {}
