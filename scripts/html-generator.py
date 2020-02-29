@@ -1019,6 +1019,9 @@ imagedict = {
     "Andrew Copp": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042114.png&w=350&h=254",
     "Michael Hutchinson": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/5133.png",
     "Barclay Goodrow": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069411.png",
+    "Brenden Dillon": "https://a.espncdn.com/i/headshots/nhl/players/full/2554903.png",
+    "Andy Greene": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3313.png",
+    "Evan Rodrigues": "https://a.espncdn.com/i/headshots/nhl/players/full/3648008.png",
 }
 
 new_player_images = {}
