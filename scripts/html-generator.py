@@ -1022,6 +1022,7 @@ imagedict = {
     "Brenden Dillon": "https://a.espncdn.com/i/headshots/nhl/players/full/2554903.png",
     "Andy Greene": "https://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3313.png",
     "Evan Rodrigues": "https://a.espncdn.com/i/headshots/nhl/players/full/3648008.png",
+    "Dakota Mermis": "https://a.espncdn.com/i/headshots/nhl/players/full/3069273.png",
 }
 
 new_player_images = {}
