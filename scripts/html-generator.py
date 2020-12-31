@@ -100,7 +100,7 @@ html = """<!doctype html>
 
 </head>
 <body class=\"mdl mdl-color--grey-100 mdl-color-text--grey-700 mdl-base\">
-      
+
     <!---TOP HEADER-->
    <!-- Always shows a header, even in smaller screens. -->
     <div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">
@@ -113,21 +113,21 @@ html = """<!doctype html>
       <!-- Navigation. We hide it in small screens. -->
     </div>
   </header>
-   
+
   <main  style=\"background:white;\" class=\"mdl-layout__content\">
-      
-      
-      
+
+
+
     <div class=\"page-content\">
         <img style=\"max-width:100%; opacity:.8; margin:auto; display:block\" src=""" + "\"" + page_image + """\">
         <div class=\"container mdl-grid\">
         <div class=\"mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone\"></div>
         <div  class=\"content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col\">
         <div class=\"opener\">
-        
+
         <p style=\"font-style:italic;opacity:.5;\">Episode """ + episode_number + """ - """ + page_title + """</p>
 
-        <p> 
+        <p>
             <audio id=\"audio\" controls style=\"width:70%;opacity:1;\">
             <source src=""" + "\"" + pod_url + """\" type=\"audio/mpeg\">
                 Your browser does not support the audio element.
@@ -141,20 +141,20 @@ html += """
         </p>
         <!----ITUNES--->
         <a href=\"https://itunes.apple.com/us/podcast/fantasy-hockey-podcast/id1198704323\">
-        <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='20%'></a> 
-                  
+        <img src=\"http://matepodcast.com/wp-content/uploads/2016/05/get-it-on-itunes-badge-440x160.png\" width='20%'></a>
+
         <!-----GOOGLE PLAY---->
         <a href=\"https://goo.gl/app/playmusic?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&link=https://play.google.com/music/m/Igp5eo4jiymytfxf3uyffggtbyq?t%3DFantasy_Hockey_Podcast%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16\">
         <img src=\"https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png\" width='20%'></a>
         <a href=\"https://www.patreon.com/fantasyhockeypodcast\"><img src=\"/images/patreon.png\" width=\"20%\"/></a>
         <a href=\"https://discord.gg/pWjCv3g\"><img src=\"/images/discord.png\" width=\"20%\"/></a>
-        </div>    
+        </div>
         <div class=\"ellipses\"><iron-icon  icon=\"filter-list\" stylue></iron-icon></div>
         <div class=\"interlude fb\">
         <div class=\"article-content\">
-        
-        <!------ ARTICLE BEGINS -----> 
-        
+
+        <!------ ARTICLE BEGINS ----->
+
         <p class=\"interlude\">
             Summary
         </p>
@@ -167,7 +167,7 @@ html += """
         <p class=\"main-paragraphs notes\">
         """ + show_notes + """
         </p>
-        
+
         <p class=\"interlude\">
             Scripts
         </p>
@@ -203,7 +203,7 @@ html_close = """
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src=\"scripts/main.js\"></script>
     <!-- endbuild -->
-    
+
     <script>
         function audioTime(audioTime) {
             var audio = document.getElementById("audio");
@@ -230,7 +230,7 @@ html_close = """
             }
         }
     </script>
-     
+
     <script>
 
         (function(document){
@@ -240,7 +240,7 @@ html_close = """
 
               div.addEventListener('click', function(){
                 if(open){
-                  icon.className = 'material-icons share';  
+                  icon.className = 'material-icons share';
                 } else{
                   icon.className = 'material-icons share open';
                 }
@@ -249,7 +249,7 @@ html_close = """
               });
             })(document);
     </script>
-      
+
     <div id=\"fb-root\"></div>
       <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -258,10 +258,10 @@ html_close = """
   js.src = \"//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=129264100505161\";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-      
-      
-      
-    
+
+
+
+
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src=\"scripts/main.js\"></script>
     <!-- endbuild -->
@@ -818,7 +818,7 @@ imagedict = {
     "Linus Ullmark": "http://www.hockeydb.com/ihdb/photos/linus-ullmark-2018-33.jpg",
     "Maxime Comtois": "https://nhl.bamcontent.com/images/headshots/current/168x168/8480031.jpg",
     "Matt Grzelcyk": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3069448.png&w=350&h=254",
-    "Warren Foegele": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477998.jpg",    
+    "Warren Foegele": "https://nhl.bamcontent.com/images/headshots/current/168x168/8477998.jpg",
     "Adam Lowry": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2563066.png&w=350&h=254",
     "Joonas Donskoi": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/2590379.png&w=350&h=254",
     "Zachary Sanford": "http://a.espncdn.com/combiner/i?img=/i/headshots/nhl/players/full/3042061.png&w=350&h=254",
@@ -1043,15 +1043,8 @@ for title in titles:
     if len(players) > 0:
         html += "<p class=\"players-interlude\">\n    " + title + "\n</p>\n\n<div class=\"players\">\n"
         for player in players:
-            if player not in unique_players:
-                unique_players.append(player)
-            image = ""
-            if player in imagedict:
-                image = imagedict[player]
-            else:
-                image = raw_input("Add image for " + player + ": ")
-                new_player_images[player] = image
-            html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"" + image + "\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
+            formatted_name = player.lower().replace("'","").replace(".","").replace(" ","-")
+            html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" + formatted_name + "&width=350&height=254\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
         html += "</div>\n\n"
     print "Completed section " + title + "\n"
 
@@ -1064,7 +1057,7 @@ html_file.write(html)
 html_file.close()
 
 if len(new_player_images) > 0:
-    print "\n\nAdd the following players and images to the database:\n\n" 
+    print "\n\nAdd the following players and images to the database:\n\n"
     for player, image in new_player_images.iteritems():
         print "\"" + player + "\": \"" + image + "\","
 
@@ -1077,15 +1070,15 @@ episode = """
           <div class=\"mdl-layout__tab-panel is-active\" id=\"overview\">
           <section class=\"section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp\">
             <header class=\"section__play-btn episode mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white\" style=\"background: url(""" + page_image + """ ) center/cover;\">
-            
+
             </header>
-              
+
             <div class=\"mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone\">
               <div class=\"mdl-card__supporting-text\">
                 <h4 style=\"font-family:product sans;\">""" + page_title + """</h4>
                 """ + page_description + """
                 <br>
-                  
+
                   <br>
                   <div style=\"opacity:.9;\">
                    <audio controls style=\"width:100%;\">
@@ -1100,8 +1093,6 @@ if len(youtube_link) > 0:
     episode += "<a href=\"" + youtube_link + "\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\"><img style=\"height:50%;padding-bottom: 3px; padding-right: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
 episode += """
                  <span style=\"display:inline-block\"><i style=\"vertical-align:middle;opacity:.7;\" class=\"material-icons\">schedule</i>
-                  <text style=\"font-size:.8em;opacity:.6\"> """ + pod_length + """ min.</text></span>
-                
               </div>
             </div>
           </section>
