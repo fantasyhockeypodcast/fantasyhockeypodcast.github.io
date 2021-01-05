@@ -1043,6 +1043,8 @@ for title in titles:
     if len(players) > 0:
         html += "<p class=\"players-interlude\">\n    " + title + "\n</p>\n\n<div class=\"players\">\n"
         for player in players:
+            if player not in unique_players:
+                unique_players.append(player)
             formatted_name = player.lower().replace("'","").replace(".","").replace(" ","-")
             html += "    <div class=\"tooltip\">\n        <img class=\"img-circle\" src=\"https://tsnimages.tsn.ca/ImageProvider/PlayerHeadshot?seoId=" + formatted_name + "&width=350&height=254\">\n        <span class=\"tooltiptext\">" + player + "</span>\n    </div>\n"
         html += "</div>\n\n"
