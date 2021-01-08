@@ -1095,6 +1095,7 @@ if len(youtube_link) > 0:
     episode += "<a href=\"" + youtube_link + "\" class=\"mdl-button mdl-color-text--black mdl-js--ripple\"><img style=\"height:50%;padding-bottom: 3px; padding-right: 10px;\" src=\"images/yt_logo_mono.png\"></a>"
 episode += """
                  <span style=\"display:inline-block\"><i style=\"vertical-align:middle;opacity:.7;\" class=\"material-icons\">schedule</i>
+                 <text style=\"font-size:.8em;opacity:.6\"> """ + pod_length + """ min.</text></span>
               </div>
             </div>
           </section>
